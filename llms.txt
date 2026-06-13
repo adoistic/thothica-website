@@ -1,0 +1,50 @@
+# Thothica
+
+> Thothica builds AI-native knowledge infrastructure. We help organizations structure, connect, and activate their fragmented knowledge so their people and their AI can work with it. The core discipline is data ontology: modeling what knowledge means and how it relates, then making it queryable and trustworthy — cited, not hallucinated, and deployable on-premise.
+
+Thothica is a company based in New Delhi, India (founded 2023). Its tagline is "AI-Native Knowledge Infrastructure." Contact: hello@thothica.com. This file describes the single-page marketing site so that LLMs and crawlers can understand and navigate it without rendering the page.
+
+This site is a static, single HTML page. All sections below are anchors on the homepage.
+
+## The core — data ontology
+
+Most organizations already have the knowledge they need. It sits in many places, formats, and languages, so neither the team nor an AI can use it as one thing. Thothica models it properly — the meaning and the relationships, not just the storage. The method has three steps:
+
+- [Structure](https://adoistic.github.io/thothica-website/#what): Model the entities and concepts in the knowledge — who, what, which document, which obligation, which fact. Clean schemas, controlled vocabularies, and provenance on every claim.
+- [Connect](https://adoistic.github.io/thothica-website/#what): Map the relationships and meaning between entities into a knowledge graph, where inference lives — how things relate, what contradicts what, what one fact implies about another.
+- [Activate](https://adoistic.github.io/thothica-website/#what): Expose it as a semantic layer the AI can reason over and act on, agent-callable through MCP (Model Context Protocol), with citations, so answers are grounded in the sources instead of guessed.
+
+## Capabilities
+
+One competency applied across formats and domains, delivering the whole pipeline from raw scattered sources to a system a team and its agents can use:
+
+- [Knowledge platforms & archives](https://adoistic.github.io/thothica-website/#capabilities): Turn a messy corpus of PDFs, scans, audio, and databases into a structured, cited, searchable platform the client operates. Full-text and semantic search; stable, citable references.
+- [Data ontology & modeling](https://adoistic.github.io/thothica-website/#capabilities): Design the entities, relationships, vocabularies, and provenance rules that make knowledge correct and reusable. Knowledge graphs; authority files and vocabularies.
+- [Agent-readiness layer](https://adoistic.github.io/thothica-website/#capabilities): Expose existing knowledge through an MCP, agent-callable interface so AI uses it without hallucinating. Librarian-not-LLM retrieval; cited, grounded answers.
+- [Digitization & OCR](https://adoistic.github.io/thothica-website/#capabilities): Document digitization at scale with true-copy fidelity, including Indic scripts, handwriting, and audio to text. Multilingual and Indic-capable; audio and video transcription.
+- [Translation](https://adoistic.github.io/thothica-website/#capabilities): Indic and academic translation, and multilingual knowledge layers over a single corpus. Indic and English; cross-language retrieval.
+- [Regulatory intelligence](https://adoistic.github.io/thothica-website/#capabilities): Structured, deadline-aware, cited monitoring of a regulatory domain, with human and AI review gates. Deadline and obligation extraction; directory-watch diffs.
+- [Creative outputs](https://adoistic.github.io/thothica-website/#capabilities): When the deliverable is a finished artifact, the Studio Whence sub-brand turns the same pipelines into books, comics, and research. Source-cited generation; bilingual, Indic-typographic.
+- [Sovereign AI deployment](https://adoistic.github.io/thothica-website/#capabilities): Stand up offline LLM systems with the ontology layer on top, so confidential data never leaves the premises. On-premise and fully offline; data-sovereignty ready.
+- [Built fast, AI-native](https://adoistic.github.io/thothica-website/#capabilities): A spec-led method collapses the cost of a custom build to days, so clients get a tailored system, not a forced-fit product. Custom at near-product speed; quality-gated delivery.
+
+## Who we serve
+
+The same core applied to very different problems — anywhere knowledge sits in many places and needs to become one usable thing:
+
+- [Government](https://adoistic.github.io/thothica-website/#sectors): Consolidate scattered archives, schemes, and internal data into one multilingual, citable, agent-queryable layer, deployed sovereign and on-premise.
+- [Enterprise](https://adoistic.github.io/thothica-website/#sectors): Build the company brain from scattered communications and documents; make contracts and obligations queryable; turn institutional memory into something an agent can answer from, with citations.
+- [Education institutions](https://adoistic.github.io/thothica-website/#sectors): Consolidate accreditation evidence (NAAC, NBA, NIRF), accelerate research-publication pipelines, and unify regulatory and student records to raise output and rankings.
+- [Publishing & culture](https://adoistic.github.io/thothica-website/#sectors): Digitize and structure backlists and archives into semantic, agent-ready catalogs, and produce finished creative works through Studio Whence.
+
+## Why Thothica
+
+- Cited, not hallucinated: Every answer is grounded in a real source passage — built like a librarian, not a guessing machine, with no vector-database hallucination.
+- Sovereign and on-premise: For confidential corpora and data-sovereignty mandates, deployed offline with the ontology layer on infrastructure the client controls.
+- Indic and multilingual: Built for Indian languages and scripts from the start, across OCR, transcription, translation, and retrieval.
+- AI-native velocity: A spec-led build method means a tailored, custom system arrives in days, not quarters.
+
+## Contact
+
+- Email: hello@thothica.com
+- Homepage: https://adoistic.github.io/thothica-website/

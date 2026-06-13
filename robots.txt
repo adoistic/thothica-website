@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adoistic.github.io/thothica-website/sitemap.xml

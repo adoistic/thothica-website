@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# build scratch (raw render; the og-image.html source is kept for reproducibility)
+_build/og-raw.png
+
+# editor
+.vscode/
+*.swp
