@@ -2,7 +2,7 @@
 
 The marketing site for **Thothica**, built around the data-ontology positioning: we turn fragmented knowledge into operational intelligence.
 
-**Live:** https://adoistic.github.io/thothica-website/
+**Live:** https://thothica.com (GitHub Pages, custom domain via the `CNAME` file; the `adoistic.github.io/thothica-website` URL redirects here)
 
 It is a single static page. No framework, no build step, no dependencies. Hand-written HTML and CSS with a few lines of vanilla JavaScript for scroll reveals. Type is set in [Fraunces](https://fonts.google.com/specimen/Fraunces) (display) and [Teachers](https://fonts.google.com/specimen/Teachers) (UI/body), served from Google Fonts. The palette is the Thothica warm brown/cream system, anchored on espresso `#2e2013`.
 
