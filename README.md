@@ -68,6 +68,28 @@ magick _build/og-raw.png -quality 86 assets/og-image.jpg
 
 Tip: after changing it, re-scrape the URL in the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) and [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) to bust their caches. WhatsApp pulls its preview from the OG tags too.
 
+## Analytics & cookie consent
+
+Google Analytics 4 with **Consent Mode v2** and a region-aware consent banner (`consent.js`).
+
+**To turn it on:** set your GA4 Measurement ID in `index.html` — find:
+
+```js
+window.THOTHICA_GA_ID = 'G-XXXXXXXXXX';   // ← replace with your real ID
+```
+
+Until that's a real ID (`G-…`), nothing loads and no banner shows. To get an ID: [analytics.google.com](https://analytics.google.com) → Admin → create a GA4 property → a Web data stream for `thothica.com` → copy the Measurement ID.
+
+**How consent works (matches the law per region):**
+
+| Region | Behavior |
+|---|---|
+| EEA + UK + Switzerland (GDPR) | **Opt-in.** Analytics stays denied until the visitor clicks Accept. Enforced by IP via Consent Mode region defaults, server-side. |
+| US (California CCPA/CPRA + other states) | **Opt-out.** Analytics on by default with a notice and a "Do Not Sell or Share" opt-out. Honors the browser **Global Privacy Control** signal automatically. |
+| India (DPDP) + rest of world | **Notice + opt-out** (lenient). |
+
+Region is detected client-side (GeoJS) only to choose the banner wording; if detection fails it falls back to the strict opt-in banner. The choice is stored in `localStorage` and re-openable via the **Privacy choices** link in the footer. No advertising signals are used (all `ad_*` storage denied everywhere).
+
 ## Deploy (GitHub Pages)
 
 This repo is already on GitHub. To serve it on Pages:
