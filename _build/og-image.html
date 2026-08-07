@@ -2,41 +2,28 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Teachers:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Teachers:wght@400;600;700&display=swap" rel="stylesheet" />
 <style>
   *{margin:0;padding:0;box-sizing:border-box;}
   html,body{width:1200px;height:630px;overflow:hidden;}
-  body{
-    background:#241608;
-    font-family:'Teachers',sans-serif;
-    position:relative;
-    color:#F4EADA;
-  }
-  .glow{position:absolute;border-radius:50%;filter:blur(120px);}
-  .g1{width:620px;height:620px;right:-160px;top:-220px;background:radial-gradient(circle,rgba(201,154,91,.34),transparent 62%);}
-  .g2{width:520px;height:520px;left:-180px;bottom:-220px;background:radial-gradient(circle,rgba(160,90,40,.26),transparent 62%);}
-  .frame{position:absolute;inset:0;padding:76px 80px;display:flex;flex-direction:column;justify-content:space-between;z-index:2;}
-  .chip{background:#F4EADA;border-radius:14px;padding:14px 22px;display:inline-flex;align-items:center;}
-  .chip img{height:42px;width:auto;display:block;}
-  h1{font-family:'Fraunces',serif;font-weight:330;font-size:72px;line-height:1.04;letter-spacing:-0.025em;color:#F4EADA;max-width:1000px;}
-  h1 em{font-style:italic;color:#E7C690;}
-  .foot{display:flex;justify-content:space-between;align-items:center;}
-  .eyebrow{font-size:20px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C99A5B;}
-  .url{font-size:24px;font-weight:600;color:#d8c8b2;}
-  .hr{position:absolute;left:80px;right:80px;bottom:140px;height:1px;background:linear-gradient(90deg,rgba(201,154,91,.5),rgba(201,154,91,0));z-index:2;}
+  body{background:#fff;color:#000;font-family:'Teachers',sans-serif;position:relative;}
+  .frame{position:absolute;inset:0;padding:72px 80px;display:flex;flex-direction:column;justify-content:space-between;}
+  .frame img{height:52px;width:auto;display:block;}
+  h1{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:66px;line-height:1.12;letter-spacing:-0.01em;max-width:1020px;}
+  h1 em{font-style:italic;}
+  .foot{display:flex;justify-content:space-between;align-items:center;border-top:2px solid #000;padding-top:26px;}
+  .eyebrow{font-size:21px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;}
+  .url{font-size:24px;font-weight:600;}
 </style>
 </head>
 <body>
-  <div class="glow g1"></div>
-  <div class="glow g2"></div>
   <div class="frame">
-    <div><span class="chip"><img src="../assets/thothica-logo.png" alt="Thothica" /></span></div>
-    <h1>We turn fragmented knowledge into operational <em>intelligence.</em></h1>
+    <div><img src="../assets/thothica-logo-black.png" alt="Thothica" /></div>
+    <h1>Hard problems can be solved when people understand their data. <em>Thothica helps them do that by building ontologies and AI-native software.</em></h1>
     <div class="foot">
-      <span class="eyebrow">AI-Native Knowledge Infrastructure</span>
+      <span class="eyebrow">Data ontology</span>
       <span class="url">thothica.com</span>
     </div>
   </div>
-  <div class="hr"></div>
 </body>
 </html>
