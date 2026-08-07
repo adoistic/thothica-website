@@ -6,7 +6,13 @@ Thothica (legal name: Thothica Private Limited) is an AI startup based in New De
 
 ## What Thothica does
 
-Thothica builds ontologies, and it builds software on top of them. An ontology is a precise written record of what an organization's data means. It states what each item is, how the items relate to one another, and who is responsible for each decision. When software runs on an ontology, staff and AI systems work from the same definitions, and the organization no longer depends on only a few experienced people to interpret its data. It can then solve, at scale, the problems those people used to solve one at a time.
+Every organization has people who know how to answer the difficult questions. They know which reports are wrong, which database column actually matters, why two departments use different names for the same thing, and how an approval really works.
+
+An ontology is that knowledge, written down precisely enough that software can run on it. Today it lives in a few people's heads.
+
+Thothica reads a client's systems and records what each item means, how the items relate to one another, and who decides. It then builds the layer the client's staff and AI both query, where every answer traces back to the record it came from.
+
+The organization no longer depends on only a few experienced people to interpret its data. It can solve, at scale, the problems those people used to solve one at a time.
 
 ## What Thothica builds
 
