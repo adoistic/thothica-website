@@ -34,6 +34,7 @@ a.hl{text-decoration:underline;text-underline-offset:.18em;text-decoration-thick
 .problems li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:baseline;padding:24px 0;border-bottom:1px solid #000;}
 .problems .n{font-family:var(--serif);font-weight:600;font-size:1.55rem;line-height:1;font-feature-settings:'lnum' 1,'tnum' 1;}
 .problems p{font-size:1.06rem;max-width:64ch;}
+.problems p+p{margin-top:14px;}
 
 /* the sentence to keep */
 .with{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.6vw,1.55rem);line-height:1.45;margin-top:56px;max-width:34em;}
