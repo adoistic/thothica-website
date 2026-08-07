@@ -27,7 +27,6 @@ h1 em{font-style:italic;font-weight:500;}
 
 /* inverted highlight: black ground, white text, a slight slant */
 .hl{background:#000;color:#fff;font-style:oblique 6deg;padding:.02em .28em .08em;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
-h1 .hl{padding:0 .18em .06em;}
 a.hl{text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1px;}
 
 /* numbered rail */
