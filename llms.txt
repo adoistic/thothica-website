@@ -1,12 +1,12 @@
 # Thothica
 
-> Hard problems can be solved when people understand their data. Thothica helps them do that by building ontologies and AI-native software. Thothica is an AI startup: it builds ontologies, and software on top of them, so staff and AI systems work from the same definitions of an organization's data.
+> Hard problems can be solved when people understand their data. Thothica helps them do that by building ontologies and AI-native software. Thothica is an AI startup: it builds ontologies, and software on top of them, so staff and AI systems work from the same definitions of an organization's data, and the organization no longer depends on only a few experienced people to interpret it.
 
 Thothica (legal name: Thothica Private Limited) is an AI startup based in New Delhi, India, founded in 2023. Its discipline is data ontology. Contact: hello@thothica.com. This file describes the single-page site so that LLMs and crawlers can understand it without rendering the page.
 
 ## What Thothica does
 
-Thothica builds ontologies, and it builds software on top of them. An ontology is a precise written record of what an organization's data means. It states what each item is, how the items relate to one another, and who is responsible for each decision. When software runs on an ontology, staff and AI systems work from the same definitions, and the organization no longer depends on a few experienced people to interpret its data. It can then solve, at scale, the problems those people used to solve one at a time.
+Thothica builds ontologies, and it builds software on top of them. An ontology is a precise written record of what an organization's data means. It states what each item is, how the items relate to one another, and who is responsible for each decision. When software runs on an ontology, staff and AI systems work from the same definitions, and the organization no longer depends on only a few experienced people to interpret its data. It can then solve, at scale, the problems those people used to solve one at a time.
 
 ## What Thothica builds
 
