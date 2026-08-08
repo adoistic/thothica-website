@@ -25,9 +25,9 @@ The organization no longer depends on only a few experienced people to interpret
 
 ## Why the method repeats
 
-On one government portal, Thothica's software made 115,652 decisions about what the data meant. On the think tank archive, the same software sorted all 506 writers three different ways, and worked out who had written the pieces that carried no clear byline. No team could do either by hand.
+The same software does all of it. On one government portal it made 115,652 decisions about what the data meant. In a historical archive it sorted all 506 writers three different ways, and worked out who had written the pieces that carried no byline. For a publisher it has drafted hundreds of comic books on its own, researching each one first and citing a real source on every line.
 
-Thothica has now done this on five government portals, on an archive of scanned documents in five languages, and on a research library for a publisher. Every one of them stored its data differently. Thothica's way of working stayed the same each time.
+Five government portals. An archive of scanned documents in five languages. A library of more than 2,000 works spanning twenty-five centuries. A publisher's research and production line. Every one of them stored its data differently, and no two were in the same business. Thothica's way of working did not change once. There is more running now that has not been announced.
 
 ## Who Thothica works with
 
