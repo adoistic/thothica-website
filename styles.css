@@ -43,8 +43,14 @@ a.hl{text-decoration:underline;text-underline-offset:.18em;text-decoration-thick
 .problems p{font-size:1.06rem;max-width:64ch;}
 .problems p+p{margin-top:14px;}
 
+/* the evidence that the method is repeatable */
+.proof{margin-top:54px;max-width:60ch;}
+.proof p{font-size:1.16rem;}
+.proof p+p{margin-top:18px;}
+
 /* the sentence to keep */
 .with{font-family:var(--serif);font-style:italic;font-size:clamp(1.25rem,2.6vw,1.55rem);line-height:1.45;margin-top:56px;max-width:34em;}
+.proof+.with{margin-top:44px;}
 
 /* closing ask: the inverted band */
 .cta{background:#000;color:#fff;padding:96px 0;}
