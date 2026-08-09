@@ -136,6 +136,41 @@ PAGES.append(dict(
       <p class="fig-cap"><b>Step 3 is where the volume is.</b> On one portal the classifiers made 115,652 separate decisions about what a piece of text meant. No team reads a quarter of a million free-text entries by hand, which is why that intelligence had never existed before.</p>
     </div>
 
+    <h2>What the catalogue actually looks like</h2>
+    <div class="sec body-w">
+      <p>The catalogue is a grid. Down one side are the things a department counts. Across the top are the ways each of those can legitimately be cut. A filled cell means that combination is defined and answerable; an empty one means it is not, and the system says so rather than inventing a number.</p>
+    </div>
+
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="mx">
+        <thead><tr><th></th><th>By district</th><th>By scheme</th><th>By month</th><th>By status</th><th>By officer</th></tr></thead>
+        <tbody>
+          <tr><th>Applications received</th><td class="on">•</td><td class="on">•</td><td class="on">•</td><td class="on">•</td><td class="off"></td></tr>
+          <tr><th>Pending beyond limit</th><td class="on">•</td><td class="on">•</td><td class="on">•</td><td class="on">•</td><td class="on">•</td></tr>
+          <tr><th>Amount disbursed</th><td class="on">•</td><td class="on">•</td><td class="on">•</td><td class="off"></td><td class="off"></td></tr>
+          <tr><th>Complaints raised</th><td class="on">•</td><td class="off"></td><td class="on">•</td><td class="on">•</td><td class="off"></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
+      <p class="fig-cap"><b>A filled cell is a promise.</b> The layer will answer that question from the portal's own rows. The empty cells matter just as much, because they are where the department's data genuinely cannot support a breakdown, and saying so is more useful than producing a figure nobody can defend. This grid is small here for the example; on the largest portal it runs to more than fifty measures.</p>
+    </div>
+
+    <h2>What happens when somebody asks</h2>
+    <div class="fig">
+      <div class="flow flow-4">
+        <div class="box"><span class="box-k">Asked</span><span class="box-t">In plain language</span><p>"How many applications in this district are waiting on one document?"</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">Resolved</span><span class="box-t">Against the catalogue</span><p>The question maps to a defined measure and two defined cuts. If it maps to nothing, the layer says the question cannot be answered rather than guessing.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">Read</span><span class="box-t">From the portal's rows</span><p>A read-only query against the department's own database. No copy, no separate warehouse, no stale figure.</p></div>
+        <div class="arw"></div>
+        <div class="box inv"><span class="box-k">Returned</span><span class="box-t">With the receipt</span><p>The number, and the rows it was computed from, so the officer can open the underlying files.</p></div>
+      </div>
+      <p class="fig-cap"><b>The second step is the one that makes this safe.</b> A layer that maps every question onto something will always produce an answer, including for questions its data cannot support. Refusing is a feature that has to be designed in.</p>
+    </div>
+
     <h2>The part that answers "is this repeatable?"</h2>
     <div class="sec body-w">
       <p>We built this layer five times. Each portal was written in a different framework, sat on a different database engine, and modelled its domain differently. One was an old application that had to be rebuilt on a modern platform before anything could be added to it.</p>
@@ -200,6 +235,26 @@ PAGES.append(dict(
         <div class="box inv"><span class="box-k">Layer 4</span><span class="box-t">Positions</span><p>Where each writer sits in the tradition, on several independent axes, judged from what the collection actually shows about them.</p></div>
       </div>
       <p class="fig-cap"><b>Most archive projects build layer 1 and call it a catalogue.</b> Layers 3 and 4 are what turn a catalogue into something you can ask questions of.</p>
+    </div>
+
+    <h2>Why one person is the hardest part</h2>
+    <div class="sec body-w">
+      <p>A hundred years of printing produces a dozen spellings of the same name. Initials expand and contract, transliteration conventions change, a periodical drops a middle name, and the same writer appears in Devanagari in one work and Latin script in another. Until those collapse into one identity, every count in the archive is wrong.</p>
+    </div>
+
+    <div class="fig">
+      <div class="mapto">
+        <ul>
+          <li>The name as printed on a 1954 pamphlet</li>
+          <li>The initials-only form used by a periodical</li>
+          <li>The same name in a different script</li>
+          <li>A transliteration with different vowels</li>
+          <li>A byline with the middle name dropped</li>
+        </ul>
+        <div class="arw"></div>
+        <div class="box inv"><span class="box-k">Resolved to</span><span class="box-t">One writer</span><p>One identity, carrying every form it has ever been printed under, so a search on any of them finds all of the work.</p></div>
+      </div>
+      <p class="fig-cap"><b>Where the software cannot make the match with confidence, it does not.</b> The name is kept exactly as printed and marked unresolved, which leaves a curator a real queue to work through. Forcing an uncertain match would quietly merge two people, and nobody would ever find the error.</p>
     </div>
 
     <h2>Every relation carries its own evidence</h2>
@@ -383,6 +438,21 @@ PAGES.append(dict(
       <p class="fig-cap"><b>This actually happened, and we learned more from it than from anything that worked.</b> One draft arrived with no citations in it at all. The gate passed it, truthfully and uselessly, because there was nothing to check. The checker now counts how much of the script is cited as well as checking the citations it finds.</p>
     </div>
 
+    <div class="fig">
+      <div class="branch">
+        <div class="box"><span class="box-k">Every line of the script</span><span class="box-t">Carries a pointer to a file and a line number</span><p>The checker opens each one against the real file in the research corpus.</p></div>
+        <div class="branch-arms">
+          <div class="arm"><span class="arm-l">Every pointer opens</span>
+            <div class="box"><span class="box-t">The script moves on</span><p>To art direction, then to the editorial review application, where the source link stays live on every beat so a reviewer can check the same thing by hand.</p></div>
+          </div>
+          <div class="arm"><span class="arm-l">One pointer fails</span>
+            <div class="box inv"><span class="box-t">The script stops here</span><p>It is returned. There is no option to record the failure and continue, because a warning nobody has to clear is a warning nobody clears.</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="fig-cap"><b>The gate is binary on purpose.</b> Most quality tooling produces a report, and reports get skimmed under deadline. A stage that simply refuses to hand the work onward cannot be skimmed.</p>
+    </div>
+
     <h2>A second lesson: preparation is not a scratchpad</h2>
     <div class="sec body-w">
       <p>The quote bank assembled during research is an intermediate file, so it was treated more casually than a script. Wording that had been smoothed while making notes was later inherited into finished scripts as though it were sourced material, and one subject's words had to be un-quoted after the fact.</p>
@@ -473,7 +543,26 @@ PAGES.append(dict(
         <tr><td>Auto-grow</td><td>Accepted and queued, never blocked</td><td>New players appear constantly. Refusing an unknown name would stop coverage of a debut, which is exactly the story worth having.</td></tr>
       </table>
       </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
       <p class="fig-cap"><b>Unknown values are always accepted and always surfaced.</b> Content is never held hostage to bookkeeping, and bookkeeping never silently rots. One command reports what needs a human, and the strict dimensions fail loudly.</p>
+    </div>
+
+    <h2>The manifest, and what each dimension declares</h2>
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="mx">
+        <thead><tr><th>Dimension</th><th>Kind</th><th>Values per article</th><th>Unknown value</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><th>Competition</th><td>Named entity</td><td>One</td><td>Warns</td><td class="on">The spine</td></tr>
+          <tr><th>Teams</th><td>Named entity</td><td>Several</td><td>Warns</td><td class="off"></td></tr>
+          <tr><th>Players</th><td>Named entity</td><td>Several</td><td>Queued</td><td class="off"></td></tr>
+          <tr><th>Format</th><td>Fixed list</td><td>One</td><td class="on">Fails</td><td class="off"></td></tr>
+          <tr><th>Themes</th><td>Fixed list</td><td>Several</td><td class="on">Fails</td><td class="off"></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
+      <p class="fig-cap"><b>One dimension is marked as the spine.</b> That is the one the coverage view groups by, so the newsroom sees its output organised the way it actually thinks about the season. Everything else is a filter. Declaring which is which in the manifest means the dashboard never has to guess.</p>
     </div>
 
     <div class="fig">
@@ -555,6 +644,28 @@ PAGES.append(dict(
         <li><span class="m">5</span><div><h3>Deliver with verdicts</h3><p>Spreadsheet and data files out, every group carrying its verdict. Matches are usable immediately; anything flagged or unverified arrives with the reason attached.</p></div></li>
       </ol>
       <p class="fig-cap"><b>Step 4 is where most systems cheat.</b> If a correction pass is allowed to rewrite the number it is being measured against, every sheet eventually reconciles and the reconciliation is meaningless.</p>
+    </div>
+
+    <h2>Three verdicts, and only one of them is silent</h2>
+    <div class="fig">
+      <div class="flow flow-3">
+        <div class="box"><span class="box-k">Verdict 1</span><span class="box-t">Match</span><p>The rows add up to a total that was read independently. Usable straight away, and nobody needs to look at the paper again.</p></div>
+        <div class="arw" style="visibility:hidden"></div>
+        <div class="box"><span class="box-k">Verdict 2</span><span class="box-t">Flagged</span><p>The sheet contradicts itself, or a class will not reconcile however it is read. Comes back with the specific disagreement described.</p></div>
+        <div class="arw" style="visibility:hidden"></div>
+        <div class="box inv"><span class="box-k">Verdict 3</span><span class="box-t">Unverified</span><p>Nothing independent to check the reading against. The figures are there and are probably right, and the system refuses to say so.</p></div>
+      </div>
+      <p class="fig-cap"><b>The third verdict is the one that makes the other two worth anything.</b> A system without it reports everything it managed to read as correct, and the school finds out at the exam hall. Roughly speaking, the work left for a person is the second and third piles, which is a short list rather than every sheet that arrived.</p>
+    </div>
+
+    <div class="fig">
+      <div class="bars">
+        <div class="bar-row"><span>Reconciled against an independent total</span><span class="bar-track"><span class="bar-fill" style="width:78%"></span></span><b>usable now</b></div>
+        <div class="bar-row"><span>Flagged with a described conflict</span><span class="bar-track"><span class="bar-fill hatch" style="width:14%"></span></span><b>needs a person</b></div>
+        <div class="bar-row"><span>No independent evidence available</span><span class="bar-track"><span class="bar-fill" style="width:8%;background:#fff"></span></span><b>reported as unverified</b></div>
+      </div>
+      <div class="key"><span><i class="solid"></i>Verified</span><span><i class="hatched"></i>Needs a person</span><span><i></i>Not claimed either way</span></div>
+      <p class="fig-cap"><b>Proportions vary by batch and by how the school filled the sheet in.</b> The shape is what matters: most of a batch clears on its own, and the part that does not arrives already sorted into "we found a problem" and "we could not check".</p>
     </div>
 
     <h2>Conflicts are reported, never repaired</h2>

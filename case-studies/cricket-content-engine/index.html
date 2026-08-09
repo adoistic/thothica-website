@@ -11,11 +11,11 @@
 <meta name="theme-color" content="#000000" />
 <meta name="author" content="Thothica" />
 
-<link rel="icon" href="/assets/favicon.ico?v=24" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=24" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=24" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=24" />
-<link rel="manifest" href="/site.webmanifest?v=24" />
+<link rel="icon" href="/assets/favicon.ico?v=25" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=25" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=25" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=25" />
+<link rel="manifest" href="/site.webmanifest?v=25" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Thothica" />
@@ -36,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=24" />
+<link rel="stylesheet" href="/styles.css?v=25" />
 <script>document.documentElement.className += ' js';</script>
 
 <script type="application/ld+json">
@@ -107,7 +107,26 @@
         <tr><td>Auto-grow</td><td>Accepted and queued, never blocked</td><td>New players appear constantly. Refusing an unknown name would stop coverage of a debut, which is exactly the story worth having.</td></tr>
       </table>
       </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
       <p class="fig-cap"><b>Unknown values are always accepted and always surfaced.</b> Content is never held hostage to bookkeeping, and bookkeeping never silently rots. One command reports what needs a human, and the strict dimensions fail loudly.</p>
+    </div>
+
+    <h2>The manifest, and what each dimension declares</h2>
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="mx">
+        <thead><tr><th>Dimension</th><th>Kind</th><th>Values per article</th><th>Unknown value</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><th>Competition</th><td>Named entity</td><td>One</td><td>Warns</td><td class="on">The spine</td></tr>
+          <tr><th>Teams</th><td>Named entity</td><td>Several</td><td>Warns</td><td class="off"></td></tr>
+          <tr><th>Players</th><td>Named entity</td><td>Several</td><td>Queued</td><td class="off"></td></tr>
+          <tr><th>Format</th><td>Fixed list</td><td>One</td><td class="on">Fails</td><td class="off"></td></tr>
+          <tr><th>Themes</th><td>Fixed list</td><td>Several</td><td class="on">Fails</td><td class="off"></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
+      <p class="fig-cap"><b>One dimension is marked as the spine.</b> That is the one the coverage view groups by, so the newsroom sees its output organised the way it actually thinks about the season. Everything else is a filter. Declaring which is which in the manifest means the dashboard never has to guess.</p>
     </div>
 
     <div class="fig">

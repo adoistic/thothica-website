@@ -11,11 +11,11 @@
 <meta name="theme-color" content="#000000" />
 <meta name="author" content="Thothica" />
 
-<link rel="icon" href="/assets/favicon.ico?v=24" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=24" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=24" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=24" />
-<link rel="manifest" href="/site.webmanifest?v=24" />
+<link rel="icon" href="/assets/favicon.ico?v=25" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=25" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=25" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=25" />
+<link rel="manifest" href="/site.webmanifest?v=25" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Thothica" />
@@ -36,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=24" />
+<link rel="stylesheet" href="/styles.css?v=25" />
 <script>document.documentElement.className += ' js';</script>
 
 <script type="application/ld+json">
@@ -117,6 +117,28 @@
         <li><span class="m">5</span><div><h3>Deliver with verdicts</h3><p>Spreadsheet and data files out, every group carrying its verdict. Matches are usable immediately; anything flagged or unverified arrives with the reason attached.</p></div></li>
       </ol>
       <p class="fig-cap"><b>Step 4 is where most systems cheat.</b> If a correction pass is allowed to rewrite the number it is being measured against, every sheet eventually reconciles and the reconciliation is meaningless.</p>
+    </div>
+
+    <h2>Three verdicts, and only one of them is silent</h2>
+    <div class="fig">
+      <div class="flow flow-3">
+        <div class="box"><span class="box-k">Verdict 1</span><span class="box-t">Match</span><p>The rows add up to a total that was read independently. Usable straight away, and nobody needs to look at the paper again.</p></div>
+        <div class="arw" style="visibility:hidden"></div>
+        <div class="box"><span class="box-k">Verdict 2</span><span class="box-t">Flagged</span><p>The sheet contradicts itself, or a class will not reconcile however it is read. Comes back with the specific disagreement described.</p></div>
+        <div class="arw" style="visibility:hidden"></div>
+        <div class="box inv"><span class="box-k">Verdict 3</span><span class="box-t">Unverified</span><p>Nothing independent to check the reading against. The figures are there and are probably right, and the system refuses to say so.</p></div>
+      </div>
+      <p class="fig-cap"><b>The third verdict is the one that makes the other two worth anything.</b> A system without it reports everything it managed to read as correct, and the school finds out at the exam hall. Roughly speaking, the work left for a person is the second and third piles, which is a short list rather than every sheet that arrived.</p>
+    </div>
+
+    <div class="fig">
+      <div class="bars">
+        <div class="bar-row"><span>Reconciled against an independent total</span><span class="bar-track"><span class="bar-fill" style="width:78%"></span></span><b>usable now</b></div>
+        <div class="bar-row"><span>Flagged with a described conflict</span><span class="bar-track"><span class="bar-fill hatch" style="width:14%"></span></span><b>needs a person</b></div>
+        <div class="bar-row"><span>No independent evidence available</span><span class="bar-track"><span class="bar-fill" style="width:8%;background:#fff"></span></span><b>reported as unverified</b></div>
+      </div>
+      <div class="key"><span><i class="solid"></i>Verified</span><span><i class="hatched"></i>Needs a person</span><span><i></i>Not claimed either way</span></div>
+      <p class="fig-cap"><b>Proportions vary by batch and by how the school filled the sheet in.</b> The shape is what matters: most of a batch clears on its own, and the part that does not arrives already sorted into "we found a problem" and "we could not check".</p>
     </div>
 
     <h2>Conflicts are reported, never repaired</h2>

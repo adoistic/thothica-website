@@ -11,11 +11,11 @@
 <meta name="theme-color" content="#000000" />
 <meta name="author" content="Thothica" />
 
-<link rel="icon" href="/assets/favicon.ico?v=24" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=24" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=24" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=24" />
-<link rel="manifest" href="/site.webmanifest?v=24" />
+<link rel="icon" href="/assets/favicon.ico?v=25" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=25" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=25" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=25" />
+<link rel="manifest" href="/site.webmanifest?v=25" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Thothica" />
@@ -36,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=24" />
+<link rel="stylesheet" href="/styles.css?v=25" />
 <script>document.documentElement.className += ' js';</script>
 
 <script type="application/ld+json">
@@ -104,6 +104,24 @@
         <div class="box inv"><span class="box-k">Derived value</span><span class="box-t">As interpreted</span><p>The normalised or classified form, with method, confidence and what it came from. Carries no source of its own, because it is not from a source.</p></div>
       </div>
       <p class="fig-cap"><b>They stay in two separate fields.</b> Once an interpretation is written into the same field as the record itself, nobody downstream can tell which parts came from the document and which were inferred.</p>
+    </div>
+
+    <h2>What one delivered record carries</h2>
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="mx">
+        <thead><tr><th>Field</th><th>Holds</th><th>Comes from</th><th>Safe to train on as fact</th></tr></thead>
+        <tbody>
+          <tr><th>Value as printed</th><td>The exact string in the document</td><td>The source</td><td class="on">yes</td></tr>
+          <tr><th>Source and locator</th><td>Document, page, and the surrounding snippet</td><td>The source</td><td class="on">yes</td></tr>
+          <tr><th>Fetched at</th><td>When the bytes were taken, and their licence position</td><td>The fetch</td><td class="on">yes</td></tr>
+          <tr><th>Normalised value</th><td>The cleaned or standardised form</td><td>A model</td><td class="off">as a label</td></tr>
+          <tr><th>Method and confidence</th><td>How it was derived, and how sure</td><td>A model</td><td class="off">as a label</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
+      <p class="fig-cap"><b>The last column is the one a buyer's legal team reads first.</b> Rows drawn from a document can be defended. Rows produced by a model are labels, useful and clearly marked as interpretation, and a dataset that blurs the two cannot be used by anyone who has to answer for it later.</p>
     </div>
 
     <h2>Evaluation sets that have not been memorised</h2>

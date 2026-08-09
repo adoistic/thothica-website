@@ -131,6 +131,48 @@ PAGES.append(dict(
       <p class="fig-cap"><b>This is how the think tank archive is published, and it is open.</b> An institution that does this stops being a place assistants hallucinate about and becomes a place they cite.</p>
     </div>
 
+    <h2>Saying what you actually trust</h2>
+    <div class="sec body-w">
+      <p>Not every holding is equally readable. A clean typescript and a damaged 1890 page do not deserve the same confidence, and publishing both as though they did is how an archive ends up quoted wrongly. So the collection declares, per item, what may be done with it.</p>
+    </div>
+
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="mx">
+        <thead><tr><th></th><th>Full text published</th><th>Paragraph addresses</th><th>May be quoted directly</th><th>Must link to the original</th></tr></thead>
+        <tbody>
+          <tr><th>Trusted text</th><td class="on">yes</td><td class="on">yes</td><td class="on">yes</td><td class="off">optional</td></tr>
+          <tr><th>Scanned works</th><td class="off">no</td><td class="off">no</td><td class="off">no</td><td class="on">yes</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
+      <p class="fig-cap"><b>The tier is a field on the record, so it travels.</b> Anything reading the collection can tell what it is permitted to assert before it says anything. The route from the lower tier to the upper one is already in the schema, so cleaning up a scan later changes the data rather than the design.</p>
+    </div>
+
+    <h2>The object and its surrogate stay linked</h2>
+    <div class="fig">
+      <div class="two">
+        <div class="box"><span class="box-k">The physical item</span><span class="box-t">Still exists, still moves</span>
+          <ul>
+            <li>Where it is now, and where it was</li>
+            <li>Condition at last inspection</li>
+            <li>Carrier, and whether that carrier is obsolete</li>
+            <li>Loan and retention clocks</li>
+          </ul>
+        </div>
+        <div class="box inv"><span class="box-k">The digital surrogate</span><span class="box-t">Knows what it came from</span>
+          <ul>
+            <li>Which object it was made from</li>
+            <li>When, and at what settings</li>
+            <li>The original bytes, kept unaltered</li>
+            <li>Every later version derived from those</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fig-cap"><b>Digitising does not retire the object.</b> Keeping the two joined is what lets an institution answer a question no catalogue usually can: which of our holdings sit on a format we will soon have no machine to read.</p>
+    </div>
+
     <h2>Knowing how your collection is actually cited</h2>
     <div class="sec body-w">
       <p>Most archives cannot answer a simple question from their own board: who used us this year, and for what. Reader registers record visits, not influence. So we build the citation picture from the outside in.</p>
@@ -181,6 +223,26 @@ PAGES.append(dict(
         <div class="box"><span class="box-k">Last, and marked optional</span><span class="box-t">Records someone else owns</span><p>Anything needing another department's data sharing agreement. Valuable, slower, and never the thing a first phase depends on.</p></div>
       </div>
       <p class="fig-cap"><b>Who already holds the data decides what we do first.</b> Most government data projects stall in a memorandum between two agencies. Starting with registers the department already owns is what keeps a first phase deliverable inside one financial year.</p>
+    </div>
+
+    <h2>The same three questions, in every department</h2>
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="mx">
+        <thead><tr><th>Department</th><th>What is written down nowhere</th><th>What that costs today</th><th>First deliverable</th></tr></thead>
+        <tbody>
+          <tr><th>Industry</th><td>What each scheme really requires, and in what order</td><td>Investors wait on officers who know</td><td>An eligibility model behind the single window</td></tr>
+          <tr><th>Revenue</th><td>Which patterns in the register indicate a leak</td><td>The same leak is found again every year</td><td>Rules as code, each citing its statute</td></tr>
+          <tr><th>Procurement</th><td>What a suspicious award looks like across a body of tenders</td><td>Only single files get read</td><td>A detection grid over published fields</td></tr>
+          <tr><th>Drafting</th><td>Which instruments contradict which</td><td>Conflicts surface in litigation</td><td>Obligations typed and compared</td></tr>
+          <tr><th>Disaster</th><td>Who must act on a given warning, and by when</td><td>The map lives with experienced officers</td><td>Warnings that produce an owned task list</td></tr>
+          <tr><th>Local bodies</th><td>What is pending, and with whom</td><td>A diary and a chat thread</td><td>Nothing exists without an owner and a date</td></tr>
+          <tr><th>PSU oversight</th><td>Which bodies overlap in mandate</td><td>Suspected, never evidenced</td><td>A roster where every value opens its source</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
+      <p class="fig-cap"><b>Read the second column down the page.</b> It is the same sentence every time: the rule that decides an outcome was written for a person to apply, and never written in a form software could check. That is the whole of what we do, and it is why the work transfers between departments that otherwise share nothing.</p>
     </div>
 
     <h2>Industry and investment promotion</h2>
@@ -298,6 +360,22 @@ PAGES.append(dict(
       <p class="fig-cap"><b>The desk hands over a brief.</b> A reporter given an angle and the passages behind it still writes the piece themselves, which is what keeps the byline honest.</p>
     </div>
 
+    <h2>Where the human sits in the loop</h2>
+    <div class="fig">
+      <div class="branch">
+        <div class="box"><span class="box-k">The engine finishes a piece</span><span class="box-t">And has no way to publish it</span><p>It can write to one queue. It holds no credential for the public site, so this is a limit of what it can do rather than a policy it is asked to follow.</p></div>
+        <div class="branch-arms">
+          <div class="arm"><span class="arm-l">Editor approves</span>
+            <div class="box"><span class="box-t">It runs</span><p>A separate, audited step publishes it. Tests and content checks run there, so a broken batch stops before readers see it.</p></div>
+          </div>
+          <div class="arm"><span class="arm-l">Editor rejects</span>
+            <div class="box inv"><span class="box-t">It dies in the queue</span><p>The decision is recorded, which over time becomes the clearest description anyone has of what the publication will and will not run.</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="fig-cap"><b>Those recorded decisions are worth more than they look.</b> A house style document says what an editor believes. A few hundred approvals and rejections say what an editor actually does, and that is the thing worth feeding back into how the engine writes.</p>
+    </div>
+
     <h2>Analytics that answer editorial questions</h2>
     <div class="sec body-w">
       <p>Standard dashboards report traffic. Editors need to know which subjects earn attention that lasts, which formats work for which desks, where coverage is thin against demonstrated demand, and what a piece is worth beyond its first day. That requires your content to be typed against a real taxonomy rather than tagged loosely, so a coverage figure is a fact instead of an artefact of inconsistent labels.</p>
@@ -353,6 +431,32 @@ PAGES.append(dict(
         <div class="box"><span class="box-k">Stage 4</span><span class="box-t">Check, and redo what fails</span><p>Every passage is scored against the source and the glossary. Anything below the bar is translated again rather than shipped with a caveat.</p></div>
       </div>
       <p class="fig-cap"><b>The glossary is the ontology.</b> Several hundred terms with one binding rendering each is what makes two documents translated months apart consistent with one another, which is the difference between a convenience and a filing.</p>
+    </div>
+
+    <div class="fig">
+      <div class="mapto">
+        <ul>
+          <li>A term of art in the source judgment</li>
+          <li>The rendering a translator might choose</li>
+          <li>A second, equally reasonable rendering</li>
+          <li>What a different translator used last year</li>
+        </ul>
+        <div class="arw"></div>
+        <div class="box inv"><span class="box-k">The glossary decides</span><span class="box-t">One binding rendering</span><p>Checked on the way out, not left to preference. Extend it and every future document follows the new entry.</p></div>
+      </div>
+      <p class="fig-cap"><b>This is the same alias problem an archive has with names,</b> and it has the same answer. Left alone, one concept fragments into four, and a body of translated judgments stops being searchable as one thing.</p>
+    </div>
+
+    <h2>What a matter looks like once it is structured</h2>
+    <div class="fig">
+      <div class="layers">
+        <div class="box"><span class="box-k">Level 1</span><span class="box-t">The matter</span><p>Parties and the role each plays. Forum, and the procedural history with its dates.</p></div>
+        <div class="up">▼ contains ▼</div>
+        <div class="box"><span class="box-k">Level 2</span><span class="box-t">The issues</span><p>What is actually in dispute, stated one issue at a time rather than as a narrative.</p></div>
+        <div class="up">▼ each carries ▼</div>
+        <div class="box inv"><span class="box-k">Level 3</span><span class="box-t">Positions</span><p>Our position and theirs on that issue, with the authorities relied on for each, and the facts asserted with the document that evidences them.</p></div>
+      </div>
+      <p class="fig-cap"><b>A junior joining the matter reads this instead of the shelf.</b> The question a partner actually asks, which is what our answer on a given issue is and what supports it, becomes something that opens the document underneath rather than something only one person can answer.</p>
     </div>
 
     <div class="sec body-w">
@@ -441,6 +545,22 @@ PAGES.append(dict(
       <p class="fig-cap"><b>Independence is the rule doing the work here,</b> exactly as it does in <a href="/case-studies/olympiad-forms/">the verification work</a>. Evidence that confirms a reading must come from a source independent of it, or a single origin ends up confirming itself through three channels.</p>
     </div>
 
+    <h2>Two things that must never be averaged into one</h2>
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="mx">
+        <thead><tr><th></th><th>Report looks solid</th><th>Report looks doubtful</th><th>Report cannot be judged</th></tr></thead>
+        <tbody>
+          <tr><th>Source has a good record</th><td class="on">Act on it</td><td class="off">Worth chasing</td><td class="off">Hold</td></tr>
+          <tr><th>Source has a poor record</th><td class="off">Corroborate first</td><td class="off">Set aside</td><td class="off">Set aside</td></tr>
+          <tr><th>Source is new</th><td class="off">Corroborate first</td><td class="off">Hold</td><td class="off">Hold</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
+      <p class="fig-cap"><b>These are separate properties of separate things.</b> How reliable a source has proven over time is a fact about the source. How solid a particular report looks is a fact about that report. Collapse them into one confidence score and the top-left and the middle-left cells become indistinguishable, which is precisely the distinction an analyst needs to keep.</p>
+    </div>
+
     <h2>Where else it applies</h2>
     <div class="tbl-scroll">
     <table class="tbl">
@@ -499,6 +619,24 @@ PAGES.append(dict(
         <div class="box inv"><span class="box-k">Derived value</span><span class="box-t">As interpreted</span><p>The normalised or classified form, with method, confidence and what it came from. Carries no source of its own, because it is not from a source.</p></div>
       </div>
       <p class="fig-cap"><b>They stay in two separate fields.</b> Once an interpretation is written into the same field as the record itself, nobody downstream can tell which parts came from the document and which were inferred.</p>
+    </div>
+
+    <h2>What one delivered record carries</h2>
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="mx">
+        <thead><tr><th>Field</th><th>Holds</th><th>Comes from</th><th>Safe to train on as fact</th></tr></thead>
+        <tbody>
+          <tr><th>Value as printed</th><td>The exact string in the document</td><td>The source</td><td class="on">yes</td></tr>
+          <tr><th>Source and locator</th><td>Document, page, and the surrounding snippet</td><td>The source</td><td class="on">yes</td></tr>
+          <tr><th>Fetched at</th><td>When the bytes were taken, and their licence position</td><td>The fetch</td><td class="on">yes</td></tr>
+          <tr><th>Normalised value</th><td>The cleaned or standardised form</td><td>A model</td><td class="off">as a label</td></tr>
+          <tr><th>Method and confidence</th><td>How it was derived, and how sure</td><td>A model</td><td class="off">as a label</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="scroll-note">Scroll the table sideways →</p>
+      <p class="fig-cap"><b>The last column is the one a buyer's legal team reads first.</b> Rows drawn from a document can be defended. Rows produced by a model are labels, useful and clearly marked as interpretation, and a dataset that blurs the two cannot be used by anyone who has to answer for it later.</p>
     </div>
 
     <h2>Evaluation sets that have not been memorised</h2>

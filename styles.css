@@ -406,3 +406,67 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .onto-caption{margin-top:26px;}
 /* six use cases read best as two rows of three, rather than four then two */
 @media(min-width:1080px){.ugrid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Further diagram primitives, all HTML and CSS so they reflow on a phone.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* a check with two outcomes: one input on top, two arms beneath */
+.branch{margin-top:4px;}
+.branch-arms{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2vw,26px);}
+.arm{position:relative;padding-top:38px;}
+.arm::before{content:"";position:absolute;left:calc(50% - 0.5px);top:0;width:1px;height:28px;background:#000;}
+.arm::after{content:"";position:absolute;left:calc(50% - 4.5px);top:27px;width:0;height:0;
+  border-left:4.5px solid transparent;border-right:4.5px solid transparent;border-top:8px solid #000;}
+.arm-l{position:absolute;top:6px;left:50%;transform:translateX(-50%);background:#fff;padding:0 8px;
+  font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;z-index:1;}
+
+/* many names collapsing to one identity */
+.mapto{display:grid;grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr);gap:14px;align-items:center;}
+.mapto ul{list-style:none;border-top:1px solid #000;}
+.mapto li{font-size:.93rem;padding:7px 0;border-bottom:1px solid #000;}
+
+/* a dense matrix: row labels down the side, column labels across the top */
+.mx{width:100%;border-collapse:collapse;font-size:.86rem;}
+.mx th,.mx td{border:1px solid #000;padding:8px 10px;text-align:left;vertical-align:top;}
+.mx thead th{font-size:.62rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;}
+.mx tbody th{font-weight:700;font-size:.88rem;width:1%;white-space:nowrap;}
+.mx .on{background:#000;color:#fff;text-align:center;font-weight:700;}
+.mx .off{text-align:center;}
+
+/* a horizontal bar, hatched for the secondary quantity (the only second fill allowed) */
+.bars{border-top:1px solid #000;margin-top:8px;}
+.bar-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr) auto;gap:14px;
+  align-items:center;padding:11px 0;border-bottom:1px solid #000;}
+.bar-row span:first-child{font-size:.9rem;}
+.bar-track{height:12px;border:1px solid #000;position:relative;}
+.bar-fill{position:absolute;inset:0 auto 0 0;background:#000;}
+.bar-fill.hatch{background:repeating-linear-gradient(45deg,#000 0 1.5px,#fff 1.5px 4px);}
+.bar-row b{font-size:.86rem;font-variant-numeric:tabular-nums;}
+
+/* a caption key for a figure that uses fills */
+.key{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;font-size:.82rem;}
+.key i{display:inline-block;width:22px;height:10px;border:1px solid #000;margin-right:7px;
+  vertical-align:-1px;font-style:normal;}
+.key i.solid{background:#000;}
+.key i.hatched{background:repeating-linear-gradient(45deg,#000 0 1.5px,#fff 1.5px 4px);}
+
+@media(max-width:760px){
+  .branch-arms{grid-template-columns:1fr;}
+  .mapto{grid-template-columns:1fr;}
+  .mapto .arw{width:1px;height:24px;margin:12px auto;}
+  .mapto .arw::after{right:auto;left:-4px;top:auto;bottom:-1px;
+    border-left:4px solid transparent;border-right:4px solid transparent;
+    border-top:7px solid #000;border-bottom:none;}
+  .bar-row{grid-template-columns:1fr auto;}
+  .bar-track{grid-column:1/-1;}
+  .mx{font-size:.78rem;}
+  .mx th,.mx td{padding:6px 7px;}
+}
+/* a wide table scrolls inside its own box rather than pushing the page sideways;
+   say so, because a table that scrolls with no hint reads as a cut-off table */
+.tbl-scroll{overflow-x:auto;}
+.tbl-scroll .mx{min-width:520px;}
+.scroll-note{display:none;font-size:.74rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;margin-top:9px;}
+@media(max-width:760px){.scroll-note{display:block;}}
