@@ -267,7 +267,7 @@ PAGES.append(dict(
         <div class="box"><span class="box-k">Tier A</span><span class="box-t">Trusted text</span><p>Clean material with stable paragraph addresses. Searchable, quotable, and linkable down to the paragraph. Software may quote it directly.</p></div>
         <div class="box"><span class="box-k">Tier B</span><span class="box-t">Scanned works</span><p>Full catalogue record, a summary and its main arguments, and the original document. Software may describe it and must link out for the underlying claim rather than quote it.</p></div>
       </div>
-      <p class="fig-cap"><b>The tier is part of the data, not a disclaimer in a footer.</b> Anything reading the archive can tell what it is allowed to assert, and the promotion path from Tier B to Tier A is already in the schema, so improving a scan later is a data update rather than a rebuild.</p>
+      <p class="fig-cap"><b>The tier travels with every record.</b> Anything reading the archive can tell what it is allowed to say about a given work. The route from Tier B up to Tier A is already in the schema, so if a scan is cleaned up later, that is a change to the data rather than a rebuild.</p>
     </div>
 
     <h2>What the researcher gets</h2>
@@ -380,7 +380,7 @@ PAGES.append(dict(
           </ul>
         </div>
       </div>
-      <p class="fig-cap"><b>This actually happened, and it is the most useful thing we learned.</b> One draft arrived with no citations in it whatsoever. The gate passed it, truthfully and uselessly. Structure that is merely present is not the same as structure that is complete, so the checker now tests for coverage as well as correctness.</p>
+      <p class="fig-cap"><b>This actually happened, and we learned more from it than from anything that worked.</b> One draft arrived with no citations in it at all. The gate passed it, truthfully and uselessly, because there was nothing to check. The checker now counts how much of the script is cited as well as checking the citations it finds.</p>
     </div>
 
     <h2>A second lesson: preparation is not a scratchpad</h2>
@@ -392,7 +392,7 @@ PAGES.append(dict(
     <h2>Why a declared length is a creative device</h2>
     <div class="sec body-w">
       <p>Lengths differ by line and by title. What does not differ is that each title <em>declares</em> its length up front, and the machine then enforces that the script contains exactly that many pages, no more and no fewer.</p>
-      <p>That is not bookkeeping. A whole life, or a whole epic, has to fit a canvas that cannot stretch, and the compression that forces is where the narration voice comes from. The constraint is the craft, not a restriction on it. Declaring it per title is what lets a 48-page biography and a short awareness title run through the same pipeline without either being bent to the other's shape.</p>
+      <p>A whole life, or a whole epic, then has to fit a canvas that cannot stretch, and that pressure is where the narrator's voice comes from. Declaring the length per title is also what lets a 48-page biography and a short awareness title run through one pipeline without either being bent into the other's shape.</p>
     </div>
 
     <h2>The art is generated too, against a locked look</h2>
@@ -413,11 +413,11 @@ PAGES.append(dict(
         <div class="arw"></div>
         <div class="box inv"><span class="box-t">Production</span><p>Print-ready colour files, editable text versions, and translated editions.</p></div>
       </div>
-      <p class="fig-cap"><b>One grammar, one parser, three consumers.</b> The validator, the renderer and the provenance checker all read the same structure, so the editor can never be shown something different from what was checked.</p>
+      <p class="fig-cap"><b>Everything reads the same structure.</b> The validator, the renderer and the citation checker all use one parser, so an editor can never be shown a page different from the one that was checked.</p>
     </div>
 
     <div class="sec body-w">
-      <p>The last box is where most generated-art pipelines quietly fail, because the tools stop at a picture. A printer does not want a picture. A printer wants colour separated for the press it is actually running, with black text that is genuinely one ink rather than a muddy mix of four, at a resolution the paper can hold.</p>
+      <p>The last box is where most generated-art pipelines quietly fail, because the tools stop once there is a picture. A printer does not want a picture. A printer wants colour separated for the press it is actually running, with black text that is genuinely one ink rather than a muddy mix of four, at a resolution the paper can hold.</p>
       <p>An editor, meanwhile, wants to change a word without regenerating a page. Neither of those comes out of an image model, so both were built: a colour-conversion path that survives uncoated paper, and a conversion that turns a rendered page back into a document whose text can be edited in the same lettering as the printed book.</p>
     </div>
 
@@ -426,7 +426,7 @@ PAGES.append(dict(
         <div class="box"><span class="box-k">Ships to the printer</span><span class="box-t">Press-ready colour</span><p>Separated for the press, with text held to a single black ink so it stays crisp instead of blurring across plates, at print resolution throughout.</p></div>
         <div class="box"><span class="box-k">Ships to the editor</span><span class="box-t">Editable pages</span><p>Rendered pages converted back into an editable document in the book's own lettering, so a correction is a text edit rather than a regeneration.</p></div>
       </div>
-      <p class="fig-cap"><b>This is the unglamorous half of the work and it is why the books can actually be published.</b> Everything up to the picture is a demo. Everything after it is a product.</p>
+      <p class="fig-cap"><b>This is the dull half of the work, and it is the half that decides whether a book gets printed.</b> Generating a good-looking page is the easier part. Getting that page through a press and past an editor is what turns it into a book.</p>
     </div>
 """,
 ))
@@ -468,7 +468,7 @@ PAGES.append(dict(
       <div class="tbl-scroll">
       <table class="tbl">
         <tr><th>Policy</th><th>When an unfamiliar value appears</th><th>Why</th></tr>
-        <tr><td>Closed</td><td>The build fails</td><td>Some sets are genuinely finite. A match format is one of a known list. An invented one is a mistake, not a discovery.</td></tr>
+        <tr><td>Closed</td><td>The build fails</td><td>Some sets really are finite. A match format is one of a known list, so a value outside that list means something went wrong upstream and the build should stop.</td></tr>
         <tr><td>Curated</td><td>Accepted, and flagged for a human to confirm</td><td>Competitions and teams are real-world things somebody should name properly, but a story should never be blocked waiting for that.</td></tr>
         <tr><td>Auto-grow</td><td>Accepted and queued, never blocked</td><td>New players appear constantly. Refusing an unknown name would stop coverage of a debut, which is exactly the story worth having.</td></tr>
       </table>
@@ -498,7 +498,7 @@ PAGES.append(dict(
         <div class="arw"></div>
         <div class="box inv"><span class="box-k">Decides</span><span class="box-t">The editor</span><p>Reads the queue in a private portal and chooses what runs.</p></div>
       </div>
-      <p class="fig-cap"><b>Blast radius is a design input, not an afterthought.</b> Autonomy is safe in proportion to how little the autonomous part is allowed to do.</p>
+      <p class="fig-cap"><b>We decide how much damage each part could do before deciding what it may touch.</b> The engine writes well and is trusted with almost nothing, which is what makes running it unattended reasonable.</p>
     </div>
 """,
 ))

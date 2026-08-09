@@ -126,7 +126,7 @@ PAGES.append(dict(
         <div class="arw"></div>
         <div class="box inv"><span class="box-k">You publish</span><span class="box-t">A defined set of operations</span><p>List, fetch, get an exact passage, search, find related. No model inside. It serves your structure and nothing else.</p></div>
         <div class="arw"></div>
-        <div class="box"><span class="box-k">Your rules travel with it</span><span class="box-t">Tiers and citation duties</span><p>Material you trust may be quoted with an address. Material you do not may only be described, with a link out. The interface enforces that, not a footnote.</p></div>
+        <div class="box"><span class="box-k">Your rules travel with it</span><span class="box-t">Tiers and citation duties</span><p>Material you trust may be quoted with an address. Material you do not may only be described, with a link out. The interface applies those rules itself, so they hold even when nobody is watching.</p></div>
       </div>
       <p class="fig-cap"><b>This is how the think tank archive is published, and it is open.</b> An institution that does this stops being a place assistants hallucinate about and becomes a place they cite.</p>
     </div>
@@ -180,7 +180,7 @@ PAGES.append(dict(
         <div class="box inv"><span class="box-k">Start here</span><span class="box-t">Records you already own</span><p>Anything the department in the room holds itself. No permission to negotiate, no other agency's cooperation, no waiting. Work that can begin on Monday.</p></div>
         <div class="box"><span class="box-k">Last, and marked optional</span><span class="box-t">Records someone else owns</span><p>Anything needing another department's data sharing agreement. Valuable, slower, and never the thing a first phase depends on.</p></div>
       </div>
-      <p class="fig-cap"><b>Custody decides sequence.</b> Most government data projects stall in a memorandum between two agencies. Ordering the work by who already holds the register is what keeps a first phase deliverable inside one financial year.</p>
+      <p class="fig-cap"><b>Who already holds the data decides what we do first.</b> Most government data projects stall in a memorandum between two agencies. Starting with registers the department already owns is what keeps a first phase deliverable inside one financial year.</p>
     </div>
 
     <h2>Industry and investment promotion</h2>
@@ -295,7 +295,7 @@ PAGES.append(dict(
         <div class="arw"></div>
         <div class="box"><span class="box-k">4</span><span class="box-t">Hand over</span><p>A brief with the angle, the supporting passages, and a link to the exact page behind each one.</p></div>
       </div>
-      <p class="fig-cap"><b>The output is a brief, not a draft.</b> A reporter who is handed an angle with the evidence attached still writes the piece. That division is what keeps the byline honest.</p>
+      <p class="fig-cap"><b>The desk hands over a brief.</b> A reporter given an angle and the passages behind it still writes the piece themselves, which is what keeps the byline honest.</p>
     </div>
 
     <h2>Analytics that answer editorial questions</h2>
@@ -438,7 +438,7 @@ PAGES.append(dict(
         <div class="edge"><span class="ent">Two reports</span><span class="rel">corroborate</span><span class="ent">each other, or do not</span><span class="ev">Corroboration is only recorded where the sources are genuinely independent. Two reports derived from the same origin are marked as one, not two.</span></div>
         <div class="edge"><span class="ent">An assessment</span><span class="rel">rests on</span><span class="ent">an ordered chain of evidence</span><span class="ev">Every conclusion can be unwound step by step to the reports beneath it, so a reviewer can see exactly where a judgement entered and who made it.</span></div>
       </div>
-      <p class="fig-cap"><b>Independence is the rule that carries the weight,</b> exactly as it does in <a href="/case-studies/olympiad-forms/">the verification work</a>. Evidence that confirms a reading must come from a source independent of it, or a single origin ends up confirming itself through three channels.</p>
+      <p class="fig-cap"><b>Independence is the rule doing the work here,</b> exactly as it does in <a href="/case-studies/olympiad-forms/">the verification work</a>. Evidence that confirms a reading must come from a source independent of it, or a single origin ends up confirming itself through three channels.</p>
     </div>
 
     <h2>Where else it applies</h2>
@@ -498,7 +498,7 @@ PAGES.append(dict(
         <div class="box"><span class="box-k">Ground fact</span><span class="box-t">As printed</span><p>The verbatim value from the document, with source, exact location and the snippet that contains it. Never edited, never smoothed.</p></div>
         <div class="box inv"><span class="box-k">Derived value</span><span class="box-t">As interpreted</span><p>The normalised or classified form, with method, confidence and what it came from. Carries no source of its own, because it is not from a source.</p></div>
       </div>
-      <p class="fig-cap"><b>Two fields, never one.</b> The moment interpretation is written into the same field as the record, the dataset stops being evidence and becomes an opinion at scale.</p>
+      <p class="fig-cap"><b>They stay in two separate fields.</b> Once an interpretation is written into the same field as the record itself, nobody downstream can tell which parts came from the document and which were inferred.</p>
     </div>
 
     <h2>Evaluation sets that have not been memorised</h2>

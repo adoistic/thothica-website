@@ -11,11 +11,11 @@
 <meta name="theme-color" content="#000000" />
 <meta name="author" content="Thothica" />
 
-<link rel="icon" href="/assets/favicon.ico?v=22" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=22" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=22" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=22" />
-<link rel="manifest" href="/site.webmanifest?v=22" />
+<link rel="icon" href="/assets/favicon.ico?v=23" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=23" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=23" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=23" />
+<link rel="manifest" href="/site.webmanifest?v=23" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Thothica" />
@@ -36,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=22" />
+<link rel="stylesheet" href="/styles.css?v=23" />
 <script>document.documentElement.className += ' js';</script>
 
 <script type="application/ld+json">
@@ -71,6 +71,7 @@
 
 <main id="main">
   <div class="wrap">
+    <div class="doc">
     <p class="crumb"><a href="/case-studies/">Case studies</a></p>
 
     <h1>Graphic stories at scale, <em>every line traced to a source.</em></h1>
@@ -166,7 +167,7 @@
           </ul>
         </div>
       </div>
-      <p class="fig-cap"><b>This actually happened, and it is the most useful thing we learned.</b> One draft arrived with no citations in it whatsoever. The gate passed it, truthfully and uselessly. Structure that is merely present is not the same as structure that is complete, so the checker now tests for coverage as well as correctness.</p>
+      <p class="fig-cap"><b>This actually happened, and we learned more from it than from anything that worked.</b> One draft arrived with no citations in it at all. The gate passed it, truthfully and uselessly, because there was nothing to check. The checker now counts how much of the script is cited as well as checking the citations it finds.</p>
     </div>
 
     <h2>A second lesson: preparation is not a scratchpad</h2>
@@ -178,7 +179,7 @@
     <h2>Why a declared length is a creative device</h2>
     <div class="sec body-w">
       <p>Lengths differ by line and by title. What does not differ is that each title <em>declares</em> its length up front, and the machine then enforces that the script contains exactly that many pages, no more and no fewer.</p>
-      <p>That is not bookkeeping. A whole life, or a whole epic, has to fit a canvas that cannot stretch, and the compression that forces is where the narration voice comes from. The constraint is the craft, not a restriction on it. Declaring it per title is what lets a 48-page biography and a short awareness title run through the same pipeline without either being bent to the other's shape.</p>
+      <p>A whole life, or a whole epic, then has to fit a canvas that cannot stretch, and that pressure is where the narrator's voice comes from. Declaring the length per title is also what lets a 48-page biography and a short awareness title run through one pipeline without either being bent into the other's shape.</p>
     </div>
 
     <h2>The art is generated too, against a locked look</h2>
@@ -199,11 +200,11 @@
         <div class="arw"></div>
         <div class="box inv"><span class="box-t">Production</span><p>Print-ready colour files, editable text versions, and translated editions.</p></div>
       </div>
-      <p class="fig-cap"><b>One grammar, one parser, three consumers.</b> The validator, the renderer and the provenance checker all read the same structure, so the editor can never be shown something different from what was checked.</p>
+      <p class="fig-cap"><b>Everything reads the same structure.</b> The validator, the renderer and the citation checker all use one parser, so an editor can never be shown a page different from the one that was checked.</p>
     </div>
 
     <div class="sec body-w">
-      <p>The last box is where most generated-art pipelines quietly fail, because the tools stop at a picture. A printer does not want a picture. A printer wants colour separated for the press it is actually running, with black text that is genuinely one ink rather than a muddy mix of four, at a resolution the paper can hold.</p>
+      <p>The last box is where most generated-art pipelines quietly fail, because the tools stop once there is a picture. A printer does not want a picture. A printer wants colour separated for the press it is actually running, with black text that is genuinely one ink rather than a muddy mix of four, at a resolution the paper can hold.</p>
       <p>An editor, meanwhile, wants to change a word without regenerating a page. Neither of those comes out of an image model, so both were built: a colour-conversion path that survives uncoated paper, and a conversion that turns a rendered page back into a document whose text can be edited in the same lettering as the printed book.</p>
     </div>
 
@@ -212,9 +213,10 @@
         <div class="box"><span class="box-k">Ships to the printer</span><span class="box-t">Press-ready colour</span><p>Separated for the press, with text held to a single black ink so it stays crisp instead of blurring across plates, at print resolution throughout.</p></div>
         <div class="box"><span class="box-k">Ships to the editor</span><span class="box-t">Editable pages</span><p>Rendered pages converted back into an editable document in the book's own lettering, so a correction is a text edit rather than a regeneration.</p></div>
       </div>
-      <p class="fig-cap"><b>This is the unglamorous half of the work and it is why the books can actually be published.</b> Everything up to the picture is a demo. Everything after it is a product.</p>
+      <p class="fig-cap"><b>This is the dull half of the work, and it is the half that decides whether a book gets printed.</b> Generating a good-looking page is the easier part. Getting that page through a press and past an editor is what turns it into a book.</p>
     </div>
 
+    </div>
   </div>
 </main>
 
