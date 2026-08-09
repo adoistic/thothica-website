@@ -470,3 +470,29 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .scroll-note{display:none;font-size:.74rem;font-weight:700;letter-spacing:.12em;
   text-transform:uppercase;margin-top:9px;}
 @media(max-width:760px){.scroll-note{display:block;}}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   One measure per article page. Elements inside .doc were each carrying their
+   own max-width, so prose sat left inside a wider column while figures centred
+   on the page. The column IS the measure now; nothing inside it sets another.
+   ───────────────────────────────────────────────────────────────────────────── */
+.doc{max-width:min(680px,100%);}
+.doc .lede,
+.doc .body-w,
+.doc .sec p,
+.doc .fig-cap,
+.doc .onto-caption,
+.doc .note,
+.doc .steps p,
+.doc .proof,
+.doc .with{max-width:none;}
+/* figures keep the same centre line and simply reach further out */
+@media(min-width:1180px){
+  .doc .fig,.doc .stats,.doc .tbl-scroll{margin-left:-210px;margin-right:-210px;}
+}
+@media(min-width:900px) and (max-width:1179px){
+  .doc .fig,.doc .stats,.doc .tbl-scroll{margin-left:-70px;margin-right:-70px;}
+}
+/* a caption under a wide figure keeps the body measure, centred, so its edges
+   line up with the prose above and below rather than with the figure */
+.doc .fig-cap,.doc .scroll-note{max-width:680px;margin-left:auto;margin-right:auto;}
