@@ -15,7 +15,7 @@ img{max-width:100%;}
 .skip:focus{left:16px;top:16px;}
 
 /* header: a conventional bar, logo left and sections right, ruled off from the page */
-.top{padding:20px 0;border-bottom:1px solid #000;}
+.top{position:sticky;top:0;z-index:100;background:#fff;padding:20px 0;border-bottom:1px solid #000;}
 .top img{height:30px;width:auto;display:block;}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;}
 .nav-logo{display:block;line-height:0;}
@@ -23,6 +23,16 @@ img{max-width:100%;}
 .nav nav a{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;
   white-space:nowrap;padding:2px 0;border-bottom:1px solid transparent;}
 .nav nav a:hover{border-bottom-color:#000;}
+/* the sticky bar would otherwise cover the heading a jump link lands on */
+[id]{scroll-margin-top:96px;}
+
+/* menu button: hidden until the viewport is narrow enough to need it */
+.nav-burger{display:none;background:none;border:0;padding:6px 0;cursor:pointer;line-height:0;}
+.nav-burger span{display:block;width:23px;height:2px;background:#000;transition:transform .25s;}
+.nav-burger span+span{margin-top:5px;}
+.nav.open .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav.open .nav-burger span:nth-child(2){transform:scaleX(0);}
+.nav.open .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 
 /* main */
 main{padding:72px 0 110px;}
@@ -102,10 +112,16 @@ footer a{color:#fff;}
 .consent-manage{background:none;border:none;color:#fff;cursor:pointer;font:inherit;font-size:inherit;letter-spacing:inherit;text-transform:inherit;text-decoration:underline;text-underline-offset:2px;padding:0;margin-left:14px;}
 
 @media(max-width:760px){
-  .top{padding:16px 0;}
-  .nav{flex-direction:column;align-items:flex-start;gap:12px;}
-  .nav nav{gap:18px;}
-  .nav nav a{font-size:.66rem;letter-spacing:.12em;}
+  .top{padding:14px 0;}
+  .nav{flex-wrap:wrap;gap:0;}
+  .nav-burger{display:block;}
+  /* Without scripting the links stay visible and simply stack, so nothing is trapped. */
+  .nav nav{width:100%;flex-direction:column;gap:0;order:3;}
+  .js .nav nav{display:none;}
+  .js .nav.open nav{display:flex;}
+  .nav nav a{font-size:.7rem;letter-spacing:.14em;padding:14px 0;border-bottom:1px solid #000;}
+  .nav nav a:first-child{border-top:1px solid #000;margin-top:14px;}
+  .nav nav a:hover{background:#000;color:#fff;padding-left:10px;}
   main{padding:48px 0 80px;}
   .eyebrow.gap{margin-top:56px;}
   .problems li{grid-template-columns:40px 1fr;gap:12px;}
