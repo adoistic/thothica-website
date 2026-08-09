@@ -115,7 +115,7 @@ PAGES.append(dict(
         <div class="up">▲ reads only ▲</div>
         <div class="box"><span class="box-k">What already existed</span><span class="box-t">The five portals and their databases</span><p>Untouched. Same screens, same tables, same logins, same release process.</p></div>
       </div>
-      <p class="fig-cap"><b>The arrows only point up.</b> The layer holds read permission and nothing else, so it cannot alter a record even if it is asked to. For a government system that is not a technical detail, it is the reason the work could be approved at all.</p>
+      <p class="fig-cap"><b>The arrows only point up.</b> The layer holds read permission and nothing else, so it cannot alter a record even if it is asked to. For a government system, that permission boundary is why the work could be approved at all.</p>
     </div>
 
     <h2>What we wrote down before writing software</h2>
@@ -327,8 +327,8 @@ PAGES.append(dict(
 
     <h2>What the researcher gets</h2>
     <div class="sec body-w">
-      <p>A fast library, searchable in five languages, where a name resolves to a person rather than a spelling, where every answer points back to the page it came from, and where a question like <em>who argued with whom about free enterprise in the 1960s</em> has an answer you can follow to the paragraph.</p>
-      <p>The same structure is readable by software, so a researcher's AI assistant can work from the archive directly, under the same tier rules a human gets, without a copy of the collection being handed to anyone.</p>
+      <p>A fast library, searchable in five languages. A name resolves to a person rather than a spelling. Every answer points back to the page it came from. And a question like <em>who argued with whom about free enterprise in the 1960s</em> has an answer you can follow down to the paragraph.</p>
+      <p>Software can read the same structure. A researcher's AI assistant works from the archive directly, under the same tier rules a person gets, and nobody has to hand over a copy of the collection.</p>
     </div>
 """,
 ))
@@ -357,7 +357,7 @@ PAGES.append(dict(
 
     <h2>The ontology, top to bottom</h2>
     <div class="sec body-w">
-      <p>Everything in the system is one of five things, and every line the pipeline produces knows where it sits. This is what lets a new product line be added without touching the machinery.</p>
+      <p>Everything in the system is one of five things, and every line the pipeline produces knows where it sits. A new product line can then be added without touching the machinery.</p>
     </div>
 
     <div class="fig">
@@ -385,7 +385,7 @@ PAGES.append(dict(
       <div class="flow flow-4">
         <div class="box"><span class="box-k">Step 1</span><span class="box-t">Convert</span><p>Books to text. Audio and video to transcripts, marked with who is speaking and when, and tagged honestly by language including mixed-language speech.</p></div>
         <div class="arw"></div>
-        <div class="box"><span class="box-k">Step 2</span><span class="box-t">Split by chapter</span><p>One file per chapter, under a chapter map that summarises each in a line. This is what makes an exact pointer possible.</p></div>
+        <div class="box"><span class="box-k">Step 2</span><span class="box-t">Split by chapter</span><p>One file per chapter, under a chapter map that summarises each in a line. Only then can a claim point at an exact line.</p></div>
         <div class="arw"></div>
         <div class="box"><span class="box-k">Step 3</span><span class="box-t">Record provenance</span><p>Per source: where it came from, who made it, what year, and the licence position.</p></div>
         <div class="arw"></div>
@@ -488,7 +488,7 @@ PAGES.append(dict(
 
     <div class="sec body-w">
       <p>The last box is where most generated-art pipelines quietly fail, because the tools stop once there is a picture. A printer does not want a picture. A printer wants colour separated for the press it is actually running, with black text that is genuinely one ink rather than a muddy mix of four, at a resolution the paper can hold.</p>
-      <p>An editor, meanwhile, wants to change a word without regenerating a page. Neither of those comes out of an image model, so both were built: a colour-conversion path that survives uncoated paper, and a conversion that turns a rendered page back into a document whose text can be edited in the same lettering as the printed book.</p>
+      <p>An editor, meanwhile, wants to change a word without regenerating a page. An image model produces neither, so we built both. One converts the colour so it survives uncoated paper. The other turns a rendered page back into a document you can edit, in the same lettering as the printed book.</p>
     </div>
 
     <div class="fig">
@@ -530,7 +530,7 @@ PAGES.append(dict(
 
     <h2>The taxonomy is an ontology, and it is enforced</h2>
     <div class="sec body-w">
-      <p>Most publishing systems accumulate tags until nobody knows which are real. Here, how content may be categorised is declared in one manifest, and everything else in the system reads from it: the thing that resolves a writer's raw tag into a canonical one, the dashboard's filters, and the check that runs before anything ships.</p>
+      <p>Most publishing systems accumulate tags until nobody knows which are real. Here, one manifest declares how content may be categorised. Everything else reads from it: the resolver that turns a writer's raw tag into a canonical one, the dashboard filters, and the check that runs before anything ships.</p>
       <p>Each dimension declares what kind of thing it is, whether an item can have one value or several, and what should happen when a value has never been seen before. That last column is the interesting one.</p>
     </div>
 
@@ -587,7 +587,7 @@ PAGES.append(dict(
         <div class="arw"></div>
         <div class="box inv"><span class="box-k">Decides</span><span class="box-t">The editor</span><p>Reads the queue in a private portal and chooses what runs.</p></div>
       </div>
-      <p class="fig-cap"><b>We decide how much damage each part could do before deciding what it may touch.</b> The engine writes well and is trusted with almost nothing, which is what makes running it unattended reasonable.</p>
+      <p class="fig-cap"><b>We decide how much damage each part could do before deciding what it may touch.</b> The engine writes well and is trusted with almost nothing. That is why running it unattended is reasonable.</p>
     </div>
 """,
 ))

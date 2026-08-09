@@ -11,11 +11,11 @@
 <meta name="theme-color" content="#000000" />
 <meta name="author" content="Thothica" />
 
-<link rel="icon" href="/assets/favicon.ico?v=27" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=27" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=27" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=27" />
-<link rel="manifest" href="/site.webmanifest?v=27" />
+<link rel="icon" href="/assets/favicon.ico?v=28" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=28" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=28" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=28" />
+<link rel="manifest" href="/site.webmanifest?v=28" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Thothica" />
@@ -36,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=27" />
+<link rel="stylesheet" href="/styles.css?v=28" />
 <script>document.documentElement.className += ' js';</script>
 
 <script type="application/ld+json">
@@ -95,7 +95,7 @@
     <h2>The rule that makes the data trustworthy</h2>
     <div class="sec body-w">
       <p>A model's output is never recorded as a fact. Anything normalised, classified or inferred is stored as a derived value carrying the method that produced it, the confidence, and what it was derived from. The ground fact stays exactly as printed in the source, in its own field.</p>
-      <p>That separation is what lets a buyer decide for themselves how much of the interpretation to accept, and what stops a pipeline from laundering a guess into a training label.</p>
+      <p>That separation lets a buyer decide how much of the interpretation to accept. It also stops a pipeline turning a guess into a training label.</p>
     </div>
 
     <div class="fig">
@@ -126,7 +126,7 @@
 
     <h2>Evaluation sets that have not been memorised</h2>
     <div class="sec body-w">
-      <p>Public benchmarks leak into training data, and a model that has seen the answers cannot be measured by them. We build evaluation sets from material that is genuinely held out: questions written against specific passages in a controlled corpus, with the answer verifiable as an exact quotation from a document rather than by an approximate match to an expected string.</p>
+      <p>Public benchmarks leak into training data, and a model that has seen the answers cannot be measured by them. So we build evaluation sets from material that is genuinely held out. Each question is written against a specific passage in a controlled corpus. The answer is checked as an exact quotation from a document, rather than by fuzzy comparison to an expected string.</p>
       <p>Because the corpus is structured, scoring can be deterministic. A citation either resolves to the right passage or it does not, which removes the judge model and the argument about whether it is fair.</p>
     </div>
 

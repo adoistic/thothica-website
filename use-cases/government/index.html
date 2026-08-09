@@ -11,11 +11,11 @@
 <meta name="theme-color" content="#000000" />
 <meta name="author" content="Thothica" />
 
-<link rel="icon" href="/assets/favicon.ico?v=27" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=27" />
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=27" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=27" />
-<link rel="manifest" href="/site.webmanifest?v=27" />
+<link rel="icon" href="/assets/favicon.ico?v=28" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=28" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=28" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=28" />
+<link rel="manifest" href="/site.webmanifest?v=28" />
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Thothica" />
@@ -36,7 +36,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=27" />
+<link rel="stylesheet" href="/styles.css?v=28" />
 <script>document.documentElement.className += ' js';</script>
 
 <script type="application/ld+json">
@@ -86,7 +86,7 @@
         <div class="box inv"><span class="box-k">Start here</span><span class="box-t">Records you already own</span><p>Anything the department in the room holds itself. No permission to negotiate, no other agency's cooperation, no waiting. Work that can begin on Monday.</p></div>
         <div class="box"><span class="box-k">Last, and marked optional</span><span class="box-t">Records someone else owns</span><p>Anything needing another department's data sharing agreement. Valuable, slower, and never the thing a first phase depends on.</p></div>
       </div>
-      <p class="fig-cap"><b>Who already holds the data decides what we do first.</b> Most government data projects stall in a memorandum between two agencies. Starting with registers the department already owns is what keeps a first phase deliverable inside one financial year.</p>
+      <p class="fig-cap"><b>Who already holds the data decides what we do first.</b> Most government data projects stall in a memorandum between two agencies. Start with registers the department already owns and a first phase can land inside one financial year.</p>
     </div>
 
     <h2>The same three questions, in every department</h2>
@@ -137,7 +137,20 @@
     <h2>Procurement integrity</h2>
     <div class="sec body-w">
       <p><b>The problem.</b> Tender data is published and almost never read as a body. Patterns that only appear across thousands of awards stay invisible to the officer looking at one file.</p>
-      <p><b>What we build.</b> A grid of tests computable from published fields alone: single-bid awards, bid windows shorter than the prescribed minimum, repeated awards just under a delegation limit, vendor concentration per buyer, repeat buyer-and-vendor pairings, corrigenda that keep extending deadlines, award values drifting from estimates, clustering at the end of a financial year, bidders sharing an address, and set-aside shortfalls against policy. Each hit becomes a finding citing the exact rule, with its working shown.</p>
+      <p><b>What we build.</b> A grid of tests, all of them computable from fields the government already publishes:</p>
+      <ul class="plainlist">
+        <li>Awards made on a single bid</li>
+        <li>Bid windows shorter than the rules require</li>
+        <li>Repeated awards that sit just under a delegation limit</li>
+        <li>One buyer concentrating its work on one vendor</li>
+        <li>The same buyer and vendor pairing again and again</li>
+        <li>Corrections that keep pushing a deadline back</li>
+        <li>Award values drifting away from the estimate</li>
+        <li>Awards clustering at the end of a financial year</li>
+        <li>Bidders that share an address</li>
+        <li>Set-aside quotas missed against policy</li>
+      </ul>
+      <p>Each hit becomes a finding that cites the exact rule and shows its working.</p>
     </div>
 
     <h2>Legislative and regulatory drafting</h2>
@@ -152,13 +165,13 @@
         <div class="edge"><span class="ent">A defined term</span><span class="rel">is redefined by</span><span class="ent">a subordinate instrument</span><span class="ev">Every downstream clause relying on the original definition is listed, so the blast radius of a redefinition is visible before it is signed.</span></div>
         <div class="edge"><span class="ent">An obligation</span><span class="rel">survives</span><span class="ent">the repeal that was meant to end it</span><span class="ev">Repeal and savings clauses are modelled, so an obligation that outlived its parent act surfaces instead of lying dormant until someone is prosecuted under it.</span></div>
       </div>
-      <p class="fig-cap"><b>The system's job is to find and show, never to decide.</b> Which rule prevails is a legal judgement belonging to the department. Presenting both clauses with their provenance is what lets that judgement be made in an afternoon instead of in a courtroom.</p>
+      <p class="fig-cap"><b>The system's job is to find and show, never to decide.</b> Which rule prevails is a legal judgement belonging to the department. Show both clauses with their sources and the judgement takes an afternoon instead of a courtroom.</p>
     </div>
 
     <h2>Disaster management and weather</h2>
     <div class="sec body-w">
       <p><b>The problem.</b> A warning is not an instruction. A forecast arrives, and the question nobody can answer fast enough is who must do what, where, by when, and under whose authority. That mapping exists, in a standing order and in the experience of officers who have handled the last three events.</p>
-      <p><b>What we build.</b> An ontology that connects the physical world to the administrative one: gauges, reservoirs, rivers, wards and villages on one side; officers, standing orders, thresholds and escalation ladders on the other. A warning crossing a threshold then produces a task list rather than a notification, with an owner and a deadline against every line, and escalation that fires on silence rather than waiting to be triggered.</p>
+      <p><b>What we build.</b> An ontology that connects the physical world to the administrative one: gauges, reservoirs, rivers, wards and villages on one side; officers, standing orders, thresholds and escalation ladders on the other. A warning that crosses a threshold then produces a task list instead of a notification. Every line has an owner and a deadline. If nothing happens, the escalation fires by itself.</p>
     </div>
 
     <div class="fig">

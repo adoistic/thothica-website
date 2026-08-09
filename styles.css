@@ -496,3 +496,7 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 /* a caption under a wide figure keeps the body measure, centred, so its edges
    line up with the prose above and below rather than with the figure */
 .doc .fig-cap,.doc .scroll-note{max-width:680px;margin-left:auto;margin-right:auto;}
+/* a plain list inside body copy: hairline rules, no bullet glyphs */
+.plainlist{list-style:none;margin-top:14px;border-top:1px solid #000;}
+.plainlist li{font-size:1.02rem;line-height:1.45;padding:8px 0;border-bottom:1px solid #000;}
+.plainlist+p{margin-top:16px;}

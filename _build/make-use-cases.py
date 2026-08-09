@@ -106,7 +106,7 @@ PAGES.append(dict(
     <h2>Oral history, treated as a first-class source</h2>
     <div class="sec body-w">
       <p>Testimony is the most perishable holding any institution has, and the least well handled. We record it, transcribe it with speakers separated and timings kept, and translate where the interview is in a language the catalogue is not. Mixed-language speech is tagged honestly as mixed rather than forced into one language, because that tag decides how strictly a later quotation can be trusted.</p>
-      <p>Then the transcript is treated exactly like a manuscript: the people and places named in it become entities, the passages become citable at a fixed address, and what the speaker said about a subject becomes a relation with the words attached.</p>
+      <p>The transcript is then treated exactly like a manuscript. People and places named in it become entities. Passages get a fixed address so they can be cited. What the speaker said about a subject becomes a relation, with the words attached.</p>
     </div>
 
     <h2>Manuscripts and material the machine finds hard</h2>
@@ -150,7 +150,27 @@ PAGES.append(dict(
       <p class="fig-cap"><b>The tier is a field on the record, so it travels.</b> Anything reading the collection can tell what it is permitted to assert before it says anything. The route from the lower tier to the upper one is already in the schema, so cleaning up a scan later changes the data rather than the design.</p>
     </div>
 
-    <h2>The object and its surrogate stay linked</h2>
+    <h2>Knowing how your collection is actually cited</h2>
+    <div class="sec body-w">
+      <p>Most archives cannot answer a simple question from their own board: who used us this year, and for what. Reader registers record visits, not influence. So we build the citation picture from the outside in.</p>
+    </div>
+
+    <div class="tbl-scroll">
+    <table class="tbl">
+      <tr><th>Question</th><th>How it gets answered</th></tr>
+      <tr><td>Who cites us</td><td>Scholarly databases and open citation indexes are matched against your holdings, so a work in your collection carries the papers that cite it.</td></tr>
+      <tr><td>Which holdings matter</td><td>Citation counts attach to items, so acquisition and conservation budgets can follow demonstrated use rather than intuition.</td></tr>
+      <tr><td>Are we cited correctly</td><td>Malformed and broken references to your material are found and reported, and stable addresses are published so future citations resolve.</td></tr>
+      <tr><td>Where are we invisible</td><td>Fields that should be citing you and do not, which is a collections and outreach finding rather than a technical one.</td></tr>
+      <tr><td>Who uses us without saying so</td><td>Passages from your holdings appearing in published work without attribution, found by matching text rather than by trusting a bibliography.</td></tr>
+    </table>
+    </div>
+
+    <h2>The physical layer, tracked</h2>
+    <div class="sec body-w">
+      <p>Digitising a document does not retire it. Boxes still move, tapes still degrade, and a loan still has to come back. So we model the physical item alongside the digital one, and keep the two joined.</p>
+    </div>
+
     <div class="fig">
       <div class="two">
         <div class="box"><span class="box-k">The physical item</span><span class="box-t">Still exists, still moves</span>
@@ -170,28 +190,11 @@ PAGES.append(dict(
           </ul>
         </div>
       </div>
-      <p class="fig-cap"><b>Digitising does not retire the object.</b> Keeping the two joined is what lets an institution answer a question no catalogue usually can: which of our holdings sit on a format we will soon have no machine to read.</p>
+      <p class="fig-cap"><b>Keep the two joined</b> and the institution can answer a question most catalogues cannot: which holdings sit on a format we will soon have no machine to read.</p>
     </div>
 
-    <h2>Knowing how your collection is actually cited</h2>
     <div class="sec body-w">
-      <p>Most archives cannot answer a simple question from their own board: who used us this year, and for what. Reader registers record visits, not influence. So we build the citation picture from the outside in.</p>
-    </div>
-
-    <div class="tbl-scroll">
-    <table class="tbl">
-      <tr><th>Question</th><th>How it gets answered</th></tr>
-      <tr><td>Who cites us</td><td>Scholarly databases and open citation indexes are matched against your holdings, so a work in your collection carries the papers that cite it.</td></tr>
-      <tr><td>Which holdings matter</td><td>Citation counts attach to items, so acquisition and conservation budgets can follow demonstrated use rather than intuition.</td></tr>
-      <tr><td>Are we cited correctly</td><td>Malformed and broken references to your material are found and reported, and stable addresses are published so future citations resolve.</td></tr>
-      <tr><td>Where are we invisible</td><td>Fields that should be citing you and do not, which is a collections and outreach finding rather than a technical one.</td></tr>
-      <tr><td>Who uses us without saying so</td><td>Passages from your holdings appearing in published work without attribution, found by matching text rather than by trusting a bibliography.</td></tr>
-    </table>
-    </div>
-
-    <h2>The physical layer, tracked</h2>
-    <div class="sec body-w">
-      <p>Digitisation does not remove the object. Boxes still move, tapes still degrade, and a loan still has to come back. We model the physical item alongside the digital one: where it is, what condition it was last recorded in, what carrier it lives on, which digital surrogate came from it, and what the retention or conservation clock says. Obsolete carriers are surfaced by risk rather than discovered when a machine to read them no longer exists.</p>
+      <p>Carriers heading for obsolescence are then ranked by risk, rather than discovered on the day nobody can find a machine to read them.</p>
     </div>
 
     <h2>Turning the backlist into things people can read</h2>
@@ -222,7 +225,7 @@ PAGES.append(dict(
         <div class="box inv"><span class="box-k">Start here</span><span class="box-t">Records you already own</span><p>Anything the department in the room holds itself. No permission to negotiate, no other agency's cooperation, no waiting. Work that can begin on Monday.</p></div>
         <div class="box"><span class="box-k">Last, and marked optional</span><span class="box-t">Records someone else owns</span><p>Anything needing another department's data sharing agreement. Valuable, slower, and never the thing a first phase depends on.</p></div>
       </div>
-      <p class="fig-cap"><b>Who already holds the data decides what we do first.</b> Most government data projects stall in a memorandum between two agencies. Starting with registers the department already owns is what keeps a first phase deliverable inside one financial year.</p>
+      <p class="fig-cap"><b>Who already holds the data decides what we do first.</b> Most government data projects stall in a memorandum between two agencies. Start with registers the department already owns and a first phase can land inside one financial year.</p>
     </div>
 
     <h2>The same three questions, in every department</h2>
@@ -273,7 +276,20 @@ PAGES.append(dict(
     <h2>Procurement integrity</h2>
     <div class="sec body-w">
       <p><b>The problem.</b> Tender data is published and almost never read as a body. Patterns that only appear across thousands of awards stay invisible to the officer looking at one file.</p>
-      <p><b>What we build.</b> A grid of tests computable from published fields alone: single-bid awards, bid windows shorter than the prescribed minimum, repeated awards just under a delegation limit, vendor concentration per buyer, repeat buyer-and-vendor pairings, corrigenda that keep extending deadlines, award values drifting from estimates, clustering at the end of a financial year, bidders sharing an address, and set-aside shortfalls against policy. Each hit becomes a finding citing the exact rule, with its working shown.</p>
+      <p><b>What we build.</b> A grid of tests, all of them computable from fields the government already publishes:</p>
+      <ul class="plainlist">
+        <li>Awards made on a single bid</li>
+        <li>Bid windows shorter than the rules require</li>
+        <li>Repeated awards that sit just under a delegation limit</li>
+        <li>One buyer concentrating its work on one vendor</li>
+        <li>The same buyer and vendor pairing again and again</li>
+        <li>Corrections that keep pushing a deadline back</li>
+        <li>Award values drifting away from the estimate</li>
+        <li>Awards clustering at the end of a financial year</li>
+        <li>Bidders that share an address</li>
+        <li>Set-aside quotas missed against policy</li>
+      </ul>
+      <p>Each hit becomes a finding that cites the exact rule and shows its working.</p>
     </div>
 
     <h2>Legislative and regulatory drafting</h2>
@@ -288,13 +304,13 @@ PAGES.append(dict(
         <div class="edge"><span class="ent">A defined term</span><span class="rel">is redefined by</span><span class="ent">a subordinate instrument</span><span class="ev">Every downstream clause relying on the original definition is listed, so the blast radius of a redefinition is visible before it is signed.</span></div>
         <div class="edge"><span class="ent">An obligation</span><span class="rel">survives</span><span class="ent">the repeal that was meant to end it</span><span class="ev">Repeal and savings clauses are modelled, so an obligation that outlived its parent act surfaces instead of lying dormant until someone is prosecuted under it.</span></div>
       </div>
-      <p class="fig-cap"><b>The system's job is to find and show, never to decide.</b> Which rule prevails is a legal judgement belonging to the department. Presenting both clauses with their provenance is what lets that judgement be made in an afternoon instead of in a courtroom.</p>
+      <p class="fig-cap"><b>The system's job is to find and show, never to decide.</b> Which rule prevails is a legal judgement belonging to the department. Show both clauses with their sources and the judgement takes an afternoon instead of a courtroom.</p>
     </div>
 
     <h2>Disaster management and weather</h2>
     <div class="sec body-w">
       <p><b>The problem.</b> A warning is not an instruction. A forecast arrives, and the question nobody can answer fast enough is who must do what, where, by when, and under whose authority. That mapping exists, in a standing order and in the experience of officers who have handled the last three events.</p>
-      <p><b>What we build.</b> An ontology that connects the physical world to the administrative one: gauges, reservoirs, rivers, wards and villages on one side; officers, standing orders, thresholds and escalation ladders on the other. A warning crossing a threshold then produces a task list rather than a notification, with an owner and a deadline against every line, and escalation that fires on silence rather than waiting to be triggered.</p>
+      <p><b>What we build.</b> An ontology that connects the physical world to the administrative one: gauges, reservoirs, rivers, wards and villages on one side; officers, standing orders, thresholds and escalation ladders on the other. A warning that crosses a threshold then produces a task list instead of a notification. Every line has an owner and a deadline. If nothing happens, the escalation fires by itself.</p>
     </div>
 
     <div class="fig">
@@ -339,7 +355,7 @@ PAGES.append(dict(
 
     <h2>Continuous coverage with a human gate</h2>
     <div class="sec body-w">
-      <p>An engine that reads live signals in your subject area, decides what is worth covering now, writes it against your written style specification, corroborates its claims against sources it actually fetches, and files everything into a private queue. An editor decides what runs. The engine holds no credential that can publish, so its worst day fills a queue rather than embarrasses the masthead.</p>
+      <p>An engine reads live signals in your subject area and decides what is worth covering now. It writes against your own style specification, corroborates its claims against sources it actually fetches, and files everything into a private queue. An editor decides what runs. The engine holds no credential that can publish, so its worst day fills a queue rather than embarrasses the masthead.</p>
     </div>
 
     <h2>The research desk</h2>
@@ -357,7 +373,7 @@ PAGES.append(dict(
         <div class="arw"></div>
         <div class="box"><span class="box-k">4</span><span class="box-t">Hand over</span><p>A brief with the angle, the supporting passages, and a link to the exact page behind each one.</p></div>
       </div>
-      <p class="fig-cap"><b>The desk hands over a brief.</b> A reporter given an angle and the passages behind it still writes the piece themselves, which is what keeps the byline honest.</p>
+      <p class="fig-cap"><b>The desk hands over a brief.</b> A reporter given an angle and the passages behind it still writes the piece. The byline stays honest.</p>
     </div>
 
     <h2>Where the human sits in the loop</h2>
@@ -397,7 +413,7 @@ PAGES.append(dict(
 
     <h2>Publishing operations</h2>
     <div class="sec body-w">
-      <p>For book and comic publishers the same discipline produces finished artefacts rather than articles: a research corpus, sourced scripts, generated art held consistent across a title, and output that a press and an editor can both actually use. That work is described in full in <a href="/case-studies/graphic-stories/">the graphic stories case study</a>.</p>
+      <p>For book and comic publishers the same discipline produces finished books rather than articles. A research corpus, sourced scripts, art held consistent across a title, and output a press and an editor can both use. That work is described in full in <a href="/case-studies/graphic-stories/">the graphic stories case study</a>.</p>
     </div>
 """,
 ))
@@ -430,7 +446,7 @@ PAGES.append(dict(
         <div class="arw"></div>
         <div class="box"><span class="box-k">Stage 4</span><span class="box-t">Check, and redo what fails</span><p>Every passage is scored against the source and the glossary. Anything below the bar is translated again rather than shipped with a caveat.</p></div>
       </div>
-      <p class="fig-cap"><b>The glossary is the ontology.</b> Several hundred terms with one binding rendering each is what makes two documents translated months apart consistent with one another, which is the difference between a convenience and a filing.</p>
+      <p class="fig-cap"><b>The glossary is the ontology.</b> Several hundred terms, one binding rendering each. Two documents translated months apart then come out consistent, which is the difference between a convenience and something you can file.</p>
     </div>
 
     <div class="fig">
@@ -447,7 +463,29 @@ PAGES.append(dict(
       <p class="fig-cap"><b>This is the same alias problem an archive has with names,</b> and it has the same answer. Left alone, one concept fragments into four, and a body of translated judgments stops being searchable as one thing.</p>
     </div>
 
-    <h2>What a matter looks like once it is structured</h2>
+    <div class="sec body-w">
+      <p>What comes out is a formatted document, not a text file. It reproduces the conventions of a legal document in the target language:</p>
+      <ul class="plainlist">
+        <li>Party tables set out as a registry expects them</li>
+        <li>Footnotes numbered correctly</li>
+        <li>Headers carrying page numbers</li>
+        <li>The fonts the registry requires</li>
+      </ul>
+      <p>A translation a clerk has to reformat has not saved the office anything.</p>
+    </div>
+
+    <h2>Case files, structured</h2>
+    <div class="sec body-w">
+      <p>A matter is a pile of documents and one lawyer's understanding of it. The ontology writes that understanding down:</p>
+      <ul class="plainlist">
+        <li>The parties, and the role each plays</li>
+        <li>The issues actually in dispute</li>
+        <li>Each side's position on each issue</li>
+        <li>The authorities relied on for each position</li>
+        <li>Every fact asserted, with the document that evidences it</li>
+        <li>The procedural history, with its dates</li>
+      </ul>
+
     <div class="fig">
       <div class="layers">
         <div class="box"><span class="box-k">Level 1</span><span class="box-t">The matter</span><p>Parties and the role each plays. Forum, and the procedural history with its dates.</p></div>
@@ -456,22 +494,22 @@ PAGES.append(dict(
         <div class="up">▼ each carries ▼</div>
         <div class="box inv"><span class="box-k">Level 3</span><span class="box-t">Positions</span><p>Our position and theirs on that issue, with the authorities relied on for each, and the facts asserted with the document that evidences them.</p></div>
       </div>
-      <p class="fig-cap"><b>A junior joining the matter reads this instead of the shelf.</b> The question a partner actually asks, which is what our answer on a given issue is and what supports it, becomes something that opens the document underneath rather than something only one person can answer.</p>
+      <p class="fig-cap"><b>Three levels, and the bottom one holds the work.</b> Positions are kept per issue rather than per document, so two authorities answering the same point sit together instead of being buried in separate files.</p>
     </div>
 
-    <div class="sec body-w">
-      <p>The output is a formatted document rather than a text file: the conventions of a legal document in the target language reproduced properly, party tables, footnote numbering, headers with page numbers, and the fonts a registry expects. A translation that has to be reformatted by a clerk has not saved the office anything.</p>
-    </div>
-
-    <h2>Case files, structured</h2>
-    <div class="sec body-w">
-      <p>A matter is a pile of documents and one lawyer's understanding of it. The ontology makes the understanding explicit: parties and their roles, the issues in dispute, each side's position on each issue, the authorities relied on for each position, the facts asserted with the document that evidences them, and the procedural history with its dates.</p>
-      <p>Once that exists, a junior joining a matter reads a structure rather than a shelf, and a question like <em>what is our answer on limitation and what supports it</em> has an answer that opens the document behind it.</p>
+      <p>A junior joining the matter then reads a structure rather than a shelf. Ask <em>what is our answer on limitation, and what supports it</em>, and the answer opens the document behind it.</p>
     </div>
 
     <h2>Contradiction across a body of law</h2>
     <div class="sec body-w">
-      <p>The same analysis described for <a href="/use-cases/government/">legislative drafting</a> serves a practice differently: conflicting authority on a point, a line of cases that has quietly diverged between benches, a statutory definition that changed under a body of precedent built on the old one, or an instrument still being cited after amendment. Each is surfaced with both texts side by side, never with a verdict, because the verdict is the practice's work.</p>
+      <p>The analysis described for <a href="/use-cases/government/">legislative drafting</a> is useful to a practice in a different way. It finds:</p>
+      <ul class="plainlist">
+        <li>Conflicting authority on the same point</li>
+        <li>A line of cases that has quietly split between benches</li>
+        <li>A definition changed by statute, under precedent built on the old one</li>
+        <li>An instrument still being cited after it was amended</li>
+      </ul>
+      <p>Each one is shown with both texts side by side. The system never picks a winner, because that is the practice's work.</p>
     </div>
 
     <h2>How it sits in the office</h2>
@@ -523,7 +561,7 @@ PAGES.append(dict(
         <div class="up">▲ enables ▲</div>
         <div class="box"><span class="box-k">Result</span><span class="box-t">Your hardware, your control</span><p>Runs on infrastructure the organisation owns. Models, where used at all, are ones that run locally. Nothing phones home, because there is nothing to phone.</p></div>
       </div>
-      <p class="fig-cap"><b>This is the same architecture we use elsewhere, for a different reason.</b> Doing the expensive work offline and shipping deterministic artefacts is how the government portals stay cheap to run. In a defence context the same choice is what makes deployment possible at all.</p>
+      <p class="fig-cap"><b>This is the same architecture we use elsewhere, for a different reason.</b> Doing the expensive work offline and shipping deterministic artefacts is how the government portals stay cheap to run. In a defence context, that same choice is the only reason it can be deployed at all.</p>
     </div>
 
     <h2>Doctrine and standing orders, made answerable</h2>
@@ -533,7 +571,7 @@ PAGES.append(dict(
 
     <h2>Assessment from many sources, with provenance intact</h2>
     <div class="sec body-w">
-      <p>Assessment means combining reports of differing reliability. The failure mode is that confidence gets averaged into a single number and the reasoning becomes unrecoverable. The ontology keeps source reliability and information credibility as separate recorded properties, never merged, so an assessment can always be unwound to what each source actually said and how much that source has historically been worth.</p>
+      <p>Assessment means combining reports of differing reliability. The failure mode is that confidence gets averaged into a single number and the reasoning becomes unrecoverable. So the ontology records two things separately and never merges them: how reliable the source has proven, and how solid this particular report looks. An assessment can then be unwound to what each source said, and to what that source has been worth in the past.</p>
     </div>
 
     <div class="fig">
@@ -610,7 +648,7 @@ PAGES.append(dict(
     <h2>The rule that makes the data trustworthy</h2>
     <div class="sec body-w">
       <p>A model's output is never recorded as a fact. Anything normalised, classified or inferred is stored as a derived value carrying the method that produced it, the confidence, and what it was derived from. The ground fact stays exactly as printed in the source, in its own field.</p>
-      <p>That separation is what lets a buyer decide for themselves how much of the interpretation to accept, and what stops a pipeline from laundering a guess into a training label.</p>
+      <p>That separation lets a buyer decide how much of the interpretation to accept. It also stops a pipeline turning a guess into a training label.</p>
     </div>
 
     <div class="fig">
@@ -641,7 +679,7 @@ PAGES.append(dict(
 
     <h2>Evaluation sets that have not been memorised</h2>
     <div class="sec body-w">
-      <p>Public benchmarks leak into training data, and a model that has seen the answers cannot be measured by them. We build evaluation sets from material that is genuinely held out: questions written against specific passages in a controlled corpus, with the answer verifiable as an exact quotation from a document rather than by an approximate match to an expected string.</p>
+      <p>Public benchmarks leak into training data, and a model that has seen the answers cannot be measured by them. So we build evaluation sets from material that is genuinely held out. Each question is written against a specific passage in a controlled corpus. The answer is checked as an exact quotation from a document, rather than by fuzzy comparison to an expected string.</p>
       <p>Because the corpus is structured, scoring can be deterministic. A citation either resolves to the right passage or it does not, which removes the judge model and the argument about whether it is fair.</p>
     </div>
 
