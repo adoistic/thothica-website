@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Archives, libraries and museums · Thothica</title>
+<meta name="description" content="What Thothica can build for a collection: manuscript and oral-history capture, a public platform, an open machine interface so any AI can read the holdings under the institution's own rules, physical media tracking, and citation intelligence." />
+<link rel="canonical" href="https://thothica.com/use-cases/archives/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+<meta name="author" content="Thothica" />
+
+<link rel="icon" href="/assets/favicon.ico?v=22" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=22" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=22" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=22" />
+<link rel="manifest" href="/site.webmanifest?v=22" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Thothica" />
+<meta property="og:title" content="Archives, libraries and museums · Thothica" />
+<meta property="og:description" content="What Thothica can build for a collection: manuscript and oral-history capture, a public platform, an open machine interface so any AI can read the holdings under the institution's own rules, physical media tracking, and citation intelligence." />
+<meta property="og:url" content="https://thothica.com/use-cases/archives/" />
+<meta property="og:image" content="https://thothica.com/assets/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Archives, libraries and museums · Thothica" />
+<meta name="twitter:description" content="What Thothica can build for a collection: manuscript and oral-history capture, a public platform, an open machine interface so any AI can read the holdings under the institution's own rules, physical media tracking, and citation intelligence." />
+<meta name="twitter:image" content="https://thothica.com/assets/og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=22" />
+<script>document.documentElement.className += ' js';</script>
+
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Archives, libraries and museums",
+  "description": "Capabilities for collections: capture, structure, public platform, an open machine interface, and citation intelligence.",
+  "url": "https://thothica.com/use-cases/archives/",
+  "publisher": {{ "@type": "Organization", "name": "Thothica", "url": "https://thothica.com/" }},
+  "author": {{ "@type": "Organization", "name": "Thothica" }},
+  "isAccessibleForFree": true
+}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="nav-logo" href="/" aria-label="Thothica home"><img src="/assets/thothica-logo-black.png" alt="Thothica" width="383" height="110" /></a>
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" aria-label="Sections">
+      <a href="/case-studies/">Case studies</a>
+      <a href="/use-cases/">Use cases</a>
+      <a href="/#open-source">Open source</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="crumb"><a href="/use-cases/">Use cases</a></p>
+
+    <h1>Collections that answer questions <em>instead of storing files.</em></h1>
+
+    <p class="lede">An archive already holds the knowledge. What it usually lacks is any way for that knowledge to be asked a question, by a researcher or by anything else. The work below runs from the physical shelf to an interface a machine can read.</p>
+
+    <p class="note">We have done work of this kind. See <a href="/case-studies/think-tank-archive/">the think tank archive</a> for how the mapping works in practice, and the open library at <a href="https://falsafa.ai">Falsafa.ai</a> for the method in public.</p>
+
+    <h2>The path a collection takes</h2>
+    <div class="fig">
+      <div class="flow flow-4">
+        <div class="box"><span class="box-k">1</span><span class="box-t">Capture</span><p>Scanning, photography of bound and fragile material, and recording. What exists only on paper or only in someone's memory becomes a file that can be worked with.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">2</span><span class="box-t">Make readable</span><p>Pictures of pages become text, including old typesetting, many scripts and handwriting. Recordings become transcripts with speakers and timings.</p></div>
+        <div class="arw"></div>
+        <div class="box inv"><span class="box-k">3</span><span class="box-t">Structure</span><p>The ontology: what each item is, who made it, what it is about, who is named inside it, and how items relate. Every relation carries the passage that proves it.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">4</span><span class="box-t">Publish</span><p>To people as a fast public platform, and to machines as an open interface. Both read the same structure.</p></div>
+      </div>
+      <p class="fig-cap"><b>Most digitisation stops after step 2.</b> That produces a searchable pile, which is better than a cupboard and still not a knowledge system. Steps 3 and 4 are where a collection becomes something you can ask a real question of.</p>
+    </div>
+
+    <h2>Oral history, treated as a first-class source</h2>
+    <div class="sec body-w">
+      <p>Testimony is the most perishable holding any institution has, and the least well handled. We record it, transcribe it with speakers separated and timings kept, and translate where the interview is in a language the catalogue is not. Mixed-language speech is tagged honestly as mixed rather than forced into one language, because that tag decides how strictly a later quotation can be trusted.</p>
+      <p>Then the transcript is treated exactly like a manuscript: the people and places named in it become entities, the passages become citable at a fixed address, and what the speaker said about a subject becomes a relation with the words attached.</p>
+    </div>
+
+    <h2>Manuscripts and material the machine finds hard</h2>
+    <div class="sec body-w">
+      <p>Older holdings break ordinary pipelines: unusual scripts, marginalia, damaged pages, mixed languages on one leaf, and layouts no modern reader expects. Two commitments make this survivable. The original stays untouched and byte-exact, so every later pass can be rerun from the source rather than from a processed copy. And the catalogue declares how confident it is in each reading rather than presenting a shaky transcription as fact.</p>
+    </div>
+
+    <h2>An open interface, so any AI can read your holdings on your terms</h2>
+    <div class="sec body-w">
+      <p>Researchers now arrive with an assistant. The question is whether your collection is something that assistant can consult properly, or something it will guess about. The answer is a small server that exposes your holdings as a set of defined operations: list the works, fetch a specific record, retrieve an exact passage, search the text, find related items.</p>
+      <p>The design decision that matters is that no language model sits inside it. It reads from your published structure and returns text and records. The reasoning happens in whatever assistant the researcher brought, which means every improvement in those tools lifts your archive without you paying for it or rebuilding anything.</p>
+    </div>
+
+    <div class="fig">
+      <div class="flow flow-3">
+        <div class="box"><span class="box-k">The researcher brings</span><span class="box-t">Their own assistant</span><p>Whatever they already use. You do not choose it, host it, or pay for it.</p></div>
+        <div class="arw"></div>
+        <div class="box inv"><span class="box-k">You publish</span><span class="box-t">A defined set of operations</span><p>List, fetch, get an exact passage, search, find related. No model inside. It serves your structure and nothing else.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">Your rules travel with it</span><span class="box-t">Tiers and citation duties</span><p>Material you trust may be quoted with an address. Material you do not may only be described, with a link out. The interface enforces that, not a footnote.</p></div>
+      </div>
+      <p class="fig-cap"><b>This is how the think tank archive is published, and it is open.</b> An institution that does this stops being a place assistants hallucinate about and becomes a place they cite.</p>
+    </div>
+
+    <h2>Knowing how your collection is actually cited</h2>
+    <div class="sec body-w">
+      <p>Most archives cannot answer a simple question from their own board: who used us this year, and for what. Reader registers record visits, not influence. So we build the citation picture from the outside in.</p>
+    </div>
+
+    <div class="tbl-scroll">
+    <table class="tbl">
+      <tr><th>Question</th><th>How it gets answered</th></tr>
+      <tr><td>Who cites us</td><td>Scholarly databases and open citation indexes are matched against your holdings, so a work in your collection carries the papers that cite it.</td></tr>
+      <tr><td>Which holdings matter</td><td>Citation counts attach to items, so acquisition and conservation budgets can follow demonstrated use rather than intuition.</td></tr>
+      <tr><td>Are we cited correctly</td><td>Malformed and broken references to your material are found and reported, and stable addresses are published so future citations resolve.</td></tr>
+      <tr><td>Where are we invisible</td><td>Fields that should be citing you and do not, which is a collections and outreach finding rather than a technical one.</td></tr>
+      <tr><td>Who uses us without saying so</td><td>Passages from your holdings appearing in published work without attribution, found by matching text rather than by trusting a bibliography.</td></tr>
+    </table>
+    </div>
+
+    <h2>The physical layer, tracked</h2>
+    <div class="sec body-w">
+      <p>Digitisation does not remove the object. Boxes still move, tapes still degrade, and a loan still has to come back. We model the physical item alongside the digital one: where it is, what condition it was last recorded in, what carrier it lives on, which digital surrogate came from it, and what the retention or conservation clock says. Obsolete carriers are surfaced by risk rather than discovered when a machine to read them no longer exists.</p>
+    </div>
+
+    <h2>Turning the backlist into things people can read</h2>
+    <div class="sec body-w">
+      <p>Institutions sit on out-of-print books, journal runs and reports whose only form is a PDF nobody reads on a phone. Once the text is structured, the same source can be issued as a web edition with stable addresses for citation, as a reflowable electronic book, and as a fresh print-ready file. One structured source, several editions, rather than three separate retyping projects.</p>
+    </div>
+
+  </div>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <p>Tell us your hardest problem. <em>We will solve it.</em></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/thothica-logo-white.png" alt="Thothica" width="383" height="110" />
+    <a class="mail" href="mailto:hello@thothica.com">hello@thothica.com</a>
+    <p class="fine">Thothica Private Limited · New Delhi<button id="cookie-prefs" class="consent-manage" type="button" style="display:none">Privacy choices</button></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.querySelector('.nav');
+  var btn = nav && nav.querySelector('.nav-burger');
+  if (!btn) return;
+  function set(open){
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function(){ set(!nav.classList.contains('open')); });
+  nav.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', function(){ set(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')) { set(false); btn.focus(); }
+  });
+})();
+</script>
+</body>
+</html>

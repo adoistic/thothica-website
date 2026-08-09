@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Defence and security · Thothica</title>
+<meta name="description" content="Doctrine and standing orders made queryable, multi-source pictures assembled with provenance, and every component able to run fully disconnected on hardware the organisation controls." />
+<link rel="canonical" href="https://thothica.com/use-cases/defence/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+<meta name="author" content="Thothica" />
+
+<link rel="icon" href="/assets/favicon.ico?v=22" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=22" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=22" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=22" />
+<link rel="manifest" href="/site.webmanifest?v=22" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Thothica" />
+<meta property="og:title" content="Defence and security · Thothica" />
+<meta property="og:description" content="Doctrine and standing orders made queryable, multi-source pictures assembled with provenance, and every component able to run fully disconnected on hardware the organisation controls." />
+<meta property="og:url" content="https://thothica.com/use-cases/defence/" />
+<meta property="og:image" content="https://thothica.com/assets/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Defence and security · Thothica" />
+<meta name="twitter:description" content="Doctrine and standing orders made queryable, multi-source pictures assembled with provenance, and every component able to run fully disconnected on hardware the organisation controls." />
+<meta name="twitter:image" content="https://thothica.com/assets/og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=22" />
+<script>document.documentElement.className += ' js';</script>
+
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Defence and security",
+  "description": "Queryable doctrine, provenance-carrying multi-source assessment, and fully disconnected deployment.",
+  "url": "https://thothica.com/use-cases/defence/",
+  "publisher": {{ "@type": "Organization", "name": "Thothica", "url": "https://thothica.com/" }},
+  "author": {{ "@type": "Organization", "name": "Thothica" }},
+  "isAccessibleForFree": true
+}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="nav-logo" href="/" aria-label="Thothica home"><img src="/assets/thothica-logo-black.png" alt="Thothica" width="383" height="110" /></a>
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" aria-label="Sections">
+      <a href="/case-studies/">Case studies</a>
+      <a href="/use-cases/">Use cases</a>
+      <a href="/#open-source">Open source</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="crumb"><a href="/use-cases/">Use cases</a></p>
+
+    <h1>Systems that run <em>where nothing may leave the building.</em></h1>
+
+    <p class="lede">Defence organisations have the ontology problem in its severest form. The knowledge that decides an action is written in doctrine, standing orders and instructions accumulated over decades, and the people who can navigate it are few and are posted out every couple of years.</p>
+
+    <p class="note">Everything here is designed for a disconnected environment. If a capability needs an external service to work, it is not offered.</p>
+
+    <h2>The constraint that comes first</h2>
+    <div class="fig">
+      <div class="layers">
+        <div class="box"><span class="box-k">Assumed</span><span class="box-t">No outbound network</span><p>The system is built to run with no connection to anything outside the enclave. Not "can be configured offline". Offline is the design point.</p></div>
+        <div class="up">▲ built on ▲</div>
+        <div class="box inv"><span class="box-k">Consequence</span><span class="box-t">The heavy work happens before deployment</span><p>Structuring, indexing and validation are done at build time. What is installed is data and deterministic code, so the running system needs no external call to answer a question.</p></div>
+        <div class="up">▲ enables ▲</div>
+        <div class="box"><span class="box-k">Result</span><span class="box-t">Your hardware, your control</span><p>Runs on infrastructure the organisation owns. Models, where used at all, are ones that run locally. Nothing phones home, because there is nothing to phone.</p></div>
+      </div>
+      <p class="fig-cap"><b>This is the same architecture we use elsewhere, for a different reason.</b> Doing the expensive work offline and shipping deterministic artefacts is how the government portals stay cheap to run. In a defence context the same choice is what makes deployment possible at all.</p>
+    </div>
+
+    <h2>Doctrine and standing orders, made answerable</h2>
+    <div class="sec body-w">
+      <p>Thousands of pages of doctrine, instructions, orders and amendments. The practical question is never "what does the manual say" but "which paragraph applies to this situation, in the current amendment state, and what does it require of me". We model instruments the way we model regulation: obligations, thresholds, conditions, authorities and amendment state, each anchored to its clause. Superseded material is marked superseded rather than deleted, so an officer can see both what applies now and what applied at the time of an incident under review.</p>
+    </div>
+
+    <h2>Assessment from many sources, with provenance intact</h2>
+    <div class="sec body-w">
+      <p>Assessment means combining reports of differing reliability. The failure mode is that confidence gets averaged into a single number and the reasoning becomes unrecoverable. The ontology keeps source reliability and information credibility as separate recorded properties, never merged, so an assessment can always be unwound to what each source actually said and how much that source has historically been worth.</p>
+    </div>
+
+    <div class="fig">
+      <div>
+        <div class="edge"><span class="ent">A reported observation</span><span class="rel">is asserted by</span><span class="ent">a source with its own reliability record</span><span class="ev">The claim and the source's track record are stored separately. A confident claim from an unreliable source never quietly becomes a confident fact.</span></div>
+        <div class="edge"><span class="ent">Two reports</span><span class="rel">corroborate</span><span class="ent">each other, or do not</span><span class="ev">Corroboration is only recorded where the sources are genuinely independent. Two reports derived from the same origin are marked as one, not two.</span></div>
+        <div class="edge"><span class="ent">An assessment</span><span class="rel">rests on</span><span class="ent">an ordered chain of evidence</span><span class="ev">Every conclusion can be unwound step by step to the reports beneath it, so a reviewer can see exactly where a judgement entered and who made it.</span></div>
+      </div>
+      <p class="fig-cap"><b>Independence is the rule that carries the weight,</b> exactly as it does in <a href="/case-studies/olympiad-forms/">the verification work</a>. Evidence that confirms a reading must come from a source independent of it, or a single origin ends up confirming itself through three channels.</p>
+    </div>
+
+    <h2>Where else it applies</h2>
+    <div class="tbl-scroll">
+    <table class="tbl">
+      <tr><th>Area</th><th>The ontology problem underneath</th></tr>
+      <tr><td>Maintenance and fleet readiness</td><td>Platforms, subsystems, parts and their interchangeability, service life and inspection intervals, modelled so a readiness figure is derived from records rather than assembled by hand each week.</td></tr>
+      <tr><td>Logistics and stores</td><td>The same physical item catalogued differently by different formations. Alias resolution is what turns several local names into one item with one true stock position.</td></tr>
+      <tr><td>Procurement and qualification</td><td>Requirements written as conditions with the evidence that satisfies each, so trial outcomes and vendor claims can be checked against the specification rather than read against it.</td></tr>
+      <tr><td>Training and lessons</td><td>After-action material structured so a recurring failure is countable across years and formations instead of being rediscovered by each new commander.</td></tr>
+      <tr><td>Archives and history</td><td>Unit records, war diaries and photographic collections structured, described and preserved on the same basis as any other <a href="/use-cases/archives/">archive</a>, at the classification the material requires.</td></tr>
+    </table>
+    </div>
+
+    <h2>What we will not claim</h2>
+    <div class="sec body-w">
+      <p>We build knowledge infrastructure. We do not build targeting systems, we do not offer autonomous decision-making in the use of force, and we do not present a machine's output as an assessment. Every system described here surfaces what the record says, with provenance, so a responsible officer decides faster on better evidence. Where the record is silent, the correct output is that it is silent.</p>
+    </div>
+
+  </div>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <p>Tell us your hardest problem. <em>We will solve it.</em></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/thothica-logo-white.png" alt="Thothica" width="383" height="110" />
+    <a class="mail" href="mailto:hello@thothica.com">hello@thothica.com</a>
+    <p class="fine">Thothica Private Limited · New Delhi<button id="cookie-prefs" class="consent-manage" type="button" style="display:none">Privacy choices</button></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.querySelector('.nav');
+  var btn = nav && nav.querySelector('.nav-burger');
+  if (!btn) return;
+  function set(open){
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function(){ set(!nav.classList.contains('open')); });
+  nav.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', function(){ set(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')) { set(false); btn.focus(); }
+  });
+})();
+</script>
+</body>
+</html>

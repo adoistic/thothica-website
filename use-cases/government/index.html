@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Government, department by department · Thothica</title>
+<meta name="description" content="Government is not one use case. Industry, revenue, procurement, legislative drafting, disaster management, local bodies, constituency offices and public sector oversight each have a distinct problem an ontology solves." />
+<link rel="canonical" href="https://thothica.com/use-cases/government/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+<meta name="author" content="Thothica" />
+
+<link rel="icon" href="/assets/favicon.ico?v=22" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=22" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=22" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=22" />
+<link rel="manifest" href="/site.webmanifest?v=22" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Thothica" />
+<meta property="og:title" content="Government, department by department · Thothica" />
+<meta property="og:description" content="Government is not one use case. Industry, revenue, procurement, legislative drafting, disaster management, local bodies, constituency offices and public sector oversight each have a distinct problem an ontology solves." />
+<meta property="og:url" content="https://thothica.com/use-cases/government/" />
+<meta property="og:image" content="https://thothica.com/assets/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Government, department by department · Thothica" />
+<meta name="twitter:description" content="Government is not one use case. Industry, revenue, procurement, legislative drafting, disaster management, local bodies, constituency offices and public sector oversight each have a distinct problem an ontology solves." />
+<meta name="twitter:image" content="https://thothica.com/assets/og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=22" />
+<script>document.documentElement.className += ' js';</script>
+
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Government, department by department",
+  "description": "Distinct ontology use cases across industry, revenue, procurement, legislation, disaster management, local bodies and constituency offices.",
+  "url": "https://thothica.com/use-cases/government/",
+  "publisher": {{ "@type": "Organization", "name": "Thothica", "url": "https://thothica.com/" }},
+  "author": {{ "@type": "Organization", "name": "Thothica" }},
+  "isAccessibleForFree": true
+}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="nav-logo" href="/" aria-label="Thothica home"><img src="/assets/thothica-logo-black.png" alt="Thothica" width="383" height="110" /></a>
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" aria-label="Sections">
+      <a href="/case-studies/">Case studies</a>
+      <a href="/use-cases/">Use cases</a>
+      <a href="/#open-source">Open source</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="crumb"><a href="/use-cases/">Use cases</a></p>
+
+    <h1>Government is not one use case. <em>It is a different one per department.</em></h1>
+
+    <p class="lede">A revenue department and a disaster management authority have nothing in common in subject matter, and exactly one thing in common underneath: the rules that decide an outcome are written down somewhere no software can read. Below, department by department, is what that costs and what we would build.</p>
+
+    <p class="note">We already run an AI layer across five live state government portals. See <a href="/case-studies/government-portals/">that case study</a> for how the layer behaves on a system in production.</p>
+
+    <h2>One rule we apply before any of it</h2>
+    <div class="fig">
+      <div class="two">
+        <div class="box inv"><span class="box-k">Start here</span><span class="box-t">Records you already own</span><p>Anything the department in the room holds itself. No permission to negotiate, no other agency's cooperation, no waiting. Work that can begin on Monday.</p></div>
+        <div class="box"><span class="box-k">Last, and marked optional</span><span class="box-t">Records someone else owns</span><p>Anything needing another department's data sharing agreement. Valuable, slower, and never the thing a first phase depends on.</p></div>
+      </div>
+      <p class="fig-cap"><b>Custody decides sequence.</b> Most government data projects stall in a memorandum between two agencies. Ordering the work by who already holds the register is what keeps a first phase deliverable inside one financial year.</p>
+    </div>
+
+    <h2>Industry and investment promotion</h2>
+    <div class="sec body-w">
+      <p><b>The problem.</b> An investor asks what land, what incentive, what clearance, and in what order. The answer exists across a dozen schemes, several agencies and a stack of orders, and lives in the memory of a few officers. Single-window portals often route the paperwork without ever encoding what each scheme actually requires.</p>
+      <p><b>What we build.</b> The eligibility ontology: every scheme, the conditions it imposes, the document that proves each condition, the officer who signs each stage, and what makes a file complete. On top of that, a single window that can tell an applicant what is missing on day one, and tell an officer which files are decision-ready and which are stuck and why.</p>
+    </div>
+
+    <h2>Revenue and arrears</h2>
+    <div class="sec body-w">
+      <p><b>The problem.</b> Auditors report large arrears every year. The underlying detail sits in registers that were designed for collection, not for analysis, so the same leak is rediscovered annually rather than prevented.</p>
+      <p><b>What we build.</b> Public registers normalised into a typed model with provenance on every record, then detection written as plain deterministic rules rather than a model. Every finding cites the statute or rule it rests on and carries its own derivation, step by step, with the figure and the source quote at each step.</p>
+    </div>
+
+    <div class="fig">
+      <div class="flow flow-4">
+        <div class="box"><span class="box-k">1</span><span class="box-t">Harvest</span><p>Published registers pulled and stored raw first, so every later pass re-runs from the same bytes.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">2</span><span class="box-t">Normalise</span><p>One typed model, provenance per record, and the gaps written down rather than hidden.</p></div>
+        <div class="arw"></div>
+        <div class="box inv"><span class="box-k">3</span><span class="box-t">Detect</span><p>Rules as code, no model anywhere in detection, so any finding re-derives live in front of whoever is challenging it.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">4</span><span class="box-t">Answer</span><p>An assistant that may only quote the sources it was handed, verified word for word, and refuses when it cannot.</p></div>
+      </div>
+      <p class="fig-cap"><b>Detection must be deterministic in government work.</b> A finding that cannot be reproduced in a meeting is a finding that will be dismissed in that meeting. Rules as code re-derive; a score does not.</p>
+    </div>
+
+    <h2>Procurement integrity</h2>
+    <div class="sec body-w">
+      <p><b>The problem.</b> Tender data is published and almost never read as a body. Patterns that only appear across thousands of awards stay invisible to the officer looking at one file.</p>
+      <p><b>What we build.</b> A grid of tests computable from published fields alone: single-bid awards, bid windows shorter than the prescribed minimum, repeated awards just under a delegation limit, vendor concentration per buyer, repeat buyer-and-vendor pairings, corrigenda that keep extending deadlines, award values drifting from estimates, clustering at the end of a financial year, bidders sharing an address, and set-aside shortfalls against policy. Each hit becomes a finding citing the exact rule, with its working shown.</p>
+    </div>
+
+    <h2>Legislative and regulatory drafting</h2>
+    <div class="sec body-w">
+      <p><b>The problem.</b> Rules accumulate for decades. Amendments overlay orders, orders overlay acts, and departments issue clarifications that quietly contradict each other. Nobody holds the whole body in their head, so contradictions are discovered in litigation.</p>
+      <p><b>What we build.</b> The corpus of instruments modelled as things rather than documents: obligations, thresholds, definitions, exemptions, commencement dates and repeals, each anchored to the clause it comes from. Once obligations are typed, contradiction detection becomes mechanical.</p>
+    </div>
+
+    <div class="fig">
+      <div>
+        <div class="edge"><span class="ent">A threshold in one rule</span><span class="rel">conflicts with</span><span class="ent">the same threshold in a later order</span><span class="ev">Both clauses are shown side by side, verbatim, with their dates and their issuing authority. The system reports the conflict; it never picks a winner.</span></div>
+        <div class="edge"><span class="ent">A defined term</span><span class="rel">is redefined by</span><span class="ent">a subordinate instrument</span><span class="ev">Every downstream clause relying on the original definition is listed, so the blast radius of a redefinition is visible before it is signed.</span></div>
+        <div class="edge"><span class="ent">An obligation</span><span class="rel">survives</span><span class="ent">the repeal that was meant to end it</span><span class="ev">Repeal and savings clauses are modelled, so an obligation that outlived its parent act surfaces instead of lying dormant until someone is prosecuted under it.</span></div>
+      </div>
+      <p class="fig-cap"><b>The system's job is to find and show, never to decide.</b> Which rule prevails is a legal judgement belonging to the department. Presenting both clauses with their provenance is what lets that judgement be made in an afternoon instead of in a courtroom.</p>
+    </div>
+
+    <h2>Disaster management and weather</h2>
+    <div class="sec body-w">
+      <p><b>The problem.</b> A warning is not an instruction. A forecast arrives, and the question nobody can answer fast enough is who must do what, where, by when, and under whose authority. That mapping exists, in a standing order and in the experience of officers who have handled the last three events.</p>
+      <p><b>What we build.</b> An ontology that connects the physical world to the administrative one: gauges, reservoirs, rivers, wards and villages on one side; officers, standing orders, thresholds and escalation ladders on the other. A warning crossing a threshold then produces a task list rather than a notification, with an owner and a deadline against every line, and escalation that fires on silence rather than waiting to be triggered.</p>
+    </div>
+
+    <div class="fig">
+      <div class="layers">
+        <div class="box"><span class="box-k">Action</span><span class="box-t">A task list, owned and dated</span><p>Which officer, which ward, what action, by when, under which clause of the standing order. Silence escalates by itself.</p></div>
+        <div class="up">▲ derived from ▲</div>
+        <div class="box inv"><span class="box-k">The ontology</span><span class="box-t">Physical world joined to the administrative one</span><p>A gauge reading is tied to the settlements downstream of it, the officers responsible for those settlements, and the threshold in the standing order that makes the reading actionable.</p></div>
+        <div class="up">▲ reads ▲</div>
+        <div class="box"><span class="box-k">Sources</span><span class="box-t">Forecasts, gauges, standing orders, rosters</span><p>Feeds you already receive, and documents you already have, most of which have never been machine-readable.</p></div>
+      </div>
+      <p class="fig-cap"><b>This is why a weather system is an ontology problem rather than a data problem.</b> The forecast is already good. What is missing is the written map from a number to a duty.</p>
+    </div>
+
+    <h2>Local bodies and constituency offices</h2>
+    <div class="sec body-w">
+      <p><b>The problem.</b> A ward office or a legislator's office runs on requests: a grievance, a certificate, a works demand, a recommendation. They arrive by every channel, and the record of what happened lives in a diary and a WhatsApp thread. Nobody can say what is pending and with whom.</p>
+      <p><b>What we build.</b> Case operations where nothing can exist without an owner and a next date. Every request typed, routed and aged, with the standing rule that silence escalates rather than sleeps. For a constituency office, that becomes an honest picture of what was asked, what was done, and what is stuck, which is also the only defensible answer at the end of a term.</p>
+    </div>
+
+    <h2>Public sector oversight</h2>
+    <div class="sec body-w">
+      <p><b>The problem.</b> A state may hold hundreds of public sector undertakings, boards, corporations, societies and authorities. Their mandates were written across decades. Overlapping objects clauses, dormant bodies and duplicated functions are widely suspected and rarely evidenced.</p>
+      <p><b>What we build.</b> A verified roster where every value opens the document it came from, and nothing is invented to fill a gap. Where a value cannot be sourced it stays empty and the gap is reported, because an empty cell is itself a finding. Overlap is then shown as evidence, with the objects clauses of two bodies set side by side verbatim, never as an assertion that they duplicate one another. Bodies mandated once per district or per university are marked as structurally required so they are never mistaken for duplication.</p>
+    </div>
+
+  </div>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <p>Tell us your hardest problem. <em>We will solve it.</em></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/thothica-logo-white.png" alt="Thothica" width="383" height="110" />
+    <a class="mail" href="mailto:hello@thothica.com">hello@thothica.com</a>
+    <p class="fine">Thothica Private Limited · New Delhi<button id="cookie-prefs" class="consent-manage" type="button" style="display:none">Privacy choices</button></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.querySelector('.nav');
+  var btn = nav && nav.querySelector('.nav-burger');
+  if (!btn) return;
+  function set(open){
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function(){ set(!nav.classList.contains('open')); });
+  nav.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', function(){ set(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')) { set(false); btn.focus(); }
+  });
+})();
+</script>
+</body>
+</html>
