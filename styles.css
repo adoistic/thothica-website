@@ -136,3 +136,118 @@ footer a{color:#fff;}
   .consent-actions{width:100%;}
   .consent-btn{flex:1;}
 }
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Case-study pages: shared diagram primitives.
+   Everything is HTML and CSS rather than fixed SVG, so a figure reflows on a
+   phone instead of shrinking to unreadable. Two inks only; hierarchy comes from
+   weight, inversion and hairlines.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* page furniture */
+.crumb{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;}
+.crumb a{text-decoration:none;border-bottom:1px solid #000;}
+.lede{font-size:1.24rem;line-height:1.5;margin-top:26px;max-width:58ch;}
+.body-w{max-width:62ch;}
+.body-w p+p{margin-top:16px;}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3.2vw,2.15rem);line-height:1.2;
+  margin-top:64px;letter-spacing:-0.01em;}
+h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
+.sec p{font-size:1.08rem;}
+.note{font-size:.95rem;border-left:2px solid #000;padding-left:14px;margin-top:20px;max-width:60ch;}
+
+/* figure wrapper */
+.fig{margin-top:32px;}
+.fig-cap{font-size:.9rem;margin-top:14px;max-width:62ch;}
+.fig-cap b{font-weight:700;}
+
+/* a bordered box; .inv is the same box inverted, for the thing that owns or decides */
+.box{border:1px solid #000;padding:14px 16px;}
+.box.inv{background:#000;color:#fff;}
+.box-k{display:block;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;}
+.box-t{display:block;font-size:1rem;font-weight:700;margin-top:3px;}
+.box p{font-size:.92rem;line-height:1.45;margin-top:8px;}
+.box ul{list-style:none;margin-top:9px;}
+.box li{font-size:.9rem;line-height:1.35;padding:4px 0;border-top:1px solid #000;}
+.box.inv li{border-top-color:#fff;}
+
+/* horizontal flow of stages, arrows between; stacks on a phone */
+.flow{display:grid;gap:0 12px;align-items:stretch;}
+.flow-3{grid-template-columns:1fr 22px 1fr 22px 1fr;}
+.flow-4{grid-template-columns:1fr 20px 1fr 20px 1fr 20px 1fr;}
+.arw{position:relative;height:1px;background:#000;align-self:center;}
+.arw::after{content:"";position:absolute;right:-1px;top:-4px;width:0;height:0;
+  border-left:7px solid #000;border-top:4px solid transparent;border-bottom:4px solid transparent;}
+
+/* layered stack: base at the bottom, the layer we add in the middle, people on top */
+.layers{display:flex;flex-direction:column;gap:0;}
+.layers .box{border-bottom:0;}
+.layers .box:last-child{border-bottom:1px solid #000;}
+.up{text-align:center;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  padding:9px 0;border-left:1px solid #000;border-right:1px solid #000;}
+
+/* numbered rail: a step per row, marker in its own column */
+.steps{list-style:none;border-top:1px solid #000;margin-top:26px;}
+.steps>li{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid #000;}
+.steps .m{display:block;font-family:var(--serif);font-weight:600;font-size:1.3rem;line-height:1.1;
+  font-feature-settings:'lnum' 1,'tnum' 1;}
+.steps h3{margin-top:0;font-size:1rem;}
+.steps p{font-size:.97rem;line-height:1.5;margin-top:6px;max-width:58ch;}
+
+/* two-column split, for a contrast that is the point (what the model does vs what code does) */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+
+/* typed-edge diagram: subject, relation, object */
+.edge{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;
+  border-top:1px solid #000;padding:12px 0;}
+.edge:last-child{border-bottom:1px solid #000;}
+.edge .rel{font-family:var(--serif);font-style:italic;font-size:.95rem;white-space:nowrap;padding:0 6px;}
+.edge .ent{display:block;font-size:.94rem;font-weight:700;}
+.edge .ev{display:block;grid-column:1/-1;font-size:.86rem;line-height:1.45;margin-top:6px;}
+
+/* two-ink table */
+.tbl{width:100%;border-collapse:collapse;margin-top:24px;font-size:.94rem;}
+.tbl th,.tbl td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid #000;vertical-align:top;}
+.tbl th{font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border-bottom-width:1px;}
+.tbl td:first-child{font-weight:700;}
+.tbl-scroll{overflow-x:auto;}
+
+/* small pill row */
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px;}
+.tags span{font-size:.78rem;border:1px solid #000;padding:4px 9px;}
+
+/* stat row */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;
+  border-top:1px solid #000;margin-top:30px;}
+.stats div{border-bottom:1px solid #000;padding:16px 14px 16px 0;}
+.stats b{display:block;font-family:var(--serif);font-weight:600;font-size:1.9rem;line-height:1;
+  font-feature-settings:'lnum' 1,'tnum' 1;}
+.stats span{display:block;font-size:.84rem;margin-top:7px;}
+
+/* index of case studies */
+.idx{list-style:none;border-top:1px solid #000;margin-top:34px;}
+.idx>li{border-bottom:1px solid #000;}
+.idx a{display:grid;grid-template-columns:34px 1fr;gap:14px;padding:24px 0;text-decoration:none;}
+.idx a:hover .idx-t{background:#000;color:#fff;}
+.idx .m{display:block;font-family:var(--serif);font-weight:600;font-size:1.3rem;font-feature-settings:'lnum' 1,'tnum' 1;}
+.idx-k{display:block;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;}
+.idx-t{font-family:var(--serif);font-size:1.5rem;font-weight:500;line-height:1.2;margin-top:5px;
+  display:inline-block;}
+.idx p{font-size:1rem;line-height:1.5;margin-top:9px;max-width:60ch;}
+
+/* the read-more link at the end of a home-page entry */
+.more{display:inline-block;margin-top:12px;font-size:.72rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;text-decoration:none;border-bottom:1px solid #000;padding-bottom:2px;}
+.more:hover{background:#000;color:#fff;}
+
+@media(max-width:760px){
+  .flow-3,.flow-4{grid-template-columns:1fr;gap:0;}
+  .flow .arw{width:1px;height:24px;margin:14px auto;}
+  .flow .arw::after{right:auto;left:-4px;top:auto;bottom:-1px;
+    border-left:4px solid transparent;border-right:4px solid transparent;
+    border-top:7px solid #000;border-bottom:none;}
+  .two{grid-template-columns:1fr;}
+  .edge{grid-template-columns:1fr;gap:4px;}
+  .edge .rel{padding:0;}
+  h2{margin-top:52px;}
+}

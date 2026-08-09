@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Handwritten registers into verified rows · Thothica</title>
+<meta name="description" content="School registration sheets filled in by hand, read at scale and reconciled against the paper's own arithmetic. The guarantee is not perfect accuracy; it is that nothing wrong ships silently." />
+<link rel="canonical" href="https://thothica.com/case-studies/olympiad-forms/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+<meta name="author" content="Thothica" />
+
+<link rel="icon" href="/assets/favicon.ico?v=21" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=21" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=21" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=21" />
+<link rel="manifest" href="/site.webmanifest?v=21" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Thothica" />
+<meta property="og:title" content="Handwritten registers into verified rows · Thothica" />
+<meta property="og:description" content="School registration sheets filled in by hand, read at scale and reconciled against the paper's own arithmetic. The guarantee is not perfect accuracy; it is that nothing wrong ships silently." />
+<meta property="og:url" content="https://thothica.com/case-studies/olympiad-forms/" />
+<meta property="og:image" content="https://thothica.com/assets/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Handwritten registers into verified rows · Thothica" />
+<meta name="twitter:description" content="School registration sheets filled in by hand, read at scale and reconciled against the paper's own arithmetic. The guarantee is not perfect accuracy; it is that nothing wrong ships silently." />
+<meta name="twitter:image" content="https://thothica.com/assets/og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=21" />
+<script>document.documentElement.className += ' js';</script>
+
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Handwritten registers into verified rows",
+  "description": "Handwritten school registration sheets read at scale, with deterministic verification and an explicit unverified state.",
+  "url": "https://thothica.com/case-studies/olympiad-forms/",
+  "publisher": {{ "@type": "Organization", "name": "Thothica", "url": "https://thothica.com/" }},
+  "author": {{ "@type": "Organization", "name": "Thothica" }},
+  "isAccessibleForFree": true
+}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="nav-logo" href="/" aria-label="Thothica home"><img src="/assets/thothica-logo-black.png" alt="Thothica" width="383" height="110" /></a>
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" aria-label="Sections">
+      <a href="/case-studies/">Case studies</a>
+      <a href="/#use-cases">Use cases</a>
+      <a href="/#open-source">Open source</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="crumb"><a href="/case-studies/">Case studies</a></p>
+
+    <h1>Handwritten registers into rows <em>nobody has to re-check.</em></h1>
+
+    <p class="lede">An academic olympiad receives its registrations on paper. Schools fill in pre-printed grids and hand-ruled registers: a row per student, a tick per subject, often a handwritten total at the bottom. Thousands of sheets arrive in a season, and every one used to be typed up by a person, then checked by another person, because the data becomes a child's exam entry.</p>
+
+    <p class="note">This is real personal information about children. The system is invite-only, source documents are stored separately from results, and deletion of stored documents is a deliberate, restricted action.</p>
+
+    <h2>The doctrine the whole system is built on</h2>
+
+    <div class="fig">
+      <div class="two">
+        <div class="box"><span class="box-k">The model does</span><span class="box-t">Perception</span><p>Look at the page. Read what is written in each cell. Report the marks, the names, the numbers as they appear. That is all it is asked to do.</p></div>
+        <div class="box inv"><span class="box-k">The code does</span><span class="box-t">Arithmetic</span><p>Every sum, every reconciliation, every comparison against the sheet's own totals, every verdict. Deterministic, repeatable, inspectable.</p></div>
+      </div>
+      <p class="fig-cap"><b>The split exists because the two failure modes are different.</b> Misreading a smudged digit is a perception error a human would also make. Adding up wrongly is not something software should ever do, so software that can reason its way to a wrong sum is not given the job.</p>
+    </div>
+
+    <h2>The rule that makes verification mean something</h2>
+    <div class="sec body-w">
+      <p>Here is the subtle trap. If the same reading pass produces both the individual marks and the handwritten total, and they agree, that agreement proves nothing: a single confused reading of the page can produce a consistent, wrong answer that verifies itself.</p>
+      <p>So evidence that confirms a reading has to come from somewhere independent of it. A total read in the same pass may <em>contradict</em> the marks, which is useful. It may never <em>confirm</em> them.</p>
+    </div>
+
+    <div class="fig">
+      <div class="flow flow-3">
+        <div class="box"><span class="box-k">Not allowed</span><span class="box-t">Self-confirmation</span><p>One pass reads the marks and the total together, they agree, the row is called verified. A coordinated misreading passes.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">Allowed</span><span class="box-t">Independent corroboration</span><p>The total is read again separately, several times, and the readings are voted on. Once settled it is pinned, and later corrections are not permitted to rewrite it.</p></div>
+        <div class="arw"></div>
+        <div class="box inv"><span class="box-k">Verdict</span><span class="box-t">Match, or say so</span><p>Agreement from an independent source is a match. No independent source is not a match; it is reported as unverified.</p></div>
+      </div>
+      <p class="fig-cap"><b>Absence of evidence is never green.</b> A sheet with no usable checksum and nothing to corroborate it comes back marked unverified, not marked correct. This single rule is the difference between a system that reports what it knows and one that flatters itself.</p>
+    </div>
+
+    <h2>What happens to one sheet</h2>
+    <div class="fig">
+      <ol class="steps">
+        <li><span class="m">1</span><div><h3>Prepare the page</h3><p>The scan is straightened using the table's own printed gridlines as the reference, then reduced to a working copy. The original is kept exactly as received, byte for byte, so the source of truth is never the processed version.</p></div></li>
+        <li><span class="m">2</span><div><h3>Read it</h3><p>Every row, every subject column, the names, and the handwritten total. The total gets its own separate reading and a vote across attempts.</p></div></li>
+        <li><span class="m">3</span><div><h3>Reconcile</h3><p>Code recomputes each class from the marks and compares against the independently read total. Registers that continue across sheets are handled by subtracting the running figures rather than assuming each page stands alone.</p></div></li>
+        <li><span class="m">4</span><div><h3>Target repairs</h3><p>Where a class does not reconcile, only the disputed part is re-read. The pinned total is not up for revision, so a repair cannot quietly move the goalposts to make itself agree.</p></div></li>
+        <li><span class="m">5</span><div><h3>Deliver with verdicts</h3><p>Spreadsheet and data files out, every group carrying its verdict. Matches are usable immediately; anything flagged or unverified arrives with the reason attached.</p></div></li>
+      </ol>
+      <p class="fig-cap"><b>Step 4 is where most systems cheat.</b> If a correction pass is allowed to rewrite the number it is being measured against, every sheet eventually reconciles and the reconciliation is meaningless.</p>
+    </div>
+
+    <h2>Conflicts are reported, never repaired</h2>
+    <div class="sec body-w">
+      <p>Sometimes the paper contradicts itself: a free entry credited in one place and written somewhere else, a total that cannot be produced from any reading of the rows. The system does not choose the interpretation that makes the sheet balance. It flags the conflict and describes it, because a school's paperwork is evidence and the software is not entitled to overrule it.</p>
+    </div>
+
+    <h2>The promise we actually make</h2>
+    <div class="sec body-w">
+      <p>Not that the reading is perfect. Handwriting on a photocopied grid does not permit that promise, and any vendor who makes it is describing a demo.</p>
+      <p>The promise is that <span class="hl">nothing wrong ships silently</span>. Every uncertain row arrives flagged, with a reason a person can act on in seconds. The work that remains for a human is triage of a short list, instead of re-typing and re-checking every sheet that came in.</p>
+    </div>
+
+    <h2>The ontology, in one sentence</h2>
+    <div class="sec body-w">
+      <p>Pages belong to sheets, sheets belong to register runs that can continue across pages, rows group into classes, and every group carries a verdict with the evidence behind it. Once that structure is written down, verification stops being a judgement call and becomes arithmetic, which is the only kind of check that holds up when the volume is thousands of sheets a season.</p>
+    </div>
+
+  </div>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <p>Tell us your hardest problem. <em>We will solve it.</em></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/thothica-logo-white.png" alt="Thothica" width="383" height="110" />
+    <a class="mail" href="mailto:hello@thothica.com">hello@thothica.com</a>
+    <p class="fine">Thothica Private Limited · New Delhi<button id="cookie-prefs" class="consent-manage" type="button" style="display:none">Privacy choices</button></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.querySelector('.nav');
+  var btn = nav && nav.querySelector('.nav-burger');
+  if (!btn) return;
+  function set(open){
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function(){ set(!nav.classList.contains('open')); });
+  nav.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', function(){ set(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')) { set(false); btn.focus(); }
+  });
+})();
+</script>
+</body>
+</html>

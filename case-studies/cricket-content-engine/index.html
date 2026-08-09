@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>A newsroom that runs unattended · Thothica</title>
+<meta name="description" content="An engine that reads live sport, news and forum signals, plans its own slate, writes in a publisher's voice, checks itself against fetched sources, and stops at a human editor. Its taxonomy is a declared ontology that fails the build when broken." />
+<link rel="canonical" href="https://thothica.com/case-studies/cricket-content-engine/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+<meta name="author" content="Thothica" />
+
+<link rel="icon" href="/assets/favicon.ico?v=21" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=21" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=21" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=21" />
+<link rel="manifest" href="/site.webmanifest?v=21" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Thothica" />
+<meta property="og:title" content="A newsroom that runs unattended · Thothica" />
+<meta property="og:description" content="An engine that reads live sport, news and forum signals, plans its own slate, writes in a publisher's voice, checks itself against fetched sources, and stops at a human editor. Its taxonomy is a declared ontology that fails the build when broken." />
+<meta property="og:url" content="https://thothica.com/case-studies/cricket-content-engine/" />
+<meta property="og:image" content="https://thothica.com/assets/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A newsroom that runs unattended · Thothica" />
+<meta name="twitter:description" content="An engine that reads live sport, news and forum signals, plans its own slate, writes in a publisher's voice, checks itself against fetched sources, and stops at a human editor. Its taxonomy is a declared ontology that fails the build when broken." />
+<meta name="twitter:image" content="https://thothica.com/assets/og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=21" />
+<script>document.documentElement.className += ' js';</script>
+
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "A newsroom that runs unattended",
+  "description": "An autonomous content engine for a sports media publisher, with a declared content ontology and a human editor as the last gate.",
+  "url": "https://thothica.com/case-studies/cricket-content-engine/",
+  "publisher": {{ "@type": "Organization", "name": "Thothica", "url": "https://thothica.com/" }},
+  "author": {{ "@type": "Organization", "name": "Thothica" }},
+  "isAccessibleForFree": true
+}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="nav-logo" href="/" aria-label="Thothica home"><img src="/assets/thothica-logo-black.png" alt="Thothica" width="383" height="110" /></a>
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" aria-label="Sections">
+      <a href="/case-studies/">Case studies</a>
+      <a href="/#use-cases">Use cases</a>
+      <a href="/#open-source">Open source</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="crumb"><a href="/case-studies/">Case studies</a></p>
+
+    <h1>A newsroom that runs <em>without anyone in it.</em></h1>
+
+    <p class="lede">A sports media publisher needed continuous coverage: match reports within the hour, previews before play, the story a fan base is arguing about today. Hiring for that clock is expensive and still leaves the small hours uncovered. So we built an engine that works the clock, and left exactly one human decision in place.</p>
+
+    <h2>What one cycle does</h2>
+
+    <div class="fig">
+      <ol class="steps">
+        <li><span class="m">1</span><div><h3>Read the signals</h3><p>Live match data, the news wire, and where a fan base actually talks. The engine starts from what is happening rather than from a content calendar written last week.</p></div></li>
+        <li><span class="m">2</span><div><h3>Plan a slate</h3><p>It decides what is worth writing right now and what kind of piece each one should be: a match report, a preview, a fan-reaction piece, a short news item. It also decides what to skip.</p></div></li>
+        <li><span class="m">3</span><div><h3>Write in the house voice</h3><p>Against a written style specification rather than a general sense of tone, so a hundred articles read as one publication instead of a hundred different ones.</p></div></li>
+        <li><span class="m">4</span><div><h3>Check itself</h3><p>Claims are corroborated against sources the engine actually fetches, not against memory. A piece that cannot be supported does not get emitted.</p></div></li>
+        <li><span class="m">5</span><div><h3>Publish to a review portal, not to the public</h3><p>Everything lands in a private editorial portal. An editor reads it and decides. Nothing reaches readers on the engine's own authority.</p></div></li>
+        <li><span class="m">6</span><div><h3>Prove it ran</h3><p>Every firing stamps a record, whatever the outcome. If the engine goes quiet, that silence raises an alarm on its own rather than being noticed a week later.</p></div></li>
+      </ol>
+      <p class="fig-cap"><b>Step 5 is the design decision that matters.</b> An autonomous writer with publish rights is a liability. An autonomous writer that fills an editor's queue multiplies what one editor can get out. The engine is fast; the judgement stays human.</p>
+    </div>
+
+    <h2>The taxonomy is an ontology, and it is enforced</h2>
+    <div class="sec body-w">
+      <p>Most publishing systems accumulate tags until nobody knows which are real. Here, how content may be categorised is declared in one manifest, and everything else in the system reads from it: the thing that resolves a writer's raw tag into a canonical one, the dashboard's filters, and the check that runs before anything ships.</p>
+      <p>Each dimension declares what kind of thing it is, whether an item can have one value or several, and what should happen when a value has never been seen before. That last column is the interesting one.</p>
+    </div>
+
+    <div class="fig">
+      <div class="tbl-scroll">
+      <table class="tbl">
+        <tr><th>Policy</th><th>When an unfamiliar value appears</th><th>Why</th></tr>
+        <tr><td>Closed</td><td>The build fails</td><td>Some sets are genuinely finite. A match format is one of a known list. An invented one is a mistake, not a discovery.</td></tr>
+        <tr><td>Curated</td><td>Accepted, and flagged for a human to confirm</td><td>Competitions and teams are real-world things somebody should name properly, but a story should never be blocked waiting for that.</td></tr>
+        <tr><td>Auto-grow</td><td>Accepted and queued, never blocked</td><td>New players appear constantly. Refusing an unknown name would stop coverage of a debut, which is exactly the story worth having.</td></tr>
+      </table>
+      </div>
+      <p class="fig-cap"><b>Unknown values are always accepted and always surfaced.</b> Content is never held hostage to bookkeeping, and bookkeeping never silently rots. One command reports what needs a human, and the strict dimensions fail loudly.</p>
+    </div>
+
+    <div class="fig">
+      <div class="two">
+        <div class="box"><span class="box-k">The problem it solves</span><span class="box-t">The same thing, six names</span><p>A writer types a team's short code, its nickname, or its full name. Left alone, one team becomes six categories and every count is wrong.</p></div>
+        <div class="box inv"><span class="box-k">How</span><span class="box-t">Aliases live in the registry</span><p>Every known form of a name resolves to one identity before it is stored. The variants never fragment, so a coverage report is a real number.</p></div>
+      </div>
+      <p class="fig-cap"><b>This is the ontology doing ordinary, load-bearing work.</b> Nothing clever is happening. It simply cannot be skipped without every downstream count becoming fiction.</p>
+    </div>
+
+    <h2>The engine is not trusted with the keys</h2>
+    <div class="sec body-w">
+      <p>The machine that writes runs unattended, which means it is the least trustworthy thing in the system. It holds exactly two credentials: read access to the sport data, and permission to push its work into one repository. It holds no credential that can publish anything to the public site.</p>
+      <p>Publication happens in a separate, audited step. Tests and checks run there, and a failing check stops a bad batch before an editor ever sees it. If the writing machine were fully compromised, the worst it could do is fill a queue.</p>
+    </div>
+
+    <div class="fig">
+      <div class="flow flow-3">
+        <div class="box"><span class="box-k">Least trusted</span><span class="box-t">The engine</span><p>Two keys: read the sport data, push to one repository. Nothing else.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">Gate</span><span class="box-t">Automated checks</span><p>Tests, type checks and content validation. Holds the publishing credential. A failure stops here.</p></div>
+        <div class="arw"></div>
+        <div class="box inv"><span class="box-k">Decides</span><span class="box-t">The editor</span><p>Reads the queue in a private portal and chooses what runs.</p></div>
+      </div>
+      <p class="fig-cap"><b>Blast radius is a design input, not an afterthought.</b> Autonomy is safe in proportion to how little the autonomous part is allowed to do.</p>
+    </div>
+
+  </div>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <p>Tell us your hardest problem. <em>We will solve it.</em></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/thothica-logo-white.png" alt="Thothica" width="383" height="110" />
+    <a class="mail" href="mailto:hello@thothica.com">hello@thothica.com</a>
+    <p class="fine">Thothica Private Limited · New Delhi<button id="cookie-prefs" class="consent-manage" type="button" style="display:none">Privacy choices</button></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.querySelector('.nav');
+  var btn = nav && nav.querySelector('.nav-burger');
+  if (!btn) return;
+  function set(open){
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function(){ set(!nav.classList.contains('open')); });
+  nav.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', function(){ set(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')) { set(false); btn.focus(); }
+  });
+})();
+</script>
+</body>
+</html>

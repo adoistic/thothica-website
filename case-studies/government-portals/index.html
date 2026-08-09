@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>An AI layer on five live government portals · Thothica</title>
+<meta name="description" content="Five state government portals on different technology stacks, each given a plain-language layer over its own records. The layer only reads, and every figure it reports traces back to the rows it came from." />
+<link rel="canonical" href="https://thothica.com/case-studies/government-portals/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#000000" />
+<meta name="author" content="Thothica" />
+
+<link rel="icon" href="/assets/favicon.ico?v=21" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=21" />
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=21" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=21" />
+<link rel="manifest" href="/site.webmanifest?v=21" />
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Thothica" />
+<meta property="og:title" content="An AI layer on five live government portals · Thothica" />
+<meta property="og:description" content="Five state government portals on different technology stacks, each given a plain-language layer over its own records. The layer only reads, and every figure it reports traces back to the rows it came from." />
+<meta property="og:url" content="https://thothica.com/case-studies/government-portals/" />
+<meta property="og:image" content="https://thothica.com/assets/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="An AI layer on five live government portals · Thothica" />
+<meta name="twitter:description" content="Five state government portals on different technology stacks, each given a plain-language layer over its own records. The layer only reads, and every figure it reports traces back to the rows it came from." />
+<meta name="twitter:image" content="https://thothica.com/assets/og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=21" />
+<script>document.documentElement.className += ' js';</script>
+
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "An AI layer on five live government portals",
+  "description": "Five state government portals on different technology stacks, each given a plain-language layer over its own records.",
+  "url": "https://thothica.com/case-studies/government-portals/",
+  "publisher": {{ "@type": "Organization", "name": "Thothica", "url": "https://thothica.com/" }},
+  "author": {{ "@type": "Organization", "name": "Thothica" }},
+  "isAccessibleForFree": true
+}}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap nav">
+    <a class="nav-logo" href="/" aria-label="Thothica home"><img src="/assets/thothica-logo-black.png" alt="Thothica" width="383" height="110" /></a>
+    <button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav-links" aria-label="Sections">
+      <a href="/case-studies/">Case studies</a>
+      <a href="/#use-cases">Use cases</a>
+      <a href="/#open-source">Open source</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <p class="crumb"><a href="/case-studies/">Case studies</a></p>
+
+    <h1>An AI layer that reads five portals and <em>changes none of them.</em></h1>
+
+    <p class="lede">A state government ran five separate portals. Different departments, different purposes, different technology, and five different ideas about how to store the same kinds of facts. Officials could see their own screens. Nobody could ask a question across the records.</p>
+
+    <div class="stats">
+      <div><b>5</b><span>live portals carrying the layer</span></div>
+      <div><b>4</b><span>different technologies underneath</span></div>
+      <div><b>115,652</b><span>decisions made about what one portal's data meant</span></div>
+      <div><b>0</b><span>writes back into any source system</span></div>
+    </div>
+
+    <h2>What was actually wrong</h2>
+    <div class="sec body-w">
+      <p>None of these portals were broken. Each did its job. The problem was that the meaning of the data lived outside the software, in the heads of the officers who had worked with it for years. They knew which status code really meant an application was stuck, which date field was reliable, and which table you had to join to get a number a minister could be shown.</p>
+      <p>So every non-routine question became a request to a person. That person exported a spreadsheet, cleaned it by hand, and produced a figure nobody else could reproduce.</p>
+    </div>
+
+    <h2>The layer sits on top and reads down</h2>
+
+    <div class="fig">
+      <div class="layers">
+        <div class="box"><span class="box-k">Where people work</span><span class="box-t">A question in plain language</span><p>An officer asks how many applications in a district are waiting on one document, and gets an answer with the rows behind it.</p></div>
+        <div class="up">▲ reads only ▲</div>
+        <div class="box inv"><span class="box-k">What we added</span><span class="box-t">The ontology, then the layer on it</span><p>A written record of what each measure means and every way it can legitimately be broken down: by district, by scheme, by month, by status. The layer answers from that record, not from a guess.</p></div>
+        <div class="up">▲ reads only ▲</div>
+        <div class="box"><span class="box-k">What already existed</span><span class="box-t">The five portals and their databases</span><p>Untouched. Same screens, same tables, same logins, same release process.</p></div>
+      </div>
+      <p class="fig-cap"><b>The arrows only point up.</b> The layer holds read permission and nothing else, so it cannot alter a record even if it is asked to. For a government system that is not a technical detail, it is the reason the work could be approved at all.</p>
+    </div>
+
+    <h2>What we wrote down before writing software</h2>
+    <div class="sec body-w">
+      <p>For each portal we built a catalogue of two things: the measures the portal actually tracks, and the dimensions each measure can be cut by. That sounds administrative. It is the whole job. Until it exists, a question like "show me pending applications by district" has no single correct answer, because two officers will disagree about what "pending" means.</p>
+    </div>
+
+    <div class="fig">
+      <div class="flow flow-4">
+        <div class="box"><span class="box-k">Step 1</span><span class="box-t">Read the schema</span><p>Every table, column and relationship in the portal's own database.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">Step 2</span><span class="box-t">Write the meanings</span><p>What each measure is, in the words the department already uses, and who owns the decision it feeds.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">Step 3</span><span class="box-t">Classify the free text</span><p>Complaints and remarks typed by hundreds of hands, sorted into a fixed set of categories so they can be counted.</p></div>
+        <div class="arw"></div>
+        <div class="box"><span class="box-k">Step 4</span><span class="box-t">Answer, with the receipt</span><p>Every figure carries the rows it came from, so a number can be defended rather than trusted.</p></div>
+      </div>
+      <p class="fig-cap"><b>Step 3 is where the volume is.</b> On one portal the classifiers made 115,652 separate decisions about what a piece of text meant. No team reads a quarter of a million free-text entries by hand, which is why that intelligence had never existed before.</p>
+    </div>
+
+    <h2>The part that answers "is this repeatable?"</h2>
+    <div class="sec body-w">
+      <p>We built this layer five times. Each portal was written in a different framework, sat on a different database engine, and modelled its domain differently. One was an old application that had to be rebuilt on a modern platform before anything could be added to it.</p>
+      <p>Across all five, the sequence above did not change. What changed was the content of the catalogue, because that is the part that is specific to a department.</p>
+    </div>
+
+    <div class="tbl-scroll">
+    <table class="tbl">
+      <tr><th>Changed every time</th><th>Did not change once</th></tr>
+      <tr><td>The database schema</td><td>Reading the schema before writing anything</td></tr>
+      <tr><td>The framework and language</td><td>Writing down measures and their dimensions</td></tr>
+      <tr><td>The measures a department cares about</td><td>Classifying free text into a fixed set</td></tr>
+      <tr><td>The vocabulary staff use</td><td>Tracing every figure back to its rows</td></tr>
+      <tr><td>What counts as a decision</td><td>Read-only by construction</td></tr>
+    </table>
+    </div>
+
+    <h2>What it found that nobody asked for</h2>
+    <div class="sec body-w">
+      <p>Once the free text was structured, patterns appeared that no report had been built to look for. On one portal the classification surfaced a duplicate-registration signal precise enough to act on. On another, a public form had been quietly absorbing automated attack attempts for a long time; turning the logs into a structured map of who was probing what also revealed a missing rate limit.</p>
+      <p>Neither was the brief. Both are what happens when data that used to be unreadable becomes countable.</p>
+    </div>
+
+  </div>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <p>Tell us your hardest problem. <em>We will solve it.</em></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/thothica-logo-white.png" alt="Thothica" width="383" height="110" />
+    <a class="mail" href="mailto:hello@thothica.com">hello@thothica.com</a>
+    <p class="fine">Thothica Private Limited · New Delhi<button id="cookie-prefs" class="consent-manage" type="button" style="display:none">Privacy choices</button></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.querySelector('.nav');
+  var btn = nav && nav.querySelector('.nav-burger');
+  if (!btn) return;
+  function set(open){
+    nav.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function(){ set(!nav.classList.contains('open')); });
+  nav.querySelectorAll('nav a').forEach(function(a){
+    a.addEventListener('click', function(){ set(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && nav.classList.contains('open')) { set(false); btn.focus(); }
+  });
+})();
+</script>
+</body>
+</html>
