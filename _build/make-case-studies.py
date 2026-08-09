@@ -346,7 +346,7 @@ PAGES.append(dict(
 
     <p class="lede">One of India's largest publishers wanted graphic stories made at a pace no studio could match, and accurate enough to put a living person's words in a speech bubble. Those two requirements pull in opposite directions. The resolution was to make provenance a mechanical gate rather than an editorial promise, and then to build the rest of the production line around it.</p>
 
-    <p class="note">This is running work, not a finished project. New lines are still being added, and each one adapts the same machinery rather than replacing it.</p>
+    <p class="note">The pipeline is deployed and running. Titles come off it continuously across five publishing lines, and each new line we add extends the same machinery instead of needing its own.</p>
 
     <div class="stats">
       <div><b>~10M</b><span>words in the research corpus</span></div>
