@@ -14,11 +14,11 @@
 <meta name="author" content="Thothica" />
 
 <!-- favicons -->
-<link rel="icon" href="assets/favicon.ico?v=23" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=23" />
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=23" />
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=23" />
-<link rel="manifest" href="site.webmanifest?v=23" />
+<link rel="icon" href="assets/favicon.ico?v=24" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=24" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=24" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=24" />
+<link rel="manifest" href="site.webmanifest?v=24" />
 
 <!-- Open Graph (WhatsApp, LinkedIn, Facebook, Slack…) -->
 <meta property="og:type" content="website" />
@@ -44,7 +44,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=23" />
+<link rel="stylesheet" href="styles.css?v=24" />
 <!-- Marks the page as scripted, so the menu only collapses where it can be reopened. -->
 <script>document.documentElement.className += ' js';</script>
 
@@ -105,7 +105,7 @@
     gtag('config', id);
   })();
 </script>
-<script src="consent.js?v=23" defer></script>
+<script src="consent.js?v=24" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -153,7 +153,8 @@
 
   <section>
     <div class="wrap">
-      <div class="sec-head">
+      <div class="shead">
+        <p class="eyebrow">The discipline</p>
         <h2>What we mean by an ontology</h2>
         <div class="sec-note">
           <p>Every organisation has people who can answer the hard questions. They know which report is wrong, which column in the database actually matters, why two departments use different words for the same thing, and how an approval really works.</p>
@@ -218,7 +219,8 @@
   <section class="band band-inv">
     <div class="wrap">
       <div class="band-in">
-        <div class="sec-head" style="padding-top:0">
+        <div class="shead">
+          <p class="eyebrow">Why it repeats</p>
           <h2>The same software does all of it</h2>
           <div class="sec-note">
             <p>Five government portals. An archive of scanned documents in five languages. A library of more than 2,000 works spanning twenty-five centuries. A publisher's research and production line. Every one of them stored its data differently, and no two were in the same business.</p>
@@ -235,43 +237,72 @@
 
   <section id="case-studies">
     <div class="wrap">
-      <div class="sec-head">
+      <div class="shead">
+        <p class="eyebrow">Case studies</p>
         <h2>What we have built</h2>
-        <div class="sec-note">
-          <p>Five systems, in five different industries. Each page shows how it works, with diagrams. Clients are described rather than named.</p>
-        </div>
+        <p class="shead-p">Five systems, in five different industries. Every one of them started the same way: writing down what the data meant before building anything on it. Clients are described rather than named.</p>
       </div>
 
-      <div class="cards">
-        <a href="/case-studies/government-portals/">
-          <span class="card-k">Government · five portals</span>
-          <span class="card-t">An AI layer that reads five portals and changes none of them</span>
-          <p>Five state government portals, each built on different technology. One layer, rebuilt against every schema, that answers an official's question from that portal's own records and can write nothing back.</p>
-          <span class="card-go">Read the case study →</span>
+      <div class="rows">
+        <a class="row" href="/case-studies/government-portals/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><path d="M2 21h20M4 21V9m4 12V9m4 12V9m4 12V9m4 12V9M2 9l10-6 10 6H2Z"/></svg></span>
+          <span>
+            <span class="row-k">Government</span>
+            <span class="row-tw"><span class="row-t">An AI layer that reads five portals and changes none of them</span></span>
+            <p>Five state government portals, each built on different technology and each storing its data differently. One layer, rebuilt against every schema, answers an official's question from that portal's own records and can write nothing back.</p>
+            <span class="row-go">Read the case study →</span>
+          </span>
+          <span class="row-side">
+            <b>115,652</b><span>records classified on one portal</span><em>It only reads. It cannot alter a record even if it is asked to.</em>
+          </span>
         </a>
-        <a href="/case-studies/think-tank-archive/">
-          <span class="card-k">Think tank · historical archive</span>
-          <span class="card-t">A century of writing, mapped so you can question it</span>
-          <p>Two thousand scanned PDFs became a library where you can ask who wrote about whom, on what subject, and in what words. Every claim is pinned to a quotation the software can find again, or it is thrown away.</p>
-          <span class="card-go">Read the case study →</span>
+        <a class="row" href="/case-studies/think-tank-archive/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><path d="M4 4h6v16H4zM10 4h5l4 16h-5zM4 8h6M4 14h6"/></svg></span>
+          <span>
+            <span class="row-k">Think tank</span>
+            <span class="row-tw"><span class="row-t">A century of writing, mapped so you can question it</span></span>
+            <p>Two thousand scanned PDFs became a library where you can ask who wrote about whom, on what subject, and in what words. Names are matched across scripts and spellings so one person stays one person.</p>
+            <span class="row-go">Read the case study →</span>
+          </span>
+          <span class="row-side">
+            <b>1,000+</b><span>historical works catalogued</span><em>Every claim is pinned to a quotation the software can find again, or it is thrown away.</em>
+          </span>
         </a>
-        <a href="/case-studies/graphic-stories/">
-          <span class="card-k">Publishing · graphic stories</span>
-          <span class="card-t">Illustrated books made at scale, every line traced to a source</span>
-          <p>Research turned into a corpus a writer can navigate, then into finished books: script, characters, backgrounds, and pages a printer can actually use.</p>
-          <span class="card-go">Read the case study →</span>
+        <a class="row" href="/case-studies/graphic-stories/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><path d="M3 4h7a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H3zM21 4h-7a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h7z"/></svg></span>
+          <span>
+            <span class="row-k">Publishing</span>
+            <span class="row-tw"><span class="row-t">Illustrated books made at scale, every line traced to a source</span></span>
+            <p>Research turned into a corpus a writer can navigate, then into finished books: script, characters, backgrounds, and pages a printer can actually use. Five publishing lines run on the same pipeline.</p>
+            <span class="row-go">Read the case study →</span>
+          </span>
+          <span class="row-side">
+            <b>10M</b><span>words in the research corpus</span><em>A gate refuses the script if any citation does not resolve to a real line.</em>
+          </span>
         </a>
-        <a href="/case-studies/cricket-content-engine/">
-          <span class="card-k">Media · unattended newsroom</span>
-          <span class="card-t">A newsroom that runs without anyone in it</span>
-          <p>An engine that reads live signals, plans its own slate, writes in the publisher's voice, checks itself against sources it fetches, and then stops at an editor.</p>
-          <span class="card-go">Read the case study →</span>
+        <a class="row" href="/case-studies/cricket-content-engine/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><circle cx="12" cy="12" r="2.4"/><path d="M7.5 7.5a6.4 6.4 0 0 0 0 9M16.5 16.5a6.4 6.4 0 0 0 0-9M4.5 4.5a10.6 10.6 0 0 0 0 15M19.5 19.5a10.6 10.6 0 0 0 0-15"/></svg></span>
+          <span>
+            <span class="row-k">Media</span>
+            <span class="row-tw"><span class="row-t">A newsroom that runs without anyone in it</span></span>
+            <p>An engine reads live signals, plans its own slate, writes in the publisher's voice, and checks itself against sources it fetches. Then it stops. Everything lands in a queue an editor decides on.</p>
+            <span class="row-go">Read the case study →</span>
+          </span>
+          <span class="row-side">
+            <b>0</b><span>credentials that can publish</span><em>On its worst day it fills a queue rather than embarrassing the masthead.</em>
+          </span>
         </a>
-        <a href="/case-studies/olympiad-forms/">
-          <span class="card-k">Education · handwritten forms</span>
-          <span class="card-t">Handwritten registers turned into rows nobody re-checks</span>
-          <p>School registration sheets read at scale and checked against the paper's own arithmetic. Anything the software cannot verify comes back marked unverified rather than marked correct.</p>
-          <span class="card-go">Read the case study →</span>
+        <a class="row" href="/case-studies/olympiad-forms/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><path d="M4 3h16v18H4zM8 8h8M8 12h8M8 16h4"/></svg></span>
+          <span>
+            <span class="row-k">Education</span>
+            <span class="row-tw"><span class="row-t">Handwritten registers turned into rows nobody re-checks</span></span>
+            <p>School registration sheets read at scale and reconciled against the paper's own arithmetic. A model reads the page; code does every sum, because a reading must not be allowed to confirm itself.</p>
+            <span class="row-go">Read the case study →</span>
+          </span>
+          <span class="row-side">
+            <b>2</b><span>independent readings of each total</span><em>Anything it cannot verify comes back marked unverified rather than marked correct.</em>
+          </span>
         </a>
       </div>
     </div>
@@ -279,49 +310,54 @@
 
   <section id="use-cases">
     <div class="wrap">
-      <div class="sec-head">
+      <div class="shead">
+        <p class="eyebrow">Use cases</p>
         <h2>What we can build for you</h2>
-        <div class="sec-note">
-          <p>Organised by the kind of institution asking, because the same discipline costs a museum and a revenue department completely different things. These are capabilities rather than finished projects.</p>
-        </div>
+        <p class="shead-p">Grouped by the kind of institution asking, because the same discipline costs a museum and a revenue department completely different things. These are capabilities rather than finished projects.</p>
       </div>
 
-      <div class="cards">
-        <a href="/use-cases/archives/">
-          <span class="card-k">Archives, libraries, museums</span>
-          <span class="card-t">Collections that answer questions</span>
+      <div class="ugrid">
+        <a class="ucell" href="/use-cases/archives/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><path d="M4 4h6v16H4zM10 4h5l4 16h-5zM4 8h6M4 14h6"/></svg></span>
+          <span class="row-k" style="margin-top:14px">Archives, libraries, museums</span>
+          <span class="ucell-tw"><span class="ucell-t">Collections that answer questions</span></span>
           <p>Manuscripts and oral history captured properly, a public platform over the collection, an open interface any AI can read under your rules, and a picture of who actually cites you.</p>
-          <span class="card-go">See the use cases →</span>
+          <span class="row-go"><span>See the use cases →</span></span>
         </a>
-        <a href="/use-cases/government/">
-          <span class="card-k">Government</span>
-          <span class="card-t">A different use case per department</span>
+        <a class="ucell" href="/use-cases/government/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><path d="M2 21h20M4 21V9m4 12V9m4 12V9m4 12V9m4 12V9M2 9l10-6 10 6H2Z"/></svg></span>
+          <span class="row-k" style="margin-top:14px">Government</span>
+          <span class="ucell-tw"><span class="ucell-t">A different use case per department</span></span>
           <p>Industry, revenue, procurement, drafting, disaster management, local bodies, constituency offices and public sector oversight. Each has its own problem, and the page says which.</p>
-          <span class="card-go">See the use cases →</span>
+          <span class="row-go"><span>See the use cases →</span></span>
         </a>
-        <a href="/use-cases/media/">
-          <span class="card-k">Media and publishing</span>
-          <span class="card-t">From research to a story ready to run</span>
+        <a class="ucell" href="/use-cases/media/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><circle cx="12" cy="12" r="2.4"/><path d="M7.5 7.5a6.4 6.4 0 0 0 0 9M16.5 16.5a6.4 6.4 0 0 0 0-9M4.5 4.5a10.6 10.6 0 0 0 0 15M19.5 19.5a10.6 10.6 0 0 0 0-15"/></svg></span>
+          <span class="row-k" style="margin-top:14px">Media and publishing</span>
+          <span class="ucell-tw"><span class="ucell-t">From research to a story ready to run</span></span>
           <p>Coverage that stops at an editor, a research desk that turns documents into angles, analytics that answer editorial questions, and discourse measured claim by claim.</p>
-          <span class="card-go">See the use cases →</span>
+          <span class="row-go"><span>See the use cases →</span></span>
         </a>
-        <a href="/use-cases/legal/">
-          <span class="card-k">Legal practices</span>
-          <span class="card-t">The office keeps its judgement</span>
+        <a class="ucell" href="/use-cases/legal/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><path d="M12 3v18M6 21h12M4 7h16M7 7l-3 6h6zM17 7l-3 6h6z"/></svg></span>
+          <span class="row-k" style="margin-top:14px">Legal practices</span>
+          <span class="ucell-tw"><span class="ucell-t">The office keeps its judgement</span></span>
           <p>Judgments translated to filing standard under a glossary that is binding, case files structured into positions and authorities, and conflicting authority surfaced across a body of law.</p>
-          <span class="card-go">See the use cases →</span>
+          <span class="row-go"><span>See the use cases →</span></span>
         </a>
-        <a href="/use-cases/defence/">
-          <span class="card-k">Defence and security</span>
-          <span class="card-t">Runs where nothing may leave the building</span>
+        <a class="ucell" href="/use-cases/defence/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.6 8.3-8 9-4.4-.7-8-4-8-9V6z"/></svg></span>
+          <span class="row-k" style="margin-top:14px">Defence and security</span>
+          <span class="ucell-tw"><span class="ucell-t">Runs where nothing may leave the building</span></span>
           <p>Doctrine and standing orders made answerable, assessment that keeps source reliability separate from what was reported, and every part able to run fully disconnected.</p>
-          <span class="card-go">See the use cases →</span>
+          <span class="row-go"><span>See the use cases →</span></span>
         </a>
-        <a href="/use-cases/ai-companies/">
-          <span class="card-k">AI companies and labs</span>
-          <span class="card-t">Messy material turned into training-grade structure</span>
+        <a class="ucell" href="/use-cases/ai-companies/">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.1" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M6.7 7.3 10.6 16.4M17.3 7.3 13.4 16.4M7 6h10"/></svg></span>
+          <span class="row-k" style="margin-top:14px">AI companies and labs</span>
+          <span class="ucell-tw"><span class="ucell-t">Messy material turned into training-grade structure</span></span>
           <p>Domain corpora typed and given provenance with the licence position recorded, plus evaluation sets a model cannot already have memorised.</p>
-          <span class="card-go">See the use cases →</span>
+          <span class="row-go"><span>See the use cases →</span></span>
         </a>
       </div>
     </div>
@@ -329,11 +365,10 @@
 
   <section id="open-source">
     <div class="wrap">
-      <div class="sec-head">
-        <h2>Open source</h2>
-        <div class="sec-note">
-          <p>We publish our method where anyone can inspect it. More of our work will be released this way.</p>
-        </div>
+      <div class="shead">
+        <p class="eyebrow">Open source</p>
+        <h2>The method, in public</h2>
+        <p class="shead-p">We publish our method where anyone can inspect it. More of our work will be released this way.</p>
       </div>
 
       <div class="cards">

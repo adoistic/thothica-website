@@ -23,10 +23,10 @@ a{color:#000;}
 img{max-width:100%;}
 .wrap{max-width:var(--page);margin:0 auto;padding:0 var(--gut);}
 /* article pages keep a reading column inside the wide shell */
-.doc{max-width:min(1020px,100%);margin:0 auto;}
+.doc{max-width:min(760px,100%);margin:0 auto;}
 /* a figure may use more width than the prose it sits with */
 .doc .fig,.doc .tbl-scroll,.doc .stats{max-width:none;}
-@media(min-width:1240px){.doc .fig,.doc .stats{margin-left:-60px;margin-right:-60px;}}
+@media(min-width:1180px){.doc .fig,.doc .stats,.doc .tbl-scroll{margin-left:-165px;margin-right:-165px;}}
 /* full-bleed band inside a wrapped page */
 .band{width:100%;}
 .band-inv{background:#000;color:#fff;}
@@ -280,7 +280,7 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 
 .hero{padding:clamp(56px,9vw,132px) 0 clamp(48px,7vw,96px);border-bottom:1px solid #000;}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end;}
-.hero h1{font-size:clamp(2.4rem,5.4vw,6.2rem);line-height:1.04;letter-spacing:-0.02em;margin-top:20px;}
+.hero h1{font-size:clamp(2.2rem,4.4vw,4.9rem);line-height:1.04;letter-spacing:-0.02em;margin-top:20px;}
 .hero .sub{font-size:clamp(1.05rem,1.15vw,1.34rem);line-height:1.55;max-width:44ch;text-wrap:pretty;}
 .hero-side{padding-bottom:6px;}
 .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
@@ -291,8 +291,8 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .btn-line:hover{background:#000;color:#fff;}
 
 /* a run of facts, ruled off, that reads across on a wide screen */
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));border-top:1px solid #000;margin-top:clamp(40px,5vw,72px);}
-.facts div{padding:22px 22px 22px 0;border-bottom:1px solid #000;}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-top:1px solid #000;margin-top:clamp(30px,3.4vw,48px);}
+.facts div{padding:18px 22px 18px 0;border-bottom:1px solid #000;}
 .facts b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(2rem,3.4vw,3rem);line-height:1;
   font-feature-settings:'lnum' 1,'tnum' 1;font-variant-numeric:tabular-nums;}
 .facts span{display:block;font-size:.9rem;line-height:1.4;margin-top:9px;max-width:30ch;}
@@ -338,7 +338,71 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
   *{transition:none !important;}
   html{scroll-behavior:auto;}
 }
-.landing{padding:0;}
-.landing>section>.wrap{padding-bottom:0;}
-.landing section:last-of-type{padding-bottom:clamp(56px,7vw,104px);}
 .sec-note p+p{margin-top:14px;}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Landing rhythm. Every section is spaced the same way and starts the same way,
+   so the page stops zigzagging between left-aligned and full-width blocks.
+   ───────────────────────────────────────────────────────────────────────────── */
+.landing{padding:0;}
+.landing>section{padding:clamp(60px,7.5vw,116px) 0;}
+.landing>section.hero{padding:clamp(36px,4.4vw,68px) 0 clamp(32px,3.6vw,54px);}
+.landing>section.band-inv{padding:0;}
+.band-inv .band-in{padding:clamp(60px,7.5vw,116px) 0;}
+.landing>section+section:not(.band-inv):not(.hero){border-top:1px solid #000;}
+
+/* one section header, used by every section */
+.shead{max-width:66ch;}
+.shead h2{margin-top:14px;}
+.shead .shead-p{margin-top:18px;font-size:1.08rem;line-height:1.55;max-width:62ch;text-wrap:pretty;}
+.shead .shead-p+.shead-p{margin-top:12px;}
+
+/* a case study: one full-width row, so each gets room to say something */
+.rows{border-top:1px solid #000;margin-top:clamp(32px,4vw,52px);}
+.row{display:grid;grid-template-columns:46px minmax(0,1.9fr) minmax(0,1fr);gap:clamp(20px,3vw,44px);
+  padding:clamp(26px,3vw,38px) 0;border-bottom:1px solid #000;text-decoration:none;align-items:start;}
+.row:hover .row-t{background:#000;color:#fff;}
+.ico{display:block;width:34px;height:34px;}
+.ico svg{width:100%;height:100%;display:block;}
+.row-k{display:block;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;}
+.row-t{display:inline;font-family:var(--serif);font-weight:500;font-size:clamp(1.35rem,1.9vw,1.85rem);
+  line-height:1.18;text-wrap:balance;}
+.row-tw{display:block;margin-top:7px;}
+.row p{font-size:1.01rem;line-height:1.55;margin-top:12px;max-width:56ch;text-wrap:pretty;}
+.row-go{display:inline-block;margin-top:14px;font-size:.67rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;border-bottom:1px solid #000;padding-bottom:2px;}
+.row-side{border-left:1px solid #000;padding-left:clamp(16px,2vw,28px);}
+.row-side b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,2.4vw,2.4rem);
+  line-height:1;font-variant-numeric:tabular-nums;font-feature-settings:'lnum' 1,'tnum' 1;}
+.row-side span{display:block;font-size:.88rem;line-height:1.4;margin-top:8px;}
+.row-side em{display:block;font-style:normal;font-size:.88rem;line-height:1.45;margin-top:14px;
+  padding-top:12px;border-top:1px solid #000;}
+
+/* use cases: shorter, so a grid rather than rows */
+.ugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+  border-top:1px solid #000;margin-top:clamp(32px,4vw,52px);}
+.ucell{display:flex;flex-direction:column;padding:clamp(24px,2.6vw,32px) clamp(24px,2.6vw,36px) clamp(24px,2.6vw,32px) 0;
+  border-bottom:1px solid #000;text-decoration:none;}
+.ucell:hover .ucell-t{background:#000;color:#fff;}
+.ucell-t{display:inline;font-family:var(--serif);font-weight:500;font-size:clamp(1.2rem,1.5vw,1.45rem);
+  line-height:1.2;text-wrap:balance;}
+.ucell-tw{display:block;margin-top:8px;}
+.ucell p{font-size:.97rem;line-height:1.5;margin-top:11px;text-wrap:pretty;}
+.ucell .row-go{margin-top:auto;padding-top:16px;border-bottom:0;}
+.ucell .row-go span{border-bottom:1px solid #000;padding-bottom:2px;}
+@media(min-width:900px){
+  .ugrid{column-gap:clamp(24px,3vw,48px);}
+  .ugrid>*{padding-right:clamp(24px,3vw,48px);}
+}
+@media(max-width:820px){
+  .row{grid-template-columns:34px minmax(0,1fr);gap:16px;}
+  .row-side{grid-column:1/-1;border-left:0;border-top:1px solid #000;padding-left:0;padding-top:16px;margin-top:6px;}
+  .row-side em{border-top:0;padding-top:0;margin-top:8px;}
+}
+.shead .sec-note{margin-top:18px;}
+.shead .sec-note p{font-size:1.08rem;line-height:1.55;max-width:62ch;text-wrap:pretty;}
+.shead .sec-note p+p{margin-top:12px;}
+.onto{margin-top:clamp(32px,4vw,52px);}
+.onto-caption{margin-top:26px;}
+/* six use cases read best as two rows of three, rather than four then two */
+@media(min-width:1080px){.ugrid{grid-template-columns:repeat(3,minmax(0,1fr));}}

@@ -6,7 +6,7 @@ Bump V whenever styles.css changes.
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-V = 23
+V = 24
 
 SHELL = """<!DOCTYPE html>
 <html lang="en">
