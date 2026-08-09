@@ -10,13 +10,13 @@ link to the case study instead of implying it here.
 """
 import pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from shell import ARTICLE_LD, INDEX_LD, write  # noqa: E402
+from shell import ARTICLE_LD, INDEX_LD, write, write_redirect  # noqa: E402
 
 PAGES = []
 
 
 def crumb():
-    return '    <p class="crumb"><a href="/use-cases/">Use cases</a></p>\n'
+    return '    <p class="crumb"><a href="/#use-cases">Use cases</a></p>\n'
 
 
 # ───────────────────────────────────────────────────────────── index
@@ -694,6 +694,12 @@ PAGES.append(dict(
 
 def main():
     for p in PAGES:
+        # Retired for now; the landing page carries this section. Body kept above
+        # so the listing can be rebuilt once there are more entries than a landing
+        # page section can hold.
+        if not p["slug"]:
+            print(f"redirect {write_redirect('use-cases', '/#use-cases')}")
+            continue
         out = write("use-cases", p["slug"], p["title"], p["description"],
                     p["url"], p["jsonld"], p["body"])
         print(f"wrote {out}")

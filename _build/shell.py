@@ -6,7 +6,7 @@ Bump V whenever styles.css changes.
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-V = 28
+V = 29
 
 SHELL = """<!DOCTYPE html>
 <html lang="en">
@@ -63,8 +63,8 @@ SHELL = """<!DOCTYPE html>
       <span></span><span></span><span></span>
     </button>
     <nav id="nav-links" aria-label="Sections">
-      <a href="/case-studies/">Case studies</a>
-      <a href="/use-cases/">Use cases</a>
+      <a href="/#case-studies">Case studies</a>
+      <a href="/#use-cases">Use cases</a>
       <a href="/#open-source">Open source</a>
     </nav>
   </div>

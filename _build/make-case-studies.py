@@ -15,7 +15,7 @@ from shell import SHELL, ARTICLE_LD, INDEX_LD, V, write, write_redirect  # noqa:
 
 
 def crumb():
-    return ('    <p class="crumb"><a href="/case-studies/">Case studies</a></p>\n')
+    return ('    <p class="crumb"><a href="/#case-studies">Case studies</a></p>\n')
 
 
 PAGES = []
@@ -689,6 +689,12 @@ PAGES.append(dict(
 
 def main():
     for p in PAGES:
+        # The listing page is retired: the landing page carries this section, and
+        # there are too few entries to justify a second index. Its body is kept
+        # above so it can be brought back when there is more to list.
+        if not p["slug"]:
+            print(f"redirect {write_redirect('case-studies', '/#case-studies')}")
+            continue
         out = write("case-studies", p["slug"], p["title"], p["description"],
                     p["url"], p["jsonld"], p["body"])
         print(f"wrote {out}")
