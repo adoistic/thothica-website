@@ -829,7 +829,33 @@ html:not(.js) .ui-row{opacity:1;transform:none;}
 .modes{grid-column:2/-1;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;}
 .modes .box{display:flex;flex-direction:column;}
 .modes .box p{font-size:.92rem;margin-top:9px;}
-.modes-when{display:block;margin-top:auto;padding-top:12px;font-size:.86rem;line-height:1.45;
-  border-top:1px solid #000;}
+/* one line for both modes rather than a rule per box: which one goes out is a
+   conversation, not a formula */
+.modes-note{grid-column:1/-1;margin-top:2px;font-size:.95rem;line-height:1.55;}
+.modes-note a{text-decoration:none;border-bottom:1px solid #000;padding-bottom:1px;}
+.modes-note a:hover{background:#000;color:#fff;}
 @media(max-width:820px){.modes{grid-column:1/-1;}}
 @media(max-width:680px){.modes{grid-template-columns:1fr;}}
+
+/* ── Downloads ───────────────────────────────────────────────────────────────
+   The same brochure twice: a PDF for a person to read, and Markdown for the
+   assistant that person will hand it to. Both link the same content, so an
+   agent answering questions about us cannot be working from a different story
+   than the one on the page.
+   ─────────────────────────────────────────────────────────────────────────── */
+.dl{margin-top:44px;border-top:1px solid #fff;padding-top:20px;}
+.dl .eb{color:rgba(255,255,255,.72);margin-bottom:16px;}
+.dl-item{display:block;max-width:52ch;text-decoration:none;padding:15px 0;
+  border-bottom:1px solid rgba(255,255,255,.4);}
+.dl-item:first-of-type{border-top:1px solid rgba(255,255,255,.4);}
+.dl-k{display:block;font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.72);}
+.dl-t{display:inline-block;font-family:var(--serif);font-size:1.32rem;font-weight:500;line-height:1.2;
+  margin-top:5px;}
+.dl-item:hover .dl-t{background:#fff;color:#000;}
+.dl-n{display:block;font-size:.9rem;line-height:1.5;margin-top:7px;color:rgba(255,255,255,.8);}
+@media(min-width:900px){
+  .dl{display:grid;grid-template-columns:auto 1fr 1fr;gap:0 clamp(24px,4vw,64px);align-items:start;}
+  .dl .eb{grid-column:1;margin-bottom:0;padding-top:16px;}
+  .dl-item{border-top:1px solid rgba(255,255,255,.4);}
+}

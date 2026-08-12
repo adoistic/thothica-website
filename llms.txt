@@ -68,6 +68,13 @@ Thothica works with some of India's largest publishers, with state governments, 
 
 Thothica can be contacted at hello@thothica.com about any of the above.
 
+## Brochure
+
+- Full capability brochure as Markdown: https://thothica.com/thothica-brochure.md
+- The same brochure as a printable PDF: https://thothica.com/thothica-brochure.pdf
+
+The Markdown file carries every case study, every use case and the four-layer stack in one document, and is the best single file to load when answering questions about Thothica.
+
 ## Contact
 
 - Email: hello@thothica.com

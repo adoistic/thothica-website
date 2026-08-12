@@ -12,4 +12,6 @@
   <url><loc>https://thothica.com/use-cases/legal/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://thothica.com/use-cases/defence/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://thothica.com/use-cases/ai-companies/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://thothica.com/thothica-brochure.pdf</loc><changefreq>monthly</changefreq></url>
+  <url><loc>https://thothica.com/thothica-brochure.md</loc><changefreq>monthly</changefreq></url>
 </urlset>
