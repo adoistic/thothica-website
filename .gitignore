@@ -7,3 +7,6 @@ _build/og-raw.png
 # editor
 .vscode/
 *.swp
+
+# Visiting card working files (not part of the site)
+_cards/
