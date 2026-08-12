@@ -10,3 +10,6 @@ _build/og-raw.png
 
 # Visiting card working files (not part of the site)
 _cards/
+
+# LinkedIn / social artwork (not part of the site)
+_social/
