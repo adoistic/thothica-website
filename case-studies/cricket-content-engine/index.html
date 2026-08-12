@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>A newsroom that runs unattended · Thothica</title>
+<title>A Newsroom That Runs Unattended and Publishes Nothing · Thothica</title>
 <meta name="description" content="An engine that reads live sport, news and forum signals, plans its own slate, writes in a publisher's voice, checks itself against fetched sources, and stops at a human editor. Its taxonomy is a declared ontology that fails the build when broken." />
 <link rel="canonical" href="https://thothica.com/case-studies/cricket-content-engine/" />
 <meta name="robots" content="index, follow" />
@@ -19,7 +19,7 @@
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Thothica" />
-<meta property="og:title" content="A newsroom that runs unattended · Thothica" />
+<meta property="og:title" content="A Newsroom That Runs Unattended and Publishes Nothing · Thothica" />
 <meta property="og:description" content="An engine that reads live sport, news and forum signals, plans its own slate, writes in a publisher's voice, checks itself against fetched sources, and stops at a human editor. Its taxonomy is a declared ontology that fails the build when broken." />
 <meta property="og:url" content="https://thothica.com/case-studies/cricket-content-engine/" />
 <meta property="og:image" content="https://thothica.com/assets/og-image.jpg" />
@@ -29,14 +29,14 @@
 <meta property="og:locale" content="en_US" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="A newsroom that runs unattended · Thothica" />
+<meta name="twitter:title" content="A Newsroom That Runs Unattended and Publishes Nothing · Thothica" />
 <meta name="twitter:description" content="An engine that reads live sport, news and forum signals, plans its own slate, writes in a publisher's voice, checks itself against fetched sources, and stops at a human editor. Its taxonomy is a declared ontology that fails the build when broken." />
 <meta name="twitter:image" content="https://thothica.com/assets/og-image.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=29" />
+<link rel="stylesheet" href="/styles.css?v=33" />
 <script>document.documentElement.className += ' js';</script>
 
 <script type="application/ld+json">
@@ -74,11 +74,11 @@
     <div class="doc">
     <p class="crumb"><a href="/#case-studies">Case studies</a></p>
 
-    <h1>A newsroom that runs <em>without anyone in it.</em></h1>
+    <h1>A Newsroom That Runs Unattended and Publishes Nothing</h1>
 
-    <p class="lede">A sports media publisher needed continuous coverage: match reports within the hour, previews before play, the story a fan base is arguing about today. Hiring for that clock is expensive and still leaves the small hours uncovered. So we built an engine that works the clock, and left exactly one human decision in place.</p>
+    <p class="lede">A sports publisher needed coverage on a clock that never stops. We built an engine that works the clock and left exactly one human decision in place.</p>
 
-    <h2>What one cycle does</h2>
+    <h2>One Cycle, End to End</h2>
 
     <div class="fig">
       <ol class="steps">
@@ -92,10 +92,16 @@
       <p class="fig-cap"><b>Step 5 is the design decision that matters.</b> An autonomous writer with publish rights is a liability. An autonomous writer that fills an editor's queue multiplies what one editor can get out. The engine is fast; the judgement stays human.</p>
     </div>
 
-    <h2>The taxonomy is an ontology, and it is enforced</h2>
+    <h2>The Taxonomy Is an Ontology, and It Is Enforced</h2>
     <div class="sec body-w">
       <p>Most publishing systems accumulate tags until nobody knows which are real. Here, one manifest declares how content may be categorised. Everything else reads from it: the resolver that turns a writer's raw tag into a canonical one, the dashboard filters, and the check that runs before anything ships.</p>
       <p>Each dimension declares what kind of thing it is, whether an item can have one value or several, and what should happen when a value has never been seen before. That last column is the interesting one.</p>
+    </div>
+
+    <div class="fig pvb">
+      <div class="box"><span class="box-k">Before</span><span class="box-t">How it worked</span><p>Continuous coverage means hiring for a clock that never stops, and the small hours stay uncovered anyway.</p></div>
+      <div class="arw" aria-hidden="true"></div>
+      <div class="box inv"><span class="box-k">After</span><span class="box-t">How it works now</span><p>The engine works the clock and stops at an editorial queue. It holds no credential that can publish.</p></div>
     </div>
 
     <div class="fig">
@@ -111,7 +117,7 @@
       <p class="fig-cap"><b>Unknown values are always accepted and always surfaced.</b> Content is never held hostage to bookkeeping, and bookkeeping never silently rots. One command reports what needs a human, and the strict dimensions fail loudly.</p>
     </div>
 
-    <h2>The manifest, and what each dimension declares</h2>
+    <h2>What the Manifest Declares</h2>
     <div class="fig">
       <div class="tbl-scroll">
       <table class="mx">
@@ -137,7 +143,7 @@
       <p class="fig-cap"><b>This is the ontology doing ordinary, load-bearing work.</b> Nothing clever is happening. It simply cannot be skipped without every downstream count becoming fiction.</p>
     </div>
 
-    <h2>The engine is not trusted with the keys</h2>
+    <h2>The Engine Is Not Trusted With the Keys</h2>
     <div class="sec body-w">
       <p>The machine that writes runs unattended, which means it is the least trustworthy thing in the system. It holds exactly two credentials: read access to the sport data, and permission to push its work into one repository. It holds no credential that can publish anything to the public site.</p>
       <p>Publication happens in a separate, audited step. Tests and checks run there, and a failing check stops a bad batch before an editor ever sees it. If the writing machine were fully compromised, the worst it could do is fill a queue.</p>

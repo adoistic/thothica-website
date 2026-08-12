@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Defence and security · Thothica</title>
+<title>Systems That Run Where Nothing May Leave the Building · Thothica</title>
 <meta name="description" content="Doctrine and standing orders made queryable, multi-source pictures assembled with provenance, and every component able to run fully disconnected on hardware the organisation controls." />
 <link rel="canonical" href="https://thothica.com/use-cases/defence/" />
 <meta name="robots" content="index, follow" />
@@ -19,7 +19,7 @@
 
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Thothica" />
-<meta property="og:title" content="Defence and security · Thothica" />
+<meta property="og:title" content="Systems That Run Where Nothing May Leave the Building · Thothica" />
 <meta property="og:description" content="Doctrine and standing orders made queryable, multi-source pictures assembled with provenance, and every component able to run fully disconnected on hardware the organisation controls." />
 <meta property="og:url" content="https://thothica.com/use-cases/defence/" />
 <meta property="og:image" content="https://thothica.com/assets/og-image.jpg" />
@@ -29,14 +29,14 @@
 <meta property="og:locale" content="en_US" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Defence and security · Thothica" />
+<meta name="twitter:title" content="Systems That Run Where Nothing May Leave the Building · Thothica" />
 <meta name="twitter:description" content="Doctrine and standing orders made queryable, multi-source pictures assembled with provenance, and every component able to run fully disconnected on hardware the organisation controls." />
 <meta name="twitter:image" content="https://thothica.com/assets/og-image.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Teachers:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=29" />
+<link rel="stylesheet" href="/styles.css?v=33" />
 <script>document.documentElement.className += ' js';</script>
 
 <script type="application/ld+json">
@@ -74,13 +74,13 @@
     <div class="doc">
     <p class="crumb"><a href="/#use-cases">Use cases</a></p>
 
-    <h1>Systems that run <em>where nothing may leave the building.</em></h1>
+    <h1>Systems That Run Where Nothing May Leave the Building</h1>
 
-    <p class="lede">Defence organisations have the ontology problem in its severest form. The knowledge that decides an action is written in doctrine, standing orders and instructions accumulated over decades, and the people who can navigate it are few and are posted out every couple of years.</p>
+    <p class="lede">Doctrine, standing orders and instructions accumulated over decades decide the action. The people who can navigate them are few, and are posted out every couple of years.</p>
 
     <p class="note">Everything here is designed for a disconnected environment. If a capability needs an external service to work, it is not offered.</p>
 
-    <h2>The constraint that comes first</h2>
+    <h2>The Constraint That Comes First</h2>
     <div class="fig">
       <div class="layers">
         <div class="box"><span class="box-k">Assumed</span><span class="box-t">No outbound network</span><p>The system is built to run with no connection to anything outside the enclave. Not "can be configured offline". Offline is the design point.</p></div>
@@ -92,12 +92,12 @@
       <p class="fig-cap"><b>This is the same architecture we use elsewhere, for a different reason.</b> Doing the expensive work offline and shipping deterministic artefacts is how the government portals stay cheap to run. In a defence context, that same choice is the only reason it can be deployed at all.</p>
     </div>
 
-    <h2>Doctrine and standing orders, made answerable</h2>
+    <h2>Doctrine and Standing Orders, Made Answerable</h2>
     <div class="sec body-w">
       <p>Thousands of pages of doctrine, instructions, orders and amendments. The practical question is never "what does the manual say" but "which paragraph applies to this situation, in the current amendment state, and what does it require of me". We model instruments the way we model regulation: obligations, thresholds, conditions, authorities and amendment state, each anchored to its clause. Superseded material is marked superseded rather than deleted, so an officer can see both what applies now and what applied at the time of an incident under review.</p>
     </div>
 
-    <h2>Assessment from many sources, with provenance intact</h2>
+    <h2>Assessment With Provenance Intact</h2>
     <div class="sec body-w">
       <p>Assessment means combining reports of differing reliability. The failure mode is that confidence gets averaged into a single number and the reasoning becomes unrecoverable. So the ontology records two things separately and never merges them: how reliable the source has proven, and how solid this particular report looks. An assessment can then be unwound to what each source said, and to what that source has been worth in the past.</p>
     </div>
@@ -111,7 +111,7 @@
       <p class="fig-cap"><b>Independence is the rule doing the work here,</b> exactly as it does in <a href="/case-studies/olympiad-forms/">the verification work</a>. Evidence that confirms a reading must come from a source independent of it, or a single origin ends up confirming itself through three channels.</p>
     </div>
 
-    <h2>Two things that must never be averaged into one</h2>
+    <h2>Two Things That Must Never Be Averaged</h2>
     <div class="fig">
       <div class="tbl-scroll">
       <table class="mx">
@@ -127,7 +127,7 @@
       <p class="fig-cap"><b>These are separate properties of separate things.</b> How reliable a source has proven over time is a fact about the source. How solid a particular report looks is a fact about that report. Collapse them into one confidence score and the top-left and the middle-left cells become indistinguishable, which is precisely the distinction an analyst needs to keep.</p>
     </div>
 
-    <h2>Where else it applies</h2>
+    <h2>Where Else It Applies</h2>
     <div class="tbl-scroll">
     <table class="tbl">
       <tr><th>Area</th><th>The ontology problem underneath</th></tr>
@@ -139,7 +139,7 @@
     </table>
     </div>
 
-    <h2>What we will not claim</h2>
+    <h2>What We Will Not Claim</h2>
     <div class="sec body-w">
       <p>We build knowledge infrastructure. We do not build targeting systems, we do not offer autonomous decision-making in the use of force, and we do not present a machine's output as an assessment. Every system described here surfaces what the record says, with provenance, so a responsible officer decides faster on better evidence. Where the record is silent, the correct output is that it is silent.</p>
     </div>

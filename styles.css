@@ -24,9 +24,9 @@ img{max-width:100%;}
 .wrap{max-width:var(--page);margin:0 auto;padding:0 var(--gut);}
 /* article pages keep a reading column inside the wide shell */
 .doc{max-width:min(760px,100%);margin:0 auto;}
-/* a figure may use more width than the prose it sits with */
+/* a figure may use more width than the prose it sits with; the widening itself
+   is defined once, further down, next to the reading column it reaches out of */
 .doc .fig,.doc .tbl-scroll,.doc .stats{max-width:none;}
-@media(min-width:1180px){.doc .fig,.doc .stats,.doc .tbl-scroll{margin-left:-165px;margin-right:-165px;}}
 /* full-bleed band inside a wrapped page */
 .band{width:100%;}
 .band-inv{background:#000;color:#fff;}
@@ -238,7 +238,7 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .tags span{font-size:.78rem;border:1px solid #000;padding:4px 9px;}
 
 /* stat row */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:0;
   border-top:1px solid #000;margin-top:30px;}
 .stats div{border-bottom:1px solid #000;padding:16px 14px 16px 0;}
 .stats b{display:block;font-family:var(--serif);font-weight:600;font-size:1.9rem;line-height:1;
@@ -279,10 +279,17 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
    ───────────────────────────────────────────────────────────────────────────── */
 
 .hero{padding:clamp(56px,9vw,132px) 0 clamp(48px,7vw,96px);border-bottom:1px solid #000;}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:end;}
-.hero h1{font-size:clamp(2.2rem,4.4vw,4.9rem);line-height:1.04;letter-spacing:-0.02em;margin-top:20px;}
-.hero .sub{font-size:clamp(1.05rem,1.15vw,1.34rem);line-height:1.55;max-width:44ch;text-wrap:pretty;}
+/* The headline holds the left column and the plate the right, so the first
+   screen carries both the claim and the picture that states the problem. */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start;}
+.hero h1{font-size:clamp(2.1rem,3.9vw,4.2rem);line-height:1.05;letter-spacing:-0.02em;margin-top:20px;}
+.hero .sub{font-size:clamp(1.05rem,1.15vw,1.28rem);line-height:1.55;max-width:46ch;margin-top:26px;text-wrap:pretty;}
 .hero-side{padding-bottom:6px;}
+.hero-plate{padding-top:8px;}
+/* the numbers sit under the headline rather than across the page, so the text
+   column ends level with the plate instead of leaving a hole beside it */
+.hero .facts-hero{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(20px,3vw,44px);}
+.hero .facts-hero b{font-size:clamp(1.7rem,2.4vw,2.3rem);}
 .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
 .btn{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
   text-decoration:none;padding:14px 24px;border:1px solid #000;white-space:nowrap;}
@@ -291,7 +298,7 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .btn-line:hover{background:#000;color:#fff;}
 
 /* a run of facts, ruled off, that reads across on a wide screen */
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-top:1px solid #000;margin-top:clamp(30px,3.4vw,48px);}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));border-top:1px solid #000;margin-top:clamp(30px,3.4vw,48px);}
 .facts div{padding:18px 22px 18px 0;border-bottom:1px solid #000;}
 .facts b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(2rem,3.4vw,3rem);line-height:1;
   font-feature-settings:'lnum' 1,'tnum' 1;font-variant-numeric:tabular-nums;}
@@ -304,7 +311,7 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .sec-head .sec-note{font-size:1.05rem;line-height:1.55;max-width:52ch;text-wrap:pretty;}
 
 /* card grid, the landing-page replacement for long numbered entries */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0;
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:0;
   border-top:1px solid #000;margin-top:34px;}
 .cards a,.cards div.card{display:flex;flex-direction:column;padding:26px 26px 26px 0;
   border-bottom:1px solid #000;text-decoration:none;}
@@ -326,7 +333,7 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .band-inv h2{margin-top:0;}
 .band-inv .facts{border-top-color:#fff;}
 .band-inv .facts div{border-bottom-color:#fff;}
-.band-stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(24px,3vw,48px);margin-top:40px;}
+.band-stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:clamp(24px,3vw,48px);margin-top:40px;}
 .band-stat p{font-size:1.04rem;line-height:1.55;text-wrap:pretty;}
 
 @media(max-width:900px){
@@ -379,7 +386,7 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
   padding-top:12px;border-top:1px solid #000;}
 
 /* use cases: shorter, so a grid rather than rows */
-.ugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));
+.ugrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));
   border-top:1px solid #000;margin-top:clamp(32px,4vw,52px);}
 .ucell{display:flex;flex-direction:column;padding:clamp(24px,2.6vw,32px) clamp(24px,2.6vw,36px) clamp(24px,2.6vw,32px) 0;
   border-bottom:1px solid #000;text-decoration:none;}
@@ -406,6 +413,85 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .onto-caption{margin-top:26px;}
 /* six use cases read best as two rows of three, rather than four then two */
 @media(min-width:1080px){.ugrid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Plates. The only pictures on the site are historical, in the public domain,
+   and each was chosen because it argues the thing the section argues anyway.
+   Every plate is shown whole, inside one hairline, with its citation under it —
+   a museum label rather than decoration. Type is never set over a picture, and
+   nothing here is tinted: they are converted to the same two inks as the
+   diagrams, so a plate and a figure read as the same kind of object.
+   ───────────────────────────────────────────────────────────────────────────── */
+.plate{margin:0;}
+.plate img{display:block;width:100%;height:auto;border:1px solid #000;background:#fff;}
+.plate figcaption{margin-top:14px;}
+.plate-src{display:block;font-size:.64rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  line-height:1.55;padding-bottom:10px;border-bottom:1px solid #000;}
+.plate-note{display:block;font-size:.95rem;line-height:1.55;margin-top:12px;max-width:60ch;text-wrap:pretty;}
+.plate-note em{font-family:var(--serif);font-style:italic;font-size:1.06em;}
+
+/* a plate that runs across a section rather than sitting beside prose */
+.plate-wide{margin-top:clamp(34px,4vw,56px);max-width:1100px;}
+.plate-wide .plate-note{max-width:66ch;}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Scenes. A plate is pinned to the viewport and a few short lines pass over it,
+   darkening the picture as they arrive. The lines carry the argument; the
+   picture only has to hold the eye while they land. Without scripting every
+   line is simply visible, and reduced-motion users get the same page with the
+   movement taken out.
+   ───────────────────────────────────────────────────────────────────────────── */
+.scene{position:relative;background:#000;color:#fff;}
+.scene-media{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;}
+.scene-media img{width:100%;height:100%;object-fit:cover;display:block;}
+.scene-scrim{position:absolute;inset:0;background:#000;opacity:.2;transition:opacity .8s ease;}
+.scene.lit .scene-scrim{opacity:.66;}
+.scene-label{position:absolute;left:0;right:0;bottom:0;z-index:4;}
+.scene-label span{display:block;font-size:.62rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;line-height:1.5;padding:14px 0;border-top:1px solid rgba(255,255,255,.4);}
+.scene-steps{position:relative;z-index:3;margin-top:-100vh;margin-top:-100svh;}
+.scene-step{min-height:100vh;min-height:100svh;display:flex;align-items:center;}
+.scene-step p{font-family:var(--serif);font-weight:500;font-size:clamp(1.75rem,4.1vw,3.5rem);
+  line-height:1.14;letter-spacing:-0.01em;max-width:17em;text-wrap:balance;
+  opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.scene-step.in p{opacity:1;transform:none;}
+/* nothing to reveal if the script never runs */
+html:not(.js) .scene-step p{opacity:1;transform:none;}
+.scene ::selection{background:#fff;color:#000;}
+@media(max-width:760px){
+  .scene-step p{font-size:clamp(1.45rem,6.4vw,2.1rem);max-width:14em;}
+}
+@media(prefers-reduced-motion:reduce){
+  .scene-step p{opacity:1;transform:none;transition:none;}
+  .scene-scrim{transition:none;opacity:.6;}
+}
+
+/* four unlike inputs, one layer, three results: the claim of section 02 drawn
+   rather than described */
+.same{margin-top:clamp(34px,4vw,54px);}
+.same-row{display:grid;gap:0 clamp(20px,3vw,40px);}
+.same-in{grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));border-top:1px solid #fff;}
+.same-out{grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));border-top:1px solid #fff;}
+.same-row>div{padding:16px 0 18px;border-bottom:1px solid rgba(255,255,255,.35);}
+.same-k{display:block;font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;}
+.same-in b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(1.3rem,1.9vw,1.7rem);
+  line-height:1.1;margin-top:7px;}
+.same-in em{display:block;font-style:normal;font-size:.88rem;line-height:1.45;margin-top:8px;opacity:.82;}
+.same-out b{display:block;font-family:var(--serif);font-weight:600;font-size:clamp(1.8rem,2.8vw,2.6rem);
+  line-height:1;font-variant-numeric:tabular-nums;font-feature-settings:'lnum' 1,'tnum' 1;}
+.same-out span{display:block;font-size:.88rem;line-height:1.4;margin-top:8px;}
+.same-arw{width:1px;height:26px;margin:0 auto;background:#fff;position:relative;}
+.same-arw::after{content:"";position:absolute;left:-4px;bottom:-1px;width:0;height:0;
+  border-left:4px solid transparent;border-right:4px solid transparent;border-top:7px solid #fff;}
+.same-bar{border:1px solid #fff;background:#fff;color:#000;text-align:center;
+  font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:15px 18px;}
+
+/* the chapter number that opens each section, so the page reads as a document
+   with a known length rather than a scroll of unknown depth */
+.snum{display:block;font-family:var(--serif);font-weight:600;line-height:1;margin-bottom:15px;
+  font-size:clamp(1.5rem,2vw,2rem);font-feature-settings:'lnum' 1,'tnum' 1;font-variant-numeric:tabular-nums;}
+.band-inv .plate img{border-color:#fff;}
+.band-inv .plate-src{border-bottom-color:#fff;}
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Further diagram primitives, all HTML and CSS so they reflow on a phone.
@@ -486,12 +572,19 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .doc .steps p,
 .doc .proof,
 .doc .with{max-width:none;}
-/* figures keep the same centre line and simply reach further out */
-@media(min-width:1180px){
-  .doc .fig,.doc .stats,.doc .tbl-scroll{margin-left:-210px;margin-right:-210px;}
-}
-@media(min-width:900px) and (max-width:1179px){
-  .doc .fig,.doc .stats,.doc .tbl-scroll{margin-left:-70px;margin-right:-70px;}
+/* Figures keep the same centre line and simply reach further out. The width is
+   computed from the shell rather than guessed, so a figure can never be wider
+   than the gutters allow and can never push the page sideways. The offset is
+   derived from that width, which also means a bleed element nested inside
+   another one — a .tbl-scroll inside a .fig — resolves to no extra offset
+   instead of reaching out twice. */
+@media(min-width:900px){
+  .doc .fig,.doc .stats,.doc .tbl-scroll{
+    --bleed:min(1100px, var(--page) - 2*var(--gut));
+    width:var(--bleed);
+    margin-left:calc((100% - var(--bleed))/2);
+    margin-right:calc((100% - var(--bleed))/2);
+  }
 }
 /* a caption under a wide figure keeps the body measure, centred, so its edges
    line up with the prose above and below rather than with the figure */
@@ -500,3 +593,230 @@ h3{font-size:1.06rem;font-weight:700;margin-top:30px;}
 .plainlist{list-style:none;margin-top:14px;border-top:1px solid #000;}
 .plainlist li{font-size:1.02rem;line-height:1.45;padding:8px 0;border-bottom:1px solid #000;}
 .plainlist+p{margin-top:16px;}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Dark hero. A near-black field with a nocturne washed in behind it, and the
+   working interface as the object on the right. The picture is atmosphere and
+   nothing else: it carries no caption and makes no argument, so it is marked
+   decorative and hidden from screen readers.
+   ───────────────────────────────────────────────────────────────────────────── */
+.hero-dark{position:relative;background:#08090b;color:#fff;overflow:hidden;border-bottom:0;
+  padding:clamp(56px,7vw,104px) 0 clamp(44px,5vw,76px);}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.85;}
+/* the headline end of the field stays dark enough to read on; the far side is
+   left open so the painting keeps its colour instead of going to grey */
+.hero-bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(8,9,11,.96) 18%,rgba(8,9,11,.78) 46%,rgba(8,9,11,.3) 100%);}
+.hero-dark .wrap{position:relative;z-index:1;}
+.hero-dark h1{font-size:clamp(2.1rem,3.7vw,4rem);line-height:1.06;letter-spacing:-0.02em;margin-top:18px;}
+.hero-dark .sub{color:rgba(255,255,255,.78);}
+.hero-dark .eyebrow{color:rgba(255,255,255,.62);}
+.hero-dark .btn-fill{background:#fff;color:#000;border-color:#fff;}
+.hero-dark .btn-fill:hover{background:transparent;color:#fff;}
+.hero-dark .btn-line{border-color:rgba(255,255,255,.55);color:#fff;}
+.hero-dark .btn-line:hover{background:#fff;color:#000;border-color:#fff;}
+.hero-dark .facts{border-top-color:rgba(255,255,255,.32);}
+.hero-dark .facts div{border-bottom-color:rgba(255,255,255,.32);}
+.hero-dark .facts span{color:rgba(255,255,255,.72);}
+.hero-dark ::selection{background:#fff;color:#000;}
+
+/* the interface panel: our own figures, drawn rather than screenshotted */
+.ui{border:1px solid rgba(255,255,255,.22);background:rgba(10,12,15,.72);
+  backdrop-filter:blur(3px);font-size:.8rem;align-self:start;}
+.ui i{display:inline-block;width:7px;height:7px;border-radius:50%;flex:0 0 auto;}
+.c1{background:#7fd4c1;} .c2{background:#8fb8f0;} .c3{background:#e0c47a;} .c4{background:#e08f7a;}
+.ui-bar{display:flex;align-items:center;gap:9px;padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.18);}
+.ui-dot{width:7px;height:7px;border-radius:50%;background:#7fd4c1;flex:0 0 auto;
+  animation:ui-pulse 2.4s ease-in-out infinite;}
+@keyframes ui-pulse{0%,100%{opacity:1}50%{opacity:.25}}
+.ui-title{font-size:.62rem;font-weight:700;letter-spacing:.15em;color:rgba(255,255,255,.82);}
+.ui-live{margin-left:auto;font-size:.58rem;font-weight:700;letter-spacing:.15em;white-space:nowrap;
+  color:rgba(255,255,255,.6);border:1px solid rgba(255,255,255,.28);padding:3px 7px;}
+.ui-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.ui-count{padding:16px 14px 14px;border-bottom:1px solid rgba(255,255,255,.14);}
+.ui-count b{display:block;font-family:var(--serif);font-weight:600;line-height:1;
+  font-size:clamp(2rem,3.4vw,2.9rem);font-variant-numeric:tabular-nums;
+  font-feature-settings:'lnum' 1,'tnum' 1;}
+.ui-count span{display:block;font-size:.72rem;letter-spacing:.06em;color:rgba(255,255,255,.62);margin-top:7px;}
+.ui-rows{padding:4px 0;}
+.ui-row{display:flex;align-items:center;gap:10px;padding:8px 14px;
+  border-bottom:1px solid rgba(255,255,255,.08);opacity:0;transform:translateY(6px);}
+.ui-row:last-child{border-bottom:0;}
+.ui-row span{font-variant-numeric:tabular-nums;color:rgba(255,255,255,.86);font-size:.74rem;letter-spacing:.02em;}
+.ui-row em{font-style:normal;color:rgba(255,255,255,.6);font-size:.74rem;margin-left:auto;}
+.ui-row b{font-weight:600;font-variant-numeric:tabular-nums;font-size:.74rem;
+  color:rgba(255,255,255,.9);min-width:2.6em;text-align:right;}
+.ui-row.c4-row b{color:#e08f7a;}
+.ui-row.on{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease;}
+html:not(.js) .ui-row{opacity:1;transform:none;}
+.ui-foot{display:flex;flex-wrap:wrap;gap:6px 16px;padding:11px 14px;
+  border-top:1px solid rgba(255,255,255,.18);font-size:.63rem;letter-spacing:.05em;
+  color:rgba(255,255,255,.6);}
+.ui-foot span{display:flex;align-items:center;gap:6px;}
+@media(max-width:900px){
+  .ui{margin-top:34px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .ui-row{opacity:1;transform:none;}
+  .ui-dot{animation:none;}
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Header over a dark hero. The bar starts transparent so the hero reads as one
+   field, and turns solid the moment it leaves the hero, which is also the
+   moment it starts overlapping white content. Only a page that opens on a dark
+   hero carries .top-over, so every other page keeps the plain white bar.
+   ───────────────────────────────────────────────────────────────────────────── */
+.logo-rev{display:none;}
+/* resting state, sitting over the dark hero */
+.top-over{background:transparent;border-bottom-color:rgba(255,255,255,.22);}
+.top-over .logo-ink{display:none;}
+.top-over .logo-rev{display:block;}
+.top-over .nav nav a{color:#fff;}
+.top-over .nav nav a:hover{border-bottom-color:#fff;}
+.top-over .nav-burger span{background:#fff;}
+/* once it has scrolled clear of the hero it is an ordinary white bar again */
+.top-over.stuck{background:#fff;border-bottom-color:#000;}
+.top-over.stuck .logo-ink{display:block;}
+.top-over.stuck .logo-rev{display:none;}
+.top-over.stuck .nav nav a{color:#000;}
+.top-over.stuck .nav nav a:hover{border-bottom-color:#000;}
+.top-over.stuck .nav-burger span{background:#000;}
+/* the swap is a state change, not an effect: keep it quick and unanimated for
+   the bar itself so text never sits mid-way between two colours */
+.top-over{transition:background-color .2s linear,border-color .2s linear;}
+@media(max-width:760px){
+  /* the open menu needs a solid ground to be readable, whatever is behind it */
+  .top-over .nav.open{background:#08090b;}
+  .top-over .nav nav a{border-bottom-color:rgba(255,255,255,.3);}
+  .top-over .nav nav a:first-child{border-top-color:rgba(255,255,255,.3);}
+  .top-over .nav nav a:hover{background:#fff;color:#000;}
+  .top-over.stuck .nav.open{background:#fff;}
+  .top-over.stuck .nav nav a{border-bottom-color:#000;}
+  .top-over.stuck .nav nav a:first-child{border-top-color:#000;}
+  .top-over.stuck .nav nav a:hover{background:#000;color:#fff;}
+}
+@media(prefers-reduced-motion:reduce){.top-over{transition:none;}}
+
+/* For the bar to be transparent over the hero, the hero has to reach up behind
+   it. The height is measured and published as --topH rather than guessed, so
+   the pull-up stays correct when the logo or the nav wraps. */
+.landing>section.hero-dark{
+  margin-top:calc(-1 * var(--topH, 71px));
+  padding-top:calc(var(--topH, 71px) + clamp(52px,6vw,92px));
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   The stack. Four layers on one rail: marker, the layer itself, and the single
+   fact that proves we do that layer rather than describe it.
+   ───────────────────────────────────────────────────────────────────────────── */
+.stack{list-style:none;border-top:1px solid #000;margin-top:clamp(32px,4vw,52px);}
+.stack>li{display:grid;grid-template-columns:64px minmax(0,1.9fr) minmax(0,1fr);
+  gap:clamp(20px,3vw,44px);padding:clamp(24px,3vw,34px) 0;border-bottom:1px solid #000;
+  align-items:start;}
+.stack-n{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,2.2vw,2rem);line-height:1;
+  font-feature-settings:'lnum' 1,'tnum' 1;}
+.stack-k{display:block;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;}
+.stack h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.25rem,1.8vw,1.7rem);
+  line-height:1.18;margin-top:7px;text-wrap:balance;}
+.stack p{font-size:1.01rem;line-height:1.55;margin-top:11px;max-width:54ch;text-wrap:pretty;}
+.stack-e{font-size:.88rem;line-height:1.45;border-left:1px solid #000;
+  padding-left:clamp(16px,2vw,28px);}
+@media(max-width:820px){
+  .stack>li{grid-template-columns:44px minmax(0,1fr);gap:16px;}
+  .stack-e{grid-column:1/-1;border-left:0;border-top:1px solid #000;
+    padding-left:0;padding-top:14px;margin-top:4px;}
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Problem against build. This was a pair of paragraphs opening with bolded
+   run-in headers, which is a list pretending to be prose. As two cells it reads
+   at a glance and follows the same inversion rule as every other figure here:
+   the inverted cell is the one that acts.
+   ───────────────────────────────────────────────────────────────────────────── */
+.pvb{display:grid;grid-template-columns:1fr 22px 1fr;gap:0 12px;align-items:stretch;margin-top:26px;}
+.pvb .box{display:flex;flex-direction:column;}
+.pvb .box p{margin-top:9px;}
+@media(max-width:760px){
+  .pvb{grid-template-columns:1fr;gap:0;}
+  .pvb .arw{width:1px;height:24px;margin:14px auto;}
+  .pvb .arw::after{right:auto;left:-4px;top:auto;bottom:-1px;
+    border-left:4px solid transparent;border-right:4px solid transparent;
+    border-top:7px solid #000;border-bottom:none;}
+}
+
+/* ── The stack ───────────────────────────────────────────────────────────────
+   Argument on the left, examples on the right. Three rails run continuously,
+   the middle one against the other two, which keeps the eye on the column
+   without any of it asking to be read in order. Naming a dozen systems does
+   more work than one line claiming we read "anything".
+   ─────────────────────────────────────────────────────────────────────────── */
+.stack>li{grid-template-columns:64px minmax(0,1fr) minmax(0,1.02fr);align-items:center;}
+.stack-body{max-width:56ch;}
+.stack p{max-width:54ch;}
+
+.rails{min-width:0;}
+.rail-k{display:block;font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  padding-bottom:11px;margin-bottom:13px;border-bottom:1px solid #000;}
+.rail-set{display:flex;flex-direction:column;gap:9px;}
+/* each row masks its own overflow, so a rail can never widen the page */
+.rail-row{display:flex;gap:9px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);}
+.rail-run{display:flex;gap:9px;flex:0 0 auto;padding-right:9px;}
+.rail-run span{display:block;white-space:nowrap;border:1px solid #000;padding:6px 13px;font-size:.82rem;}
+.js .rail-run{animation:rail-l 34s linear infinite;}
+.js .rail-back .rail-run{animation-name:rail-r;}
+.rails:hover .rail-run,.rails:focus-within .rail-run{animation-play-state:paused;}
+@keyframes rail-l{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@keyframes rail-r{from{transform:translateX(-100%)}to{transform:translateX(0)}}
+/* three speeds per layer, and a different set per layer, so nothing marches in step */
+.stack>li .rail-row:nth-child(1) .rail-run{animation-duration:36s;}
+.stack>li .rail-row:nth-child(2) .rail-run{animation-duration:29s;}
+.stack>li .rail-row:nth-child(3) .rail-run{animation-duration:42s;}
+.stack>li:nth-child(2) .rail-row:nth-child(1) .rail-run{animation-duration:31s;}
+.stack>li:nth-child(2) .rail-row:nth-child(3) .rail-run{animation-duration:38s;}
+.stack>li:nth-child(3) .rail-row:nth-child(2) .rail-run{animation-duration:33s;}
+.stack>li:nth-child(4) .rail-row:nth-child(1) .rail-run{animation-duration:40s;}
+.stack>li:nth-child(4) .rail-row:nth-child(3) .rail-run{animation-duration:35s;}
+
+@media(max-width:980px){
+  /* the rails drop under the text and keep all three rows */
+  .stack>li{grid-template-columns:64px minmax(0,1fr);align-items:start;}
+  .rails{grid-column:2/-1;margin-top:24px;}
+}
+@media(max-width:820px){
+  .stack>li{grid-template-columns:44px minmax(0,1fr);}
+  .rails{grid-column:1/-1;}
+}
+@media(prefers-reduced-motion:reduce){
+  /* no travel; the rails become a plain wrapping list of the same words */
+  .js .rail-run{animation:none;}
+  .rail-row{overflow:visible;flex-wrap:wrap;-webkit-mask-image:none;mask-image:none;}
+  .rail-run{flex-wrap:wrap;}
+  .rail-run[aria-hidden="true"]{display:none;}
+}
+
+/* ── Scroll reveal ───────────────────────────────────────────────────────────
+   A short rise as a block reaches the viewport. It is deliberately small: on a
+   page a minister is skimming, movement that has to be waited out is a cost,
+   not a flourish. Everything is visible without scripting, and the whole thing
+   is switched off for anyone who has asked for reduced motion.
+   ─────────────────────────────────────────────────────────────────────────── */
+.reveal .rev{opacity:0;transform:translateY(18px);}
+.reveal .rev.seen{opacity:1;transform:none;
+  transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1);}
+/* rows and cells arrive one after another rather than as a slab */
+.reveal .rev-stagger>*{opacity:0;transform:translateY(14px);}
+.reveal .rev-stagger.seen>*{opacity:1;transform:none;
+  transition:opacity .5s cubic-bezier(.2,.7,.2,1),transform .5s cubic-bezier(.2,.7,.2,1);}
+.reveal .rev-stagger.seen>*:nth-child(2){transition-delay:.06s;}
+.reveal .rev-stagger.seen>*:nth-child(3){transition-delay:.12s;}
+.reveal .rev-stagger.seen>*:nth-child(4){transition-delay:.18s;}
+.reveal .rev-stagger.seen>*:nth-child(5){transition-delay:.24s;}
+.reveal .rev-stagger.seen>*:nth-child(6){transition-delay:.3s;}
+@media(prefers-reduced-motion:reduce){
+  .reveal .rev,.reveal .rev.seen,.reveal .rev-stagger>*,.reveal .rev-stagger.seen>*{
+    opacity:1;transform:none;transition:none;}
+}
