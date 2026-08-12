@@ -820,3 +820,16 @@ html:not(.js) .ui-row{opacity:1;transform:none;}
   .reveal .rev,.reveal .rev.seen,.reveal .rev-stagger>*,.reveal .rev-stagger.seen>*{
     opacity:1;transform:none;transition:none;}
 }
+
+/* Two ways of doing the same layer. Neither box is inverted: one does not
+   outrank the other, they are alternatives, and the last line in each says
+   which situation picks it. */
+/* spans the whole row, under both the text and the rails, so each mode gets a
+   readable measure instead of being squeezed into the prose column */
+.modes{grid-column:2/-1;display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px;}
+.modes .box{display:flex;flex-direction:column;}
+.modes .box p{font-size:.92rem;margin-top:9px;}
+.modes-when{display:block;margin-top:auto;padding-top:12px;font-size:.86rem;line-height:1.45;
+  border-top:1px solid #000;}
+@media(max-width:820px){.modes{grid-column:1/-1;}}
+@media(max-width:680px){.modes{grid-template-columns:1fr;}}
